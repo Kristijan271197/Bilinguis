@@ -1,0 +1,18 @@
+Drink
+Water
+Mineral water
+Lemonade
+Fruit juice
+Tea
+Coffee
+Cocoa
+Hot chocolate
+Cappuccino
+Milk
+Milkshake
+Ice tea
+Coke
+Compote
+Cocktail
+Wine
+Beer

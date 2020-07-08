@@ -1,0 +1,14 @@
+Kitchen
+Glass
+Bottle
+Plate
+Knife
+Fork
+Spoon
+Dish
+Oven
+Refrigerator
+Kitchen stove
+Frying pan
+Pan
+Sink

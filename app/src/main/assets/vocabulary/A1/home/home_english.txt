@@ -1,0 +1,19 @@
+Living room
+Bedroom
+Dining room
+Bathroom
+Table
+Bed
+Sofa
+Armchair
+Chair
+Carpet
+Wardrobe
+Tub
+Shelf
+Box
+Lamp
+Picture
+Plant
+Flowers
+Garden

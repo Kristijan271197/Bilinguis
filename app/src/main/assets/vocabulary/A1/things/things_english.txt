@@ -1,0 +1,13 @@
+Book
+Paper
+Notebook
+Pencil
+Pen
+Ruler
+Rubber
+Scissors
+Pencil sharpener
+Magazine
+Computer
+Desk
+Chair

@@ -1,0 +1,37 @@
+Food
+Vegetables
+Fruits
+Bread
+Pizza
+Soda
+Juice
+Pasta
+Egg
+Milk
+Cheese
+Chocolate
+Salad
+Soup
+Hamburger
+Hot dog
+Sandwich
+French fries
+Cake
+Water
+Ice cream
+Orange
+Apple
+Banana
+Pineapple
+Strawberry
+Cherry
+Pear
+Watermelon
+Melon
+Onion
+Garlic
+Pepper
+Potato
+Tomato
+Cucumber
+Carrot

@@ -1,0 +1,15 @@
+City
+Village
+Country
+House
+Street
+River
+Lake
+Sea
+Mountain
+Ocean
+Island
+Park
+Where do you live?
+I live in a small village
+I live in a big city

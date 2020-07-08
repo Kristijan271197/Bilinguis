@@ -1,0 +1,5 @@
+I am (Я)
+You are (Ты)
+He is (Он)
+She is (Она)
+It is (Оно)

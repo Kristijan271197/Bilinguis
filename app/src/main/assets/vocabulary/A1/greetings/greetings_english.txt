@@ -1,0 +1,21 @@
+Good morning!
+Good afternoon!
+Good evening!
+Good night!
+Hello
+Hi
+What is your name?
+My name is Maria
+Sorry, I did not get your name!
+I am Maria
+I like your name!
+Nice to meet you!
+Where are you from?
+I am from Spain
+Do you speak English?
+Yes, I do.
+No, I don’t.
+How are you?
+I am fine, thank you!
+Goodbye
+Bye

@@ -1,0 +1,25 @@
+Floor
+Lamp
+Rubbish bin
+Mirror
+Picture
+Sofa
+Bed
+Pillow
+Sheet
+Blanket
+Curtains
+Closet
+Armchair
+Chair
+Table
+Vase
+Toys
+Desk
+Computer
+Wall clock
+Shoe cabinet
+Towel
+Toothbrush
+Toilet
+Tub

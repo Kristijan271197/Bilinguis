@@ -1,0 +1,5 @@
+I am working (Я работаю)
+You are working (Ты работаешь)
+He is working (Он работает)
+She is working
+It is working

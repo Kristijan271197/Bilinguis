@@ -1,0 +1,29 @@
+City
+Town
+Centre
+Street
+Street lights
+Flat
+House
+Café
+School
+University
+Library
+Hotel
+Hospital 
+Police
+Restaurant
+Bakery
+Square
+Park
+Bank
+Cinema
+Market
+Mall
+Station
+Shop
+Bus stop
+Car
+Bus
+Train
+Subway

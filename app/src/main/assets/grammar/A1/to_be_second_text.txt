@@ -1,0 +1,9 @@
+Отрицание:
+   I am + not
+   You/We/They are + not
+   He/She/It are + not
+
+Вопрос:
+   Am I?
+   Are you/we/they?
+   Is he/she/it?
