@@ -16,12 +16,13 @@ public class GrammarA1 extends Fragment {
 
     private Button personalPronounsButton;
     private Button englishArticlesButton;
-    private Button pluralButton;
     private Button demonstrativePronounsButton;
     private Button verbToHaveButton;
-    private Button toBeButton;
+    private Button pluralButton;
     private Button verbsButton;
     private Button presentSimpleTenseButton;
+    private Button quantifiersButton;
+    private Button toBeButton;
     private Button presentContinuousTenseButton;
 
     public GrammarA1() {
@@ -35,12 +36,13 @@ public class GrammarA1 extends Fragment {
 
         personalPronounsButton = view.findViewById(R.id.personal_pronouns_button);
         englishArticlesButton = view.findViewById(R.id.english_articles_button);
-        pluralButton = view.findViewById(R.id.plural_button);
         demonstrativePronounsButton = view.findViewById(R.id.demonstrative_button);
         verbToHaveButton = view.findViewById(R.id.to_have_button);
-        toBeButton = view.findViewById(R.id.to_be_button);
+        pluralButton = view.findViewById(R.id.plural_button);
         verbsButton = view.findViewById(R.id.verbs_button);
         presentSimpleTenseButton = view.findViewById(R.id.present_simple_tense);
+        quantifiersButton = view.findViewById(R.id.quantifiers_button);
+        toBeButton = view.findViewById(R.id.to_be_button);
         presentContinuousTenseButton = view.findViewById(R.id.present_continuous_tense);
 
         personalPronounsButton.setOnClickListener(v -> {
@@ -57,14 +59,6 @@ public class GrammarA1 extends Fragment {
             startActivity(intent);
         });
 
-        pluralButton.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
-            intent.putExtra("name", 3);
-            intent.putExtra("image", true);
-            startActivity(intent);
-        });
-
-
         demonstrativePronounsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra("name", 4);
@@ -79,9 +73,9 @@ public class GrammarA1 extends Fragment {
             startActivity(intent);
         });
 
-        toBeButton.setOnClickListener(v -> {
+        pluralButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
-            intent.putExtra("name", 6);
+            intent.putExtra("name", 3);
             intent.putExtra("image", true);
             startActivity(intent);
         });
@@ -96,6 +90,21 @@ public class GrammarA1 extends Fragment {
         presentSimpleTenseButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra("name", 8);
+            intent.putExtra("image", true);
+            startActivity(intent);
+        });
+
+        quantifiersButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
+            intent.putExtra("name", 10);
+            intent.putExtra("image", false);
+            startActivity(intent);
+        });
+
+
+        toBeButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
+            intent.putExtra("name", 6);
             intent.putExtra("image", true);
             startActivity(intent);
         });

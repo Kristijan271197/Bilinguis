@@ -39,24 +39,12 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/plural_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/english_articles_button"
-                android:layout_margin="16dp"
-                android:background="@drawable/rounded_corners"
-                android:fontFamily="@font/roboto_black"
-                android:text="Plural"
-                android:textColor="#6C63FF"
-                android:textSize="20sp"
-                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/demonstrative_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/plural_button"
+                android:layout_below="@+id/english_articles_button"
                 android:layout_margin="16dp"
                 android:background="@drawable/rounded_corners"
                 android:fontFamily="@font/roboto_black"
@@ -79,23 +67,24 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/to_be_button"
+                android:id="@+id/plural_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/to_have_button"
                 android:layout_margin="16dp"
                 android:background="@drawable/rounded_corners"
                 android:fontFamily="@font/roboto_black"
-                android:text="To Be"
+                android:text="Plural"
                 android:textColor="#6C63FF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
 
             <Button
                 android:id="@+id/verbs_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/to_be_button"
+                android:layout_below="@+id/plural_button"
                 android:layout_margin="16dp"
                 android:background="@drawable/rounded_corners"
                 android:fontFamily="@font/roboto_black"
@@ -118,10 +107,36 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/present_continuous_tense"
+                android:id="@+id/quantifiers_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/present_simple_tense"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Quantifiers"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/to_be_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/quantifiers_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="To Be"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/present_continuous_tense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/to_be_button"
                 android:layout_margin="16dp"
                 android:background="@drawable/rounded_corners"
                 android:fontFamily="@font/roboto_black"

@@ -39,6 +39,8 @@ public class NoImageGrammarFragment extends Fragment {
                 enterText("grammar/A1/english_articles.txt");
             else if(name == 4)
                 enterText("grammar/A1/demonstrative_pronouns.txt");
+            else if(name == 10)
+                enterText("grammar/A1/quantifiers_text.txt");
         }
 
 
