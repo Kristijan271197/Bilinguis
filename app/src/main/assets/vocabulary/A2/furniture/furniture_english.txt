@@ -23,3 +23,5 @@ Towel
 Toothbrush
 Toilet
 Tub
+Door
+Window

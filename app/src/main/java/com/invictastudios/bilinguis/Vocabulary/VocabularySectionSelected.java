@@ -78,6 +78,10 @@ public class VocabularySectionSelected extends AppCompatActivity {
                     initializeWords(englishWords, "vocabulary/A2/nature/nature_english.txt");
                     initializeWords(russianWords, "vocabulary/A2/nature/nature_russian.txt");
                     break;
+                case VocabularyA2.ANIMALS:
+                    initializeWords(englishWords, "vocabulary/A2/animals/animals_english.txt");
+                    initializeWords(russianWords, "vocabulary/A2/animals/animals_russian.txt");
+                    break;
                 case VocabularyA2.FACE_PARTS:
                     initializeWords(englishWords, "vocabulary/A2/face_parts/face_parts_english.txt");
                     initializeWords(russianWords, "vocabulary/A2/face_parts/face_parts_russian.txt");

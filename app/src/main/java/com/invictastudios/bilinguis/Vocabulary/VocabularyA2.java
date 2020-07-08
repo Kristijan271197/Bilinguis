@@ -14,6 +14,7 @@ import com.invictastudios.bilinguis.R;
 public class VocabularyA2 extends Fragment {
 
     public static final String NATURE = "nature";
+    public static final String ANIMALS = "animals";
     public static final String FACE_PARTS = "face_parts";
     public static final String BODY_PARTS = "body_parts";
     public static final String CLOTHES = "clothes";
@@ -25,6 +26,7 @@ public class VocabularyA2 extends Fragment {
 
 
     private ImageButton natureButton;
+    private ImageButton animalsButton;
     private ImageButton facePartsButton;
     private ImageButton bodyPartsButton;
     private ImageButton clothesButton;
@@ -47,6 +49,13 @@ public class VocabularyA2 extends Fragment {
         natureButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", NATURE);
+            startActivity(intent);
+        });
+
+        animalsButton = view.findViewById(R.id.animals);
+        animalsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
+            intent.putExtra("section", ANIMALS);
             startActivity(intent);
         });
 
