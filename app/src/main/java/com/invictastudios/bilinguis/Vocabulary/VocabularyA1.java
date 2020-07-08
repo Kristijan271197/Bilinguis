@@ -14,23 +14,27 @@ import com.invictastudios.bilinguis.R;
 public class VocabularyA1 extends Fragment {
 
     public static final String GREETINGS = "greetings";
+    public static final String GEOGRAPHY = "geography";
+    public static final String COLORS = "colors";
     public static final String THINGS = "things";
     public static final String FOOD = "food";
-    public static final String GEOGRAPHY = "geography";
+    public static final String PRODUCTS = "products";
     public static final String HOME = "home";
     public static final String FAMILY = "family";
     public static final String WEATHER = "weather";
-    public static final String COLORS = "colors";
+
 
 
     private ImageButton greetingsButton;
+    private ImageButton geographyButton;
+    private ImageButton colorsButton;
     private ImageButton thingsButton;
     private ImageButton foodButton;
-    private ImageButton geographyButton;
+    private ImageButton productsButton;
     private ImageButton homeButton;
     private ImageButton familyButton;
     private ImageButton weatherButton;
-    private ImageButton colorsButton;
+
 
     public VocabularyA1() {
     }
@@ -48,6 +52,20 @@ public class VocabularyA1 extends Fragment {
             startActivity(intent);
         });
 
+        geographyButton = view.findViewById(R.id.geography);
+        geographyButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
+            intent.putExtra("section", GEOGRAPHY);
+            startActivity(intent);
+        });
+
+        colorsButton = view.findViewById(R.id.colors);
+        colorsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
+            intent.putExtra("section", COLORS);
+            startActivity(intent);
+        });
+
         thingsButton = view.findViewById(R.id.things);
         thingsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
@@ -62,10 +80,10 @@ public class VocabularyA1 extends Fragment {
             startActivity(intent);
         });
 
-        geographyButton = view.findViewById(R.id.geography);
-        geographyButton.setOnClickListener(v -> {
+        productsButton = view.findViewById(R.id.products);
+        productsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
-            intent.putExtra("section", GEOGRAPHY);
+            intent.putExtra("section", PRODUCTS);
             startActivity(intent);
         });
 
@@ -90,12 +108,7 @@ public class VocabularyA1 extends Fragment {
             startActivity(intent);
         });
 
-        colorsButton = view.findViewById(R.id.colors);
-        colorsButton.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
-            intent.putExtra("section", COLORS);
-            startActivity(intent);
-        });
+
 
 
         return view;

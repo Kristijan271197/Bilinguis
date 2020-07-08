@@ -45,10 +45,72 @@
             </FrameLayout>
 
             <FrameLayout
-                android:id="@+id/thingsFrame"
+                android:id="@+id/geographyFrame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/greetingsFrame"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp">
+
+                <ImageButton
+                    android:id="@+id/geography"
+                    android:layout_width="300dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/image_button_rounded_corners"
+                    android:padding="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/geography" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="Geography"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/colorsFrame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/geographyFrame"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <ImageButton
+                    android:id="@+id/colors"
+                    android:layout_width="300dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/image_button_rounded_corners"
+                    android:padding="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/colors" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="Colors"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/thingsFrame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/colorsFrame"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp">
 
@@ -105,7 +167,7 @@
             </FrameLayout>
 
             <FrameLayout
-                android:id="@+id/geographyFrame"
+                android:id="@+id/productsFrame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/foodFrame"
@@ -113,14 +175,14 @@
                 android:layout_marginTop="16dp">
 
                 <ImageButton
-                    android:id="@+id/geography"
+                    android:id="@+id/products"
                     android:layout_width="300dp"
                     android:layout_height="220dp"
                     android:layout_gravity="center"
                     android:background="@drawable/image_button_rounded_corners"
                     android:padding="8dp"
                     android:scaleType="fitXY"
-                    android:src="@mipmap/geography" />
+                    android:src="@mipmap/products" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -128,17 +190,18 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/roboto_black"
-                    android:text="Geography"
+                    android:text="Products"
                     android:textColor="@android:color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </FrameLayout>
 
+
             <FrameLayout
                 android:id="@+id/homeFrame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/geographyFrame"
+                android:layout_below="@id/productsFrame"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp">
 
@@ -224,36 +287,7 @@
                     android:textStyle="bold" />
             </FrameLayout>
 
-            <FrameLayout
-                android:id="@+id/colorsFrame"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/weatherFrame"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp">
 
-                <ImageButton
-                    android:id="@+id/colors"
-                    android:layout_width="300dp"
-                    android:layout_height="220dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/image_button_rounded_corners"
-                    android:padding="8dp"
-                    android:scaleType="fitXY"
-                    android:src="@mipmap/colors" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/roboto_black"
-                    android:text="Colors"
-                    android:textColor="@android:color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </FrameLayout>
         </RelativeLayout>
     </ScrollView>
 </FrameLayout>

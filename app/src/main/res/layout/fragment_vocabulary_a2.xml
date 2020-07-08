@@ -60,7 +60,7 @@
                     android:background="@drawable/image_button_rounded_corners"
                     android:padding="8dp"
                     android:scaleType="fitXY"
-                    android:src="@mipmap/nature" />
+                    android:src="@mipmap/animals" />
 
                 <TextView
                     android:layout_width="wrap_content"

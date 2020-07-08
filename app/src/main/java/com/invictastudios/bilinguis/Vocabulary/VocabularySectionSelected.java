@@ -46,6 +46,14 @@ public class VocabularySectionSelected extends AppCompatActivity {
                     initializeWords(englishWords, "vocabulary/A1/greetings/greetings_english.txt");
                     initializeWords(russianWords, "vocabulary/A1/greetings/greetings_russian.txt");
                     break;
+                case VocabularyA1.GEOGRAPHY:
+                    initializeWords(englishWords, "vocabulary/A1/geography/geography_english.txt");
+                    initializeWords(russianWords, "vocabulary/A1/geography/geography_russian.txt");
+                    break;
+                case VocabularyA1.COLORS:
+                    initializeWords(englishWords, "vocabulary/A1/colors/colors_english.txt");
+                    initializeWords(russianWords, "vocabulary/A1/colors/colors_russian.txt");
+                    break;
                 case VocabularyA1.THINGS:
                     initializeWords(englishWords, "vocabulary/A1/things/things_english.txt");
                     initializeWords(russianWords, "vocabulary/A1/things/things_russian.txt");
@@ -54,9 +62,9 @@ public class VocabularySectionSelected extends AppCompatActivity {
                     initializeWords(englishWords, "vocabulary/A1/food/food_english.txt");
                     initializeWords(russianWords, "vocabulary/A1/food/food_russian.txt");
                     break;
-                case VocabularyA1.GEOGRAPHY:
-                    initializeWords(englishWords, "vocabulary/A1/geography/geography_english.txt");
-                    initializeWords(russianWords, "vocabulary/A1/geography/geography_russian.txt");
+                case VocabularyA1.PRODUCTS:
+                    initializeWords(englishWords, "vocabulary/A1/products/products_english.txt");
+                    initializeWords(russianWords, "vocabulary/A1/products/products_russian.txt");
                     break;
                 case VocabularyA1.HOME:
                     initializeWords(englishWords, "vocabulary/A1/home/home_english.txt");
@@ -69,10 +77,6 @@ public class VocabularySectionSelected extends AppCompatActivity {
                 case VocabularyA1.WEATHER:
                     initializeWords(englishWords, "vocabulary/A1/weather/weather_english.txt");
                     initializeWords(russianWords, "vocabulary/A1/weather/weather_russian.txt");
-                    break;
-                case VocabularyA1.COLORS:
-                    initializeWords(englishWords, "vocabulary/A1/colors/colors_english.txt");
-                    initializeWords(russianWords, "vocabulary/A1/colors/colors_russian.txt");
                     break;
                 case VocabularyA2.NATURE:
                     initializeWords(englishWords, "vocabulary/A2/nature/nature_english.txt");
@@ -117,7 +121,6 @@ public class VocabularySectionSelected extends AppCompatActivity {
 
             }
         }
-
 
         for (int i = 0; i < englishWords.size(); i++)
             vocabularyModel.add(new VocabularySelectionModel(englishWords.get(i),
