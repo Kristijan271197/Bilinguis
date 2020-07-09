@@ -45,59 +45,68 @@ public class ImageGrammarFragment extends Fragment {
         sixthFrameTextView = view.findViewById(R.id.sixth_linear_text);
 
         int name;
+        boolean a1;
 
         if (this.getArguments() != null) {
             name = this.getArguments().getInt("name");
+            a1 = this.getArguments().getBoolean("a1");
 
-            if (name == 3) {
-                enterText("grammar/A1/plural.txt", 1);
-                enterText("grammar/A1/plural_left_table.txt", true, 1);
-                enterText("grammar/A1/plural_right_table.txt", false, 1);
-            } else if (name == 5) {
-                firstTextView.append("Have/has got – Иметь (Has got используем только когда он, она или оно)");
-                secondTextView.append("Отрицание");
-                thirdTextView.append("Вопрос");
-                enterText("grammar/A1/to_have_first_table_left.txt", true, 1);
-                enterText("grammar/A1/to_have_first_table_right.txt", false, 1);
-                enterText("grammar/A1/to_have_second_table_left.txt", true, 2);
-                enterText("grammar/A1/to_have_second_table_right.txt", false, 2);
-                enterText("grammar/A1/to_have_third_table_left.txt", true, 3);
-                enterText("grammar/A1/to_have_third_table_right.txt", false, 3);
-                secondTextView.setVisibility(View.VISIBLE);
-                thirdTextView.setVisibility(View.VISIBLE);
-                thirdFrameTextView.setVisibility(View.VISIBLE);
-                fourthFrameTextView.setVisibility(View.VISIBLE);
-                fifthFrameTextView.setVisibility(View.VISIBLE);
-                sixthFrameTextView.setVisibility(View.VISIBLE);
-            } else if (name == 6) {
-                enterText("grammar/A1/to_be_first_text.txt", 1);
-                enterText("grammar/A1/to_be_second_text.txt", 2);
-                enterText("grammar/A1/to_be_first_table_left.txt", true, 1);
-                enterText("grammar/A1/to_be_first_table_right.txt", false, 1);
-                secondTextView.setVisibility(View.VISIBLE);
-            } else if (name == 7) {
-                enterText("grammar/A1/verbs_table_left.txt", true, 1);
-                enterText("grammar/A1/verbs_table_right.txt", false, 1);
-            } else if (name == 8) {
-                enterText("grammar/A1/present_simple_first_text.txt", 1);
-                enterText("grammar/A1/present_simple_second_text.txt", 2);
-                enterText("grammar/A1/present_simple_first_table_left.txt", true, 1);
-                enterText("grammar/A1/present_simple_first_table_right.txt", false, 1);
-                enterText("grammar/A1/present_simple_second_table_left.txt", true, 2);
-                enterText("grammar/A1/present_simple_second_table_right.txt", false, 2);
-                secondTextView.setVisibility(View.VISIBLE);
-                thirdFrameTextView.setVisibility(View.VISIBLE);
-                fourthFrameTextView.setVisibility(View.VISIBLE);
-            } else if (name == 9) {
-                enterText("grammar/A1/present_continuous_first_text.txt", 1);
-                enterText("grammar/A1/present_continuous_second_text.txt", 2);
-                enterText("grammar/A1/present_continuous_first_table_left.txt", true, 1);
-                enterText("grammar/A1/present_continuous_first_table_right.txt", false, 1);
-                enterText("grammar/A1/present_continuous_second_table_left.txt", true, 2);
-                enterText("grammar/A1/present_continuous_second_table_right.txt", false, 2);
-                secondTextView.setVisibility(View.VISIBLE);
-                thirdFrameTextView.setVisibility(View.VISIBLE);
-                fourthFrameTextView.setVisibility(View.VISIBLE);
+            if (a1) {
+                if (name == 3) {
+                    enterText("grammar/A1/plural.txt", 1);
+                    enterText("grammar/A1/plural_left_table.txt", true, 1);
+                    enterText("grammar/A1/plural_right_table.txt", false, 1);
+                } else if (name == 5) {
+                    firstTextView.append("Have/has got – Иметь (Has got используем только когда он, она или оно)");
+                    secondTextView.append("Отрицание");
+                    thirdTextView.append("Вопрос");
+                    enterText("grammar/A1/to_have_first_table_left.txt", true, 1);
+                    enterText("grammar/A1/to_have_first_table_right.txt", false, 1);
+                    enterText("grammar/A1/to_have_second_table_left.txt", true, 2);
+                    enterText("grammar/A1/to_have_second_table_right.txt", false, 2);
+                    enterText("grammar/A1/to_have_third_table_left.txt", true, 3);
+                    enterText("grammar/A1/to_have_third_table_right.txt", false, 3);
+                    secondTextView.setVisibility(View.VISIBLE);
+                    thirdTextView.setVisibility(View.VISIBLE);
+                    thirdFrameTextView.setVisibility(View.VISIBLE);
+                    fourthFrameTextView.setVisibility(View.VISIBLE);
+                    fifthFrameTextView.setVisibility(View.VISIBLE);
+                    sixthFrameTextView.setVisibility(View.VISIBLE);
+                } else if (name == 6) {
+                    enterText("grammar/A1/to_be_first_text.txt", 1);
+                    enterText("grammar/A1/to_be_second_text.txt", 2);
+                    enterText("grammar/A1/to_be_first_table_left.txt", true, 1);
+                    enterText("grammar/A1/to_be_first_table_right.txt", false, 1);
+                    secondTextView.setVisibility(View.VISIBLE);
+                } else if (name == 7) {
+                    enterText("grammar/A1/verbs_table_left.txt", true, 1);
+                    enterText("grammar/A1/verbs_table_right.txt", false, 1);
+                } else if (name == 8) {
+                    enterText("grammar/A1/present_simple_first_text.txt", 1);
+                    enterText("grammar/A1/present_simple_second_text.txt", 2);
+                    enterText("grammar/A1/present_simple_first_table_left.txt", true, 1);
+                    enterText("grammar/A1/present_simple_first_table_right.txt", false, 1);
+                    enterText("grammar/A1/present_simple_second_table_left.txt", true, 2);
+                    enterText("grammar/A1/present_simple_second_table_right.txt", false, 2);
+                    secondTextView.setVisibility(View.VISIBLE);
+                    thirdFrameTextView.setVisibility(View.VISIBLE);
+                    fourthFrameTextView.setVisibility(View.VISIBLE);
+                } else if (name == 9) {
+                    enterText("grammar/A1/present_continuous_first_text.txt", 1);
+                    enterText("grammar/A1/present_continuous_second_text.txt", 2);
+                    enterText("grammar/A1/present_continuous_first_table_left.txt", true, 1);
+                    enterText("grammar/A1/present_continuous_first_table_right.txt", false, 1);
+                    enterText("grammar/A1/present_continuous_second_table_left.txt", true, 2);
+                    enterText("grammar/A1/present_continuous_second_table_right.txt", false, 2);
+                    secondTextView.setVisibility(View.VISIBLE);
+                    thirdFrameTextView.setVisibility(View.VISIBLE);
+                    fourthFrameTextView.setVisibility(View.VISIBLE);
+                }
+            } else{
+                if(name == 1){
+                    firstTextView.append("По-другому множественное число образуется если слово:");
+
+                }
             }
 
 

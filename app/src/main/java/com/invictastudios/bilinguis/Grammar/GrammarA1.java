@@ -49,6 +49,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra("name", 1);
             intent.putExtra("image", false);
+            intent.putExtra("a1",true);
             startActivity(intent);
         });
 
@@ -56,6 +57,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra("name", 2);
             intent.putExtra("image", false);
+            intent.putExtra("a1",true);
             startActivity(intent);
         });
 
@@ -63,6 +65,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra("name", 4);
             intent.putExtra("image", false);
+            intent.putExtra("a1",true);
             startActivity(intent);
         });
 
@@ -70,6 +73,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra("name", 5);
             intent.putExtra("image", true);
+            intent.putExtra("a1",true);
             startActivity(intent);
         });
 
@@ -77,6 +81,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra("name", 3);
             intent.putExtra("image", true);
+            intent.putExtra("a1",true);
             startActivity(intent);
         });
 
@@ -84,6 +89,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra("name", 7);
             intent.putExtra("image", true);
+            intent.putExtra("a1",true);
             startActivity(intent);
         });
 
@@ -91,6 +97,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra("name", 8);
             intent.putExtra("image", true);
+            intent.putExtra("a1",true);
             startActivity(intent);
         });
 
@@ -98,6 +105,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra("name", 10);
             intent.putExtra("image", false);
+            intent.putExtra("a1",true);
             startActivity(intent);
         });
 
@@ -106,6 +114,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra("name", 6);
             intent.putExtra("image", true);
+            intent.putExtra("a1",true);
             startActivity(intent);
         });
 
@@ -113,6 +122,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra("name", 9);
             intent.putExtra("image", true);
+            intent.putExtra("a1",true);
             startActivity(intent);
         });
 

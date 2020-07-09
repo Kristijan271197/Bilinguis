@@ -5,10 +5,160 @@
     android:layout_height="match_parent"
     tools:context=".Grammar.GrammarA2">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/plural_exceptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Plural Exceptions"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/verbs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/plural_exceptions"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Verbs"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/past_simple_tense_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/verbs"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Past Simple Tense"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/personal_pronouns_2_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/past_simple_tense_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Personal Pronouns Part 2"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/modal_verbs_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/personal_pronouns_2_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Modal Verbs"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/there_is_are_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/modal_verbs_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="There is/There are"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/future_simple_tense_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/there_is_are_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Future Simple Tense"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/modals_must_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/future_simple_tense_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Modals Must/Mustn't"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/prepositions_of_time_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/modals_must_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Prepositions of Time"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/prepositions_of_place_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/prepositions_of_time_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Prepositions of Place"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/future_be_going_to_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/prepositions_of_place_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Future: Be Going To"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
 
 </FrameLayout>

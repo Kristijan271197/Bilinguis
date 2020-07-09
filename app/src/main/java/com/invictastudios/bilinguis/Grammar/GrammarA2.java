@@ -1,16 +1,29 @@
 package com.invictastudios.bilinguis.Grammar;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import androidx.fragment.app.Fragment;
 
 import com.invictastudios.bilinguis.R;
 
 public class GrammarA2 extends Fragment {
+
+    private Button pluralExceptionsButton;
+    private Button verbsButton;
+    private Button pastSimpleTenseButton;
+    private Button personalPronounsPartTwoButton;
+    private Button modalVerbsButton;
+    private Button thereIsAreButton;
+    private Button futureSimpleTenseButton;
+    private Button modalsMustButton;
+    private Button prepositionsOfTimeButton;
+    private Button prepositionsOfPlaceButton;
+    private Button futureBeGoingToButton;
 
     public GrammarA2() {
     }
@@ -18,7 +31,108 @@ public class GrammarA2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_grammar_a2, container, false);
 
-        return inflater.inflate(R.layout.fragment_grammar_a2, container, false);
+        pluralExceptionsButton = view.findViewById(R.id.plural_exceptions);
+        verbsButton = view.findViewById(R.id.verbs);
+        pastSimpleTenseButton = view.findViewById(R.id.past_simple_tense_button);
+        personalPronounsPartTwoButton = view.findViewById(R.id.personal_pronouns_2_button);
+        modalVerbsButton = view.findViewById(R.id.modal_verbs_button);
+        thereIsAreButton = view.findViewById(R.id.there_is_are_button);
+        futureSimpleTenseButton = view.findViewById(R.id.future_simple_tense_button);
+        modalsMustButton = view.findViewById(R.id.modals_must_button);
+        prepositionsOfTimeButton = view.findViewById(R.id.prepositions_of_time_button);
+        prepositionsOfPlaceButton = view.findViewById(R.id.prepositions_of_place_button);
+        futureBeGoingToButton = view.findViewById(R.id.future_be_going_to_button);
+
+        pluralExceptionsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
+            intent.putExtra("name", 1);
+            intent.putExtra("image", true);
+            intent.putExtra("a1", false);
+            startActivity(intent);
+        });
+
+        verbsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
+            intent.putExtra("name", 2);
+            intent.putExtra("image", true);
+            intent.putExtra("a1", false);
+            startActivity(intent);
+        });
+
+        pastSimpleTenseButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
+            intent.putExtra("name", 3);
+            intent.putExtra("image", true);
+            intent.putExtra("a1", false);
+            startActivity(intent);
+        });
+
+        personalPronounsPartTwoButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
+            intent.putExtra("name", 4);
+            intent.putExtra("image", false);
+            intent.putExtra("a1", false);
+            startActivity(intent);
+        });
+
+        modalVerbsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
+            intent.putExtra("name", 5);
+            intent.putExtra("image", false);
+            intent.putExtra("a1", false);
+            startActivity(intent);
+        });
+
+        thereIsAreButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
+            intent.putExtra("name", 6);
+            intent.putExtra("image", false);
+            intent.putExtra("a1", false);
+            startActivity(intent);
+        });
+
+        futureSimpleTenseButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
+            intent.putExtra("name", 7);
+            intent.putExtra("image", true);
+            intent.putExtra("a1", false);
+            startActivity(intent);
+        });
+
+        modalsMustButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
+            intent.putExtra("name", 8);
+            intent.putExtra("image", true);
+            intent.putExtra("a1", false);
+            startActivity(intent);
+        });
+
+        prepositionsOfTimeButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
+            intent.putExtra("name", 9);
+            intent.putExtra("image", false);
+            intent.putExtra("a1", false);
+            startActivity(intent);
+        });
+
+        prepositionsOfPlaceButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
+            intent.putExtra("name", 10);
+            intent.putExtra("image", false);
+            intent.putExtra("a1", false);
+            startActivity(intent);
+        });
+
+        futureBeGoingToButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
+            intent.putExtra("name", 11);
+            intent.putExtra("image", true);
+            intent.putExtra("a1", false);
+            startActivity(intent);
+        });
+
+        return view;
     }
 }
