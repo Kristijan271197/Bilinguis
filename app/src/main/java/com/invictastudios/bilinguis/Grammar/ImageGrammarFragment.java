@@ -102,16 +102,53 @@ public class ImageGrammarFragment extends Fragment {
                     thirdFrameTextView.setVisibility(View.VISIBLE);
                     fourthFrameTextView.setVisibility(View.VISIBLE);
                 }
-            } else{
-                if(name == 1){
+            } else {
+                if (name == 1) {
                     firstTextView.append("По-другому множественное число образуется если слово:");
-
+                    enterText("grammar/A2/plural_exceptions_second_text.txt", 2);
+                    enterText("grammar/A2/plural_exceptions_table_left.txt", true, 1);
+                    enterText("grammar/A2/plural_exceptions_table_right.txt", false, 1);
+                    secondTextView.setVisibility(View.VISIBLE);
+                } else if (name == 2) {
+                    enterText("grammar/A2/verbs_table_left.txt", true, 1);
+                    enterText("grammar/A2/verbs_table_right.txt", false, 1);
+                } else if (name == 3) {
+                    enterText("grammar/A2/past_simple_first_text.txt", 1);
+                    enterText("grammar/A2/past_simple_first_table_left.txt", true, 1);
+                    enterText("grammar/A2/past_simple_first_table_right.txt", false, 1);
+                    enterText("grammar/A2/past_simple_second_text.txt", 2);
+                    enterText("grammar/A2/past_simple_second_table_left.txt", true, 2);
+                    enterText("grammar/A2/past_simple_second_table_right.txt", false, 2);
+                    secondTextView.setVisibility(View.VISIBLE);
+                    thirdFrameTextView.setVisibility(View.VISIBLE);
+                    fourthFrameTextView.setVisibility(View.VISIBLE);
+                } else if (name == 7) {
+                    enterText("grammar/A2/future_simple_first_text.txt", 1);
+                    enterText("grammar/A2/future_simple_first_table_left.txt", true, 1);
+                    enterText("grammar/A2/future_simple_first_table_right.txt", false, 1);
+                    enterText("grammar/A2/future_simple_second_text.txt", 2);
+                    enterText("grammar/A2/future_simple_second_table_left.txt", true, 2);
+                    enterText("grammar/A2/future_simple_second_table_right.txt", false, 2);
+                    secondTextView.setVisibility(View.VISIBLE);
+                    thirdFrameTextView.setVisibility(View.VISIBLE);
+                    fourthFrameTextView.setVisibility(View.VISIBLE);
+                } else if (name == 8) {
+                    enterText("grammar/A2/modals_must_first_text.txt", 1);
+                    enterText("grammar/A2/modals_must_table_left.txt", true, 1);
+                    enterText("grammar/A2/modals_must_table_right.txt", false, 1);
+                    enterText("grammar/A2/modals_must_second_text.txt", 2);
+                    secondTextView.setVisibility(View.VISIBLE);
+                } else if (name == 11) {
+                    enterText("grammar/A2/future_be_going_to_first_text.txt", 1);
+                    enterText("grammar/A2/future_be_going_to_table_left.txt", true, 1);
+                    enterText("grammar/A2/future_be_going_to_table_right.txt", false, 1);
+                    enterText("grammar/A2/future_be_going_to_second_text.txt", 2);
+                    secondTextView.setVisibility(View.VISIBLE);
                 }
             }
 
 
         }
-
 
         return view;
     }

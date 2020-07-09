@@ -20,7 +20,7 @@
                 android:fontFamily="@font/open_sans"
                 android:gravity="start"
                 android:lineSpacingExtra="4dp"
-                android:padding="8dp"
+                android:padding="16dp"
                 android:text=""
                 android:textColor="@android:color/black"
                 android:textSize="14sp" />
@@ -45,7 +45,7 @@
                     android:fontFamily="@font/open_sans"
                     android:gravity="start"
                     android:lineSpacingExtra="4dp"
-                    android:padding="8dp"
+                    android:padding="16dp"
                     android:text=""
                     android:textColor="@android:color/black"
                     android:textSize="14sp" />
@@ -60,7 +60,7 @@
                     android:fontFamily="@font/open_sans"
                     android:gravity="start"
                     android:lineSpacingExtra="4dp"
-                    android:padding="8dp"
+                    android:padding="16dp"
                     android:text=""
                     android:textColor="@android:color/black"
                     android:textSize="14sp" />
@@ -74,7 +74,7 @@
                 android:fontFamily="@font/open_sans"
                 android:gravity="start"
                 android:lineSpacingExtra="4dp"
-                android:padding="8dp"
+                android:padding="16dp"
                 android:text=""
                 android:textColor="@android:color/black"
                 android:textSize="14sp"
@@ -100,7 +100,7 @@
                     android:fontFamily="@font/open_sans"
                     android:gravity="start"
                     android:lineSpacingExtra="4dp"
-                    android:padding="8dp"
+                    android:padding="16dp"
                     android:text=""
                     android:textColor="@android:color/black"
                     android:textSize="14sp"
@@ -116,7 +116,7 @@
                     android:fontFamily="@font/open_sans"
                     android:gravity="start"
                     android:lineSpacingExtra="4dp"
-                    android:padding="8dp"
+                    android:padding="16dp"
                     android:text=""
                     android:textColor="@android:color/black"
                     android:textSize="14sp"
@@ -131,7 +131,7 @@
                 android:fontFamily="@font/open_sans"
                 android:gravity="start"
                 android:lineSpacingExtra="4dp"
-                android:padding="8dp"
+                android:padding="16dp"
                 android:text=""
                 android:textColor="@android:color/black"
                 android:textSize="14sp"
@@ -156,7 +156,7 @@
                     android:fontFamily="@font/open_sans"
                     android:gravity="start"
                     android:lineSpacingExtra="4dp"
-                    android:padding="8dp"
+                    android:padding="16dp"
                     android:text=""
                     android:textColor="@android:color/black"
                     android:textSize="14sp"
@@ -172,7 +172,7 @@
                     android:fontFamily="@font/open_sans"
                     android:gravity="start"
                     android:lineSpacingExtra="4dp"
-                    android:padding="8dp"
+                    android:padding="16dp"
                     android:text=""
                     android:textColor="@android:color/black"
                     android:textSize="14sp"
@@ -180,7 +180,6 @@
             </LinearLayout>
 
         </RelativeLayout>
-
 
     </ScrollView>
 
