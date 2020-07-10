@@ -9,17 +9,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/open_sans"
-            android:gravity="start"
-            android:lineSpacingExtra="4dp"
-            android:padding="16dp"
-            android:text=""
-            android:textColor="@android:color/black"
-            android:textSize="14sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:gravity="start"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/exercise_button_no_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view"
+                android:layout_margin="16dp"
+                android:text="Exercise" />
+        </RelativeLayout>
+
+
     </ScrollView>
+
 
 </FrameLayout>

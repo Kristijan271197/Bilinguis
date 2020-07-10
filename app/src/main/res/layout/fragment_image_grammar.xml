@@ -179,6 +179,14 @@
                     android:visibility="invisible" />
             </LinearLayout>
 
+            <Button
+                android:id="@+id/exercise_button_image"
+                android:layout_width="match_parent"
+                android:layout_margin="16dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/third_linear_layout"
+                android:text="Exercise" />
+
         </RelativeLayout>
 
     </ScrollView>
