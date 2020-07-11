@@ -1,12 +1,16 @@
 package com.invictastudios.bilinguis.Grammar;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.invictastudios.bilinguis.R;
 
@@ -28,6 +32,7 @@ public class GrammarExercise extends AppCompatActivity {
     private Button answerTwoButton;
     private Button answerThreeButton;
     private Button answerFourButton;
+    private CardView cardView;
     private List<String> questions;
     private List<String> allAnswers;
     private List<String> answers;
@@ -35,7 +40,6 @@ public class GrammarExercise extends AppCompatActivity {
     private int correctAnswers;
     private int wrongAnswers;
     private int questionNumber;
-    private int randomAnswer;
     private int randomButton;
 
     @Override
@@ -52,6 +56,7 @@ public class GrammarExercise extends AppCompatActivity {
         answerTwoButton = findViewById(R.id.answer_two_button);
         answerThreeButton = findViewById(R.id.answer_three_button);
         answerFourButton = findViewById(R.id.answer_four_button);
+        cardView = findViewById(R.id.cardView);
         questions = new ArrayList<>();
         answers = new ArrayList<>();
         allAnswers = new ArrayList<>();
@@ -71,7 +76,6 @@ public class GrammarExercise extends AppCompatActivity {
                     setAnswerButtonsText();
                 }
             }
-
         }
 
         questionNumberTextView.setText(String.format(Locale.ENGLISH, "Question %d/%d", questionNumber + 1, questions.size()));
@@ -79,81 +83,85 @@ public class GrammarExercise extends AppCompatActivity {
 
         answerOneButton.setOnClickListener(v -> {
             String answer = answerOneButton.getText().toString();
-            if (answer.equals(answers.get(questionNumber)))
-                correctAnswer(true);
-            else
-                correctAnswer(false);
+            if (answer.equals(answers.get(questionNumber))) {
+                correctAnswers++;
+                fadeView();
+            } else {
+                wrongAnswers++;
+                rightAnswer();
+                shakeAnimation();
+            }
         });
 
         answerTwoButton.setOnClickListener(v -> {
             String answer = answerTwoButton.getText().toString();
-            if (answer.equals(answers.get(questionNumber)))
-                correctAnswer(true);
-            else
-                correctAnswer(false);
+            if (answer.equals(answers.get(questionNumber))) {
+                correctAnswers++;
+                fadeView();
+            } else {
+                wrongAnswers++;
+                rightAnswer();
+                shakeAnimation();
+            }
         });
 
         answerThreeButton.setOnClickListener(v -> {
             String answer = answerThreeButton.getText().toString();
-            if (answer.equals(answers.get(questionNumber)))
-                correctAnswer(true);
-            else
-                correctAnswer(false);
+            if (answer.equals(answers.get(questionNumber))) {
+                correctAnswers++;
+                fadeView();
+            } else {
+                wrongAnswers++;
+                rightAnswer();
+                shakeAnimation();
+            }
         });
 
         answerFourButton.setOnClickListener(v -> {
             String answer = answerFourButton.getText().toString();
-            if (answer.equals(answers.get(questionNumber)))
-                correctAnswer(true);
-            else
-                correctAnswer(false);
+            if (answer.equals(answers.get(questionNumber))) {
+                correctAnswers++;
+                fadeView();
+            } else {
+                wrongAnswers++;
+                rightAnswer();
+                shakeAnimation();
+            }
         });
-
-
     }
 
-    private void correctAnswer(boolean correct) {
-        if (correct) {
-            correctAnswers++;
-            Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show();
-        } else {
-            wrongAnswers++;
-            Toast.makeText(this, "Wrong", Toast.LENGTH_SHORT).show();
-        }
-
+    private void nextQuestion() {
         if (questionNumber + 1 < questions.size()) {
             questionNumber++;
             setAnswerButtonsText();
             questionNumberTextView.setText(String.format(Locale.ENGLISH, "Question %d/%d", questionNumber + 1, questions.size()));
             exerciseTextView.setText(questions.get(questionNumber));
-        } else{
+        } else {
             answerOneButton.setVisibility(View.INVISIBLE);
             answerTwoButton.setVisibility(View.INVISIBLE);
             answerThreeButton.setVisibility(View.INVISIBLE);
             answerFourButton.setVisibility(View.INVISIBLE);
             questionNumberTextView.setVisibility(View.INVISIBLE);
-            exerciseTitleTextView.setText(String.format(Locale.ENGLISH,"Results: "));
+            exerciseTitleTextView.setText(String.format(Locale.ENGLISH, "Results: "));
             exerciseTitleTextView.setTextSize(18);
-            exerciseTextView.setText(String.format(Locale.ENGLISH,"Correct: %d \nIncorrect: %d",correctAnswers,wrongAnswers));
+            exerciseTextView.setText(String.format(Locale.ENGLISH, "Correct: %d \nIncorrect: %d", correctAnswers, wrongAnswers));
         }
-
-
-
     }
 
     private void setAnswerButtonsText() {
         Random random = new Random();
         randomButton = random.nextInt(4);
-        Toast.makeText(this, "Text" + randomButton, Toast.LENGTH_SHORT).show();
-        randomAnswer = random.nextInt(allAnswers.size());
-        if(questionNumber == 0)
-            allAnswers.remove(5);
-        else if(questionNumber == 1)
-            allAnswers.remove(3);
-        else if(questionNumber == 2)
-            allAnswers.remove(7);
-        else if(questionNumber == 3)
-            allAnswers.remove(1);
+
+        if (questionNumber == 0)
+            allAnswers.remove(answers.get(questionNumber));
+        else if (questionNumber == 1)
+            allAnswers.remove(answers.get(questionNumber));
+        else if (questionNumber == 2)
+            allAnswers.remove(answers.get(questionNumber));
+        else if (questionNumber == 3)
+            allAnswers.remove(answers.get(questionNumber));
+
+        int randomAnswer = random.nextInt(allAnswers.size());
 
         if (randomButton == 0)
             answerOneButton.setText(answers.get(questionNumber));
@@ -186,6 +194,17 @@ public class GrammarExercise extends AppCompatActivity {
         allAnswers.addAll(allAnswersCopy);
     }
 
+    private void rightAnswer() {
+        if (randomButton == 0)
+            answerOneButton.setBackgroundColor(Color.GREEN);
+        if (randomButton == 1)
+            answerTwoButton.setBackgroundColor(Color.GREEN);
+        if (randomButton == 2)
+            answerThreeButton.setBackgroundColor(Color.GREEN);
+        if (randomButton == 3)
+            answerFourButton.setBackgroundColor(Color.GREEN);
+    }
+
     private void fillArray(String path, List<String> list) {
         try (BufferedReader reader = new BufferedReader(
                 new InputStreamReader(getAssets().open(path), StandardCharsets.UTF_8))) {
@@ -197,5 +216,81 @@ public class GrammarExercise extends AppCompatActivity {
             e.printStackTrace();
         }
 
+    }
+
+    private void fadeView() {
+        AlphaAnimation alphaAnimation = new AlphaAnimation(1.0f, 0.0f);
+        alphaAnimation.setDuration(400);
+        alphaAnimation.setRepeatCount(2);
+        alphaAnimation.setRepeatMode(Animation.REVERSE);
+
+        cardView.startAnimation(alphaAnimation);
+
+        alphaAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                cardView.setCardBackgroundColor(Color.GREEN);
+                answerOneButton.setEnabled(false);
+                answerTwoButton.setEnabled(false);
+                answerThreeButton.setEnabled(false);
+                answerFourButton.setEnabled(false);
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                cardView.setCardBackgroundColor(Color.WHITE);
+                nextQuestion();
+                answerOneButton.setBackgroundColor(Color.WHITE);
+                answerTwoButton.setBackgroundColor(Color.WHITE);
+                answerThreeButton.setBackgroundColor(Color.WHITE);
+                answerFourButton.setBackgroundColor(Color.WHITE);
+                answerOneButton.setEnabled(true);
+                answerTwoButton.setEnabled(true);
+                answerThreeButton.setEnabled(true);
+                answerFourButton.setEnabled(true);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+            }
+        });
+
+    }
+
+    private void shakeAnimation() {
+        Animation shake = AnimationUtils.loadAnimation(GrammarExercise.this,
+                R.anim.shake_animation);
+
+        cardView.startAnimation(shake);
+
+        shake.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                cardView.setCardBackgroundColor(Color.RED);
+                answerOneButton.setEnabled(false);
+                answerTwoButton.setEnabled(false);
+                answerThreeButton.setEnabled(false);
+                answerFourButton.setEnabled(false);
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                cardView.setCardBackgroundColor(Color.WHITE);
+                nextQuestion();
+                answerOneButton.setBackgroundColor(Color.WHITE);
+                answerTwoButton.setBackgroundColor(Color.WHITE);
+                answerThreeButton.setBackgroundColor(Color.WHITE);
+                answerFourButton.setBackgroundColor(Color.WHITE);
+                answerOneButton.setEnabled(true);
+                answerTwoButton.setEnabled(true);
+                answerThreeButton.setEnabled(true);
+                answerFourButton.setEnabled(true);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+            }
+        });
     }
 }
