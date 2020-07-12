@@ -20,9 +20,11 @@ import java.nio.charset.StandardCharsets;
 public class NoImageGrammarFragment extends Fragment {
 
     private TextView textView;
-    private Button exerciseButtonNoImage;
-    int name;
-    boolean a1;
+    private Button exerciseOneButtonNoImage;
+    private Button exerciseTwoButtonNoImage;
+    private Button exerciseThreeButtonNoImage;
+    int exerciseName;
+    int exerciseLevel;
 
     public NoImageGrammarFragment() {
 
@@ -33,40 +35,59 @@ public class NoImageGrammarFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_no_image_grammar, container, false);
 
         textView = view.findViewById(R.id.text_view);
-        exerciseButtonNoImage = view.findViewById(R.id.exercise_button_no_image);
+        exerciseOneButtonNoImage = view.findViewById(R.id.exercise_one_button_no_image);
+        exerciseTwoButtonNoImage = view.findViewById(R.id.exercise_two_button_no_image);
+        exerciseThreeButtonNoImage = view.findViewById(R.id.exercise_three_button_no_image);
         if (this.getArguments() != null) {
-            name = this.getArguments().getInt("name");
-            a1 = this.getArguments().getBoolean("a1");
+            exerciseName = this.getArguments().getInt(GrammarA1.EXERCISE_NAME);
+            exerciseLevel = this.getArguments().getInt(GrammarA1.EXERCISE_LEVEL);
         }
 
 
-        if (a1) {
-            if (name == 1)
+        if (exerciseLevel == 1) {
+            if (exerciseName == 1)
                 enterText("grammar/A1/personal_pronouns.txt");
-            else if (name == 2)
+            else if (exerciseName == 2)
                 enterText("grammar/A1/english_articles.txt");
-            else if (name == 4)
+            else if (exerciseName == 4)
                 enterText("grammar/A1/demonstrative_pronouns.txt");
-            else if (name == 10)
+            else if (exerciseName == 10)
                 enterText("grammar/A1/quantifiers_text.txt");
-        } else {
-            if (name == 4)
+        } else if (exerciseLevel == 2) {
+            if (exerciseName == 4)
                 enterText("grammar/A2/personal_pronouns_part_two.txt");
-            else if (name == 5)
+            else if (exerciseName == 5)
                 enterText("grammar/A2/modal_verbs.txt");
-            else if (name == 6)
+            else if (exerciseName == 6)
                 enterText("grammar/A2/there_is_are.txt");
-            else if (name == 9)
+            else if (exerciseName == 9)
                 enterText("grammar/A2/prepositions_of_time.txt");
-            else if (name == 10)
+            else if (exerciseName == 10)
                 enterText("grammar/A2/prepositions_of_place.txt");
         }
 
 
-        exerciseButtonNoImage.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), GrammarExercise.class);
-            intent.putExtra("name", name);
-            intent.putExtra("a1", a1);
+        exerciseOneButtonNoImage.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
+            intent.putExtra(GrammarA1.EXERCISE_NUMBER, 1);
+            startActivity(intent);
+        });
+
+        exerciseTwoButtonNoImage.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
+            intent.putExtra(GrammarA1.EXERCISE_NUMBER, 2);
+            startActivity(intent);
+        });
+
+        exerciseThreeButtonNoImage.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
+            intent.putExtra(GrammarA1.EXERCISE_NUMBER, 3);
             startActivity(intent);
         });
 

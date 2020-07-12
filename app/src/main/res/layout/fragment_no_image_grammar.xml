@@ -11,7 +11,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/text_view"
@@ -26,12 +26,26 @@
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/exercise_button_no_image"
+                android:id="@+id/exercise_one_button_no_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_view"
                 android:layout_margin="16dp"
-                android:text="Exercise" />
+                android:text="Exercise 1" />
+            <Button
+                android:id="@+id/exercise_two_button_no_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exercise_one_button_no_image"
+                android:layout_margin="16dp"
+                android:text="Exercise 2" />
+            <Button
+                android:id="@+id/exercise_three_button_no_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exercise_two_button_no_image"
+                android:layout_margin="16dp"
+                android:text="Exercise 3" />
         </RelativeLayout>
 
 

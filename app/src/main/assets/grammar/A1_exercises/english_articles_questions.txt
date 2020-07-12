@@ -1,0 +1,9 @@
+___ lamp
+___ apple
+___ box
+___ onion
+___ sofa
+___ pear
+___ melon
+___ magazine
+___ chair

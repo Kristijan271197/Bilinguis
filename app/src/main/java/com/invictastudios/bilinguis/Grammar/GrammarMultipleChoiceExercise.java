@@ -2,6 +2,7 @@ package com.invictastudios.bilinguis.Grammar;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -23,7 +24,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
-public class GrammarExercise extends AppCompatActivity {
+public class GrammarMultipleChoiceExercise extends AppCompatActivity {
 
     private TextView questionNumberTextView;
     private TextView exerciseTitleTextView;
@@ -37,15 +38,20 @@ public class GrammarExercise extends AppCompatActivity {
     private List<String> allAnswers;
     private List<String> answers;
     private List<String> allAnswersCopy;
+    private int exerciseName;
+    private int exerciseNumber;
     private int correctAnswers;
     private int wrongAnswers;
     private int questionNumber;
     private int randomButton;
+    private int numberOfButtons;
+    private int exerciseLevel;
+    private Random random;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grammar_exercise);
+        setContentView(R.layout.activity_grammar_multiplechoice_exercise);
 
         Bundle bundle = getIntent().getExtras();
 
@@ -61,22 +67,92 @@ public class GrammarExercise extends AppCompatActivity {
         answers = new ArrayList<>();
         allAnswers = new ArrayList<>();
         allAnswersCopy = new ArrayList<>();
+        random = new Random();
         questionNumber = 0;
         correctAnswers = 0;
         wrongAnswers = 0;
 
         if (bundle != null) {
-            if (bundle.getBoolean("a1")) {
-                if (bundle.getInt("name") == 1) {
+            exerciseName = bundle.getInt(GrammarA1.EXERCISE_NAME);
+            exerciseLevel = bundle.getInt(GrammarA1.EXERCISE_LEVEL);
+            exerciseNumber = bundle.getInt(GrammarA1.EXERCISE_NUMBER);
+        }
+
+        if (exerciseLevel == 1) {
+            if (exerciseName == 1) {
+                if (exerciseNumber == 1) {
                     exerciseTitleTextView.setText("Попробуйте перевести:");
                     fillArray("grammar/A1_exercises/personal_pronouns_questions.txt", questions);
                     fillArray("grammar/A1_exercises/personal_pronouns_answers.txt", answers);
                     fillArray("grammar/A1_exercises/personal_pronouns_all_answers.txt", allAnswers);
                     fillArray("grammar/A1_exercises/personal_pronouns_all_answers.txt", allAnswersCopy);
+                    numberOfButtons = 4;
+                    setAnswerButtonsText();
+                }
+            } else if (exerciseName == 2) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("a или an?");
+                    fillArray("grammar/A1_exercises/english_articles_questions.txt", questions);
+                    fillArray("grammar/A1_exercises/english_articles_answers.txt", answers);
+                    fillArray("grammar/A1_exercises/english_articles_all_answers.txt", allAnswers);
+                    fillArray("grammar/A1_exercises/english_articles_all_answers.txt", allAnswersCopy);
+                    answerThreeButton.setVisibility(View.INVISIBLE);
+                    answerFourButton.setVisibility(View.INVISIBLE);
+                    numberOfButtons = 2;
+                    setAnswerButtonsText();
+                }
+            } else if (exerciseName == 10) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Much/many?");
+                    fillArray("grammar/A1_exercises/quantifiers_questions_one.txt", questions);
+                    fillArray("grammar/A1_exercises/quantifiers_answers_one.txt", answers);
+                    fillArray("grammar/A1_exercises/quantifiers_all_answers_one.txt", allAnswers);
+                    fillArray("grammar/A1_exercises/quantifiers_all_answers_one.txt", allAnswersCopy);
+                    answerThreeButton.setVisibility(View.INVISIBLE);
+                    answerFourButton.setVisibility(View.INVISIBLE);
+                    numberOfButtons = 2;
+                    setAnswerButtonsText();
+                }
+            }
+        } else if (exerciseLevel == 2) {
+            if (exerciseName == 6) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("There is или There are?");
+                    fillArray("grammar/A2_exercises/there_is_are_questions_one.txt", questions);
+                    fillArray("grammar/A2_exercises/there_is_are_answers_one.txt", answers);
+                    fillArray("grammar/A2_exercises/there_is_are_all_answers_one.txt", allAnswers);
+                    fillArray("grammar/A2_exercises/there_is_are_all_answers_one.txt", allAnswersCopy);
+                    answerThreeButton.setVisibility(View.INVISIBLE);
+                    answerFourButton.setVisibility(View.INVISIBLE);
+                    numberOfButtons = 2;
+                    setAnswerButtonsText();
+                }
+            } else if (exerciseName == 8) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Must или Mustn’t?");
+                    fillArray("grammar/A2_exercises/modals_must_questions_one.txt", questions);
+                    fillArray("grammar/A2_exercises/modals_must_answers_one.txt", answers);
+                    fillArray("grammar/A2_exercises/modals_must_all_answers_one.txt", allAnswers);
+                    fillArray("grammar/A2_exercises/modals_must_all_answers_one.txt", allAnswersCopy);
+                    answerThreeButton.setVisibility(View.INVISIBLE);
+                    answerFourButton.setVisibility(View.INVISIBLE);
+                    numberOfButtons = 2;
+                    setAnswerButtonsText();
+                }
+            } else if (exerciseName == 9) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("At, on или in?");
+                    fillArray("grammar/A2_exercises/prepositions_of_time_questions_one.txt", questions);
+                    fillArray("grammar/A2_exercises/prepositions_of_time_answers_one.txt", answers);
+                    fillArray("grammar/A2_exercises/prepositions_of_time_all_answers_one.txt", allAnswers);
+                    fillArray("grammar/A2_exercises/prepositions_of_time_all_answers_one.txt", allAnswersCopy);
+                    answerFourButton.setVisibility(View.INVISIBLE);
+                    numberOfButtons = 3;
                     setAnswerButtonsText();
                 }
             }
         }
+
 
         questionNumberTextView.setText(String.format(Locale.ENGLISH, "Question %d/%d", questionNumber + 1, questions.size()));
         exerciseTextView.setText(questions.get(questionNumber));
@@ -88,6 +164,7 @@ public class GrammarExercise extends AppCompatActivity {
                 fadeView();
             } else {
                 wrongAnswers++;
+
                 rightAnswer();
                 shakeAnimation();
             }
@@ -112,6 +189,7 @@ public class GrammarExercise extends AppCompatActivity {
                 fadeView();
             } else {
                 wrongAnswers++;
+
                 rightAnswer();
                 shakeAnimation();
             }
@@ -124,6 +202,7 @@ public class GrammarExercise extends AppCompatActivity {
                 fadeView();
             } else {
                 wrongAnswers++;
+
                 rightAnswer();
                 shakeAnimation();
             }
@@ -133,6 +212,7 @@ public class GrammarExercise extends AppCompatActivity {
     private void nextQuestion() {
         if (questionNumber + 1 < questions.size()) {
             questionNumber++;
+
             setAnswerButtonsText();
             questionNumberTextView.setText(String.format(Locale.ENGLISH, "Question %d/%d", questionNumber + 1, questions.size()));
             exerciseTextView.setText(questions.get(questionNumber));
@@ -149,19 +229,12 @@ public class GrammarExercise extends AppCompatActivity {
     }
 
     private void setAnswerButtonsText() {
-        Random random = new Random();
-        randomButton = random.nextInt(4);
 
-        if (questionNumber == 0)
-            allAnswers.remove(answers.get(questionNumber));
-        else if (questionNumber == 1)
-            allAnswers.remove(answers.get(questionNumber));
-        else if (questionNumber == 2)
-            allAnswers.remove(answers.get(questionNumber));
-        else if (questionNumber == 3)
-            allAnswers.remove(answers.get(questionNumber));
+        randomButton = random.nextInt(numberOfButtons);
 
-        int randomAnswer = random.nextInt(allAnswers.size());
+        allAnswers.remove(answers.get(questionNumber));
+
+        int randomAnswer = randomAnswer(allAnswers.size());
 
         if (randomButton == 0)
             answerOneButton.setText(answers.get(questionNumber));
@@ -169,29 +242,43 @@ public class GrammarExercise extends AppCompatActivity {
             answerOneButton.setText(allAnswers.get(randomAnswer));
             allAnswers.remove(randomAnswer);
         }
-        randomAnswer = random.nextInt(allAnswers.size());
+        randomAnswer = randomAnswer(allAnswers.size());
         if (randomButton == 1)
             answerTwoButton.setText(answers.get(questionNumber));
         else {
             answerTwoButton.setText(allAnswers.get(randomAnswer));
             allAnswers.remove(randomAnswer);
         }
-        randomAnswer = random.nextInt(allAnswers.size());
-        if (randomButton == 2)
-            answerThreeButton.setText(answers.get(questionNumber));
-        else {
-            answerThreeButton.setText(allAnswers.get(randomAnswer));
-            allAnswers.remove(randomAnswer);
+        if (numberOfButtons > 2) {
+            randomAnswer = randomAnswer(allAnswers.size());
+            if (randomButton == 2)
+                answerThreeButton.setText(answers.get(questionNumber));
+            else {
+                answerThreeButton.setText(allAnswers.get(randomAnswer));
+                allAnswers.remove(randomAnswer);
+            }
+
+            if (numberOfButtons > 3) {
+                randomAnswer = randomAnswer(allAnswers.size());
+                if (randomButton == 3)
+                    answerFourButton.setText(answers.get(questionNumber));
+                else {
+                    answerFourButton.setText(allAnswers.get(randomAnswer));
+                    allAnswers.remove(randomAnswer);
+                }
+            }
         }
-        randomAnswer = random.nextInt(allAnswers.size());
-        if (randomButton == 3)
-            answerFourButton.setText(answers.get(questionNumber));
-        else {
-            answerFourButton.setText(allAnswers.get(randomAnswer));
-            allAnswers.remove(randomAnswer);
-        }
-        allAnswers.clear();
+
+        if (!allAnswers.isEmpty())
+            allAnswers.clear();
         allAnswers.addAll(allAnswersCopy);
+    }
+
+    private int randomAnswer(int number) {
+        if (number != 0)
+            return random.nextInt(number);
+        else
+            return 1;
     }
 
     private void rightAnswer() {
@@ -203,6 +290,7 @@ public class GrammarExercise extends AppCompatActivity {
             answerThreeButton.setBackgroundColor(Color.GREEN);
         if (randomButton == 3)
             answerFourButton.setBackgroundColor(Color.GREEN);
+
     }
 
     private void fillArray(String path, List<String> list) {
@@ -258,7 +346,7 @@ public class GrammarExercise extends AppCompatActivity {
     }
 
     private void shakeAnimation() {
-        Animation shake = AnimationUtils.loadAnimation(GrammarExercise.this,
+        Animation shake = AnimationUtils.loadAnimation(GrammarMultipleChoiceExercise.this,
                 R.anim.shake_animation);
 
         cardView.startAnimation(shake);

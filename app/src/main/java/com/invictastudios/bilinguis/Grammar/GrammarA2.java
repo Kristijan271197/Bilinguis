@@ -47,89 +47,89 @@ public class GrammarA2 extends Fragment {
 
         pluralExceptionsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
-            intent.putExtra("name", 1);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, 1);
             intent.putExtra("image", true);
-            intent.putExtra("a1", false);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, 2);
             startActivity(intent);
         });
 
         verbsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
-            intent.putExtra("name", 2);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, 2);
             intent.putExtra("image", true);
-            intent.putExtra("a1", false);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, 2);
             startActivity(intent);
         });
 
         pastSimpleTenseButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
-            intent.putExtra("name", 3);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, 3);
             intent.putExtra("image", true);
-            intent.putExtra("a1", false);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, 2);
             startActivity(intent);
         });
 
         personalPronounsPartTwoButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
-            intent.putExtra("name", 4);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, 4);
             intent.putExtra("image", false);
-            intent.putExtra("a1", false);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, 2);
             startActivity(intent);
         });
 
         modalVerbsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
-            intent.putExtra("name", 5);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, 5);
             intent.putExtra("image", false);
-            intent.putExtra("a1", false);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, 2);
             startActivity(intent);
         });
 
         thereIsAreButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
-            intent.putExtra("name", 6);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, 6);
             intent.putExtra("image", false);
-            intent.putExtra("a1", false);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, 2);
             startActivity(intent);
         });
 
         futureSimpleTenseButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
-            intent.putExtra("name", 7);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, 7);
             intent.putExtra("image", true);
-            intent.putExtra("a1", false);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, 2);
             startActivity(intent);
         });
 
         modalsMustButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
-            intent.putExtra("name", 8);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, 8);
             intent.putExtra("image", true);
-            intent.putExtra("a1", false);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, 2);
             startActivity(intent);
         });
 
         prepositionsOfTimeButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
-            intent.putExtra("name", 9);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, 9);
             intent.putExtra("image", false);
-            intent.putExtra("a1", false);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, 2);
             startActivity(intent);
         });
 
         prepositionsOfPlaceButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
-            intent.putExtra("name", 10);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, 10);
             intent.putExtra("image", false);
-            intent.putExtra("a1", false);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, 2);
             startActivity(intent);
         });
 
         futureBeGoingToButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
-            intent.putExtra("name", 11);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, 11);
             intent.putExtra("image", true);
-            intent.putExtra("a1", false);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, 2);
             startActivity(intent);
         });
 

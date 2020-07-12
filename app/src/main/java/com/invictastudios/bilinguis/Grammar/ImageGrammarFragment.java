@@ -28,9 +28,12 @@ public class ImageGrammarFragment extends Fragment {
     private TextView fourthFrameTextView;
     private TextView fifthFrameTextView;
     private TextView sixthFrameTextView;
-    private Button exerciseButtonImage;
-    private int name;
-    private boolean a1;
+    private Button exerciseOneButtonImage;
+    private Button exerciseTwoButtonImage;
+    private Button exerciseThreeButtonImage;
+
+    private int exerciseName;
+    private int exerciseLevel;
 
     public ImageGrammarFragment() {
     }
@@ -48,19 +51,21 @@ public class ImageGrammarFragment extends Fragment {
         fourthFrameTextView = view.findViewById(R.id.fourth_linear_text);
         fifthFrameTextView = view.findViewById(R.id.fifth_linear_text);
         sixthFrameTextView = view.findViewById(R.id.sixth_linear_text);
-        exerciseButtonImage = view.findViewById(R.id.exercise_button_image);
+        exerciseOneButtonImage = view.findViewById(R.id.exercise_one_button_image);
+        exerciseTwoButtonImage = view.findViewById(R.id.exercise_two_button_image);
+        exerciseThreeButtonImage = view.findViewById(R.id.exercise_three_button_image);
 
 
         if (this.getArguments() != null) {
-            name = this.getArguments().getInt("name");
-            a1 = this.getArguments().getBoolean("a1");
+            exerciseName = this.getArguments().getInt(GrammarA1.EXERCISE_NAME);
+            exerciseLevel = this.getArguments().getInt(GrammarA1.EXERCISE_LEVEL);
         }
-        if (a1) {
-            if (name == 3) {
+        if (exerciseLevel == 1) {
+            if (exerciseName == 3) {
                 enterText("grammar/A1/plural.txt", 1);
                 enterText("grammar/A1/plural_left_table.txt", true, 1);
                 enterText("grammar/A1/plural_right_table.txt", false, 1);
-            } else if (name == 5) {
+            } else if (exerciseName == 5) {
                 firstTextView.append("Have/has got – Иметь (Has got используем только когда он, она или оно)");
                 secondTextView.append("Отрицание");
                 thirdTextView.append("Вопрос");
@@ -76,16 +81,16 @@ public class ImageGrammarFragment extends Fragment {
                 fourthFrameTextView.setVisibility(View.VISIBLE);
                 fifthFrameTextView.setVisibility(View.VISIBLE);
                 sixthFrameTextView.setVisibility(View.VISIBLE);
-            } else if (name == 6) {
+            } else if (exerciseName == 6) {
                 enterText("grammar/A1/to_be_first_text.txt", 1);
                 enterText("grammar/A1/to_be_second_text.txt", 2);
                 enterText("grammar/A1/to_be_first_table_left.txt", true, 1);
                 enterText("grammar/A1/to_be_first_table_right.txt", false, 1);
                 secondTextView.setVisibility(View.VISIBLE);
-            } else if (name == 7) {
+            } else if (exerciseName == 7) {
                 enterText("grammar/A1/verbs_table_left.txt", true, 1);
                 enterText("grammar/A1/verbs_table_right.txt", false, 1);
-            } else if (name == 8) {
+            } else if (exerciseName == 8) {
                 enterText("grammar/A1/present_simple_first_text.txt", 1);
                 enterText("grammar/A1/present_simple_second_text.txt", 2);
                 enterText("grammar/A1/present_simple_first_table_left.txt", true, 1);
@@ -95,7 +100,7 @@ public class ImageGrammarFragment extends Fragment {
                 secondTextView.setVisibility(View.VISIBLE);
                 thirdFrameTextView.setVisibility(View.VISIBLE);
                 fourthFrameTextView.setVisibility(View.VISIBLE);
-            } else if (name == 9) {
+            } else if (exerciseName == 9) {
                 enterText("grammar/A1/present_continuous_first_text.txt", 1);
                 enterText("grammar/A1/present_continuous_second_text.txt", 2);
                 enterText("grammar/A1/present_continuous_first_table_left.txt", true, 1);
@@ -106,17 +111,17 @@ public class ImageGrammarFragment extends Fragment {
                 thirdFrameTextView.setVisibility(View.VISIBLE);
                 fourthFrameTextView.setVisibility(View.VISIBLE);
             }
-        } else {
-            if (name == 1) {
+        } else if(exerciseLevel == 2){
+            if (exerciseName == 1) {
                 firstTextView.append("По-другому множественное число образуется если слово:");
                 enterText("grammar/A2/plural_exceptions_second_text.txt", 2);
                 enterText("grammar/A2/plural_exceptions_table_left.txt", true, 1);
                 enterText("grammar/A2/plural_exceptions_table_right.txt", false, 1);
                 secondTextView.setVisibility(View.VISIBLE);
-            } else if (name == 2) {
+            } else if (exerciseName == 2) {
                 enterText("grammar/A2/verbs_table_left.txt", true, 1);
                 enterText("grammar/A2/verbs_table_right.txt", false, 1);
-            } else if (name == 3) {
+            } else if (exerciseName == 3) {
                 enterText("grammar/A2/past_simple_first_text.txt", 1);
                 enterText("grammar/A2/past_simple_first_table_left.txt", true, 1);
                 enterText("grammar/A2/past_simple_first_table_right.txt", false, 1);
@@ -126,7 +131,7 @@ public class ImageGrammarFragment extends Fragment {
                 secondTextView.setVisibility(View.VISIBLE);
                 thirdFrameTextView.setVisibility(View.VISIBLE);
                 fourthFrameTextView.setVisibility(View.VISIBLE);
-            } else if (name == 7) {
+            } else if (exerciseName == 7) {
                 enterText("grammar/A2/future_simple_first_text.txt", 1);
                 enterText("grammar/A2/future_simple_first_table_left.txt", true, 1);
                 enterText("grammar/A2/future_simple_first_table_right.txt", false, 1);
@@ -136,13 +141,13 @@ public class ImageGrammarFragment extends Fragment {
                 secondTextView.setVisibility(View.VISIBLE);
                 thirdFrameTextView.setVisibility(View.VISIBLE);
                 fourthFrameTextView.setVisibility(View.VISIBLE);
-            } else if (name == 8) {
+            } else if (exerciseName == 8) {
                 enterText("grammar/A2/modals_must_first_text.txt", 1);
                 enterText("grammar/A2/modals_must_table_left.txt", true, 1);
                 enterText("grammar/A2/modals_must_table_right.txt", false, 1);
                 enterText("grammar/A2/modals_must_second_text.txt", 2);
                 secondTextView.setVisibility(View.VISIBLE);
-            } else if (name == 11) {
+            } else if (exerciseName == 11) {
                 enterText("grammar/A2/future_be_going_to_first_text.txt", 1);
                 enterText("grammar/A2/future_be_going_to_table_left.txt", true, 1);
                 enterText("grammar/A2/future_be_going_to_table_right.txt", false, 1);
@@ -151,10 +156,27 @@ public class ImageGrammarFragment extends Fragment {
             }
         }
 
-        exerciseButtonImage.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), GrammarExercise.class);
-            intent.putExtra("name", name);
-            intent.putExtra("a1", a1);
+        exerciseOneButtonImage.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
+            intent.putExtra(GrammarA1.EXERCISE_NUMBER, 1);
+            startActivity(intent);
+        });
+
+        exerciseTwoButtonImage.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
+            intent.putExtra(GrammarA1.EXERCISE_NUMBER, 2);
+            startActivity(intent);
+        });
+
+        exerciseThreeButtonImage.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+            intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
+            intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
+            intent.putExtra(GrammarA1.EXERCISE_NUMBER, 3);
             startActivity(intent);
         });
 
