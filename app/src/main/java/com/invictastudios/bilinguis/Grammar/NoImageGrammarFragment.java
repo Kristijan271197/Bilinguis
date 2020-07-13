@@ -68,15 +68,29 @@ public class NoImageGrammarFragment extends Fragment {
 
 
         exerciseOneButtonNoImage.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
-            intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
-            intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
-            intent.putExtra(GrammarA1.EXERCISE_NUMBER, 1);
-            startActivity(intent);
+            Intent intent = null;
+            if (exerciseLevel == 1) {
+                if (exerciseName == 1 || exerciseName == 2 || exerciseName == 10)
+                    intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+                else
+                    intent = new Intent(view.getContext(), GrammarWritingExercise.class);
+            } else if(exerciseLevel == 2){
+                if (exerciseName == 6 || exerciseName == 9)
+                    intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+                else
+                    intent = new Intent(view.getContext(), GrammarWritingExercise.class);
+            }
+
+            if (intent != null) {
+                intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
+                intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
+                intent.putExtra(GrammarA1.EXERCISE_NUMBER, 1);
+                startActivity(intent);
+            }
         });
 
         exerciseTwoButtonNoImage.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+            Intent intent = new Intent(view.getContext(), GrammarWritingExercise.class);
             intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
             intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
             intent.putExtra(GrammarA1.EXERCISE_NUMBER, 2);
@@ -84,7 +98,7 @@ public class NoImageGrammarFragment extends Fragment {
         });
 
         exerciseThreeButtonNoImage.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+            Intent intent = new Intent(view.getContext(), GrammarWritingExercise.class);
             intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
             intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
             intent.putExtra(GrammarA1.EXERCISE_NUMBER, 3);

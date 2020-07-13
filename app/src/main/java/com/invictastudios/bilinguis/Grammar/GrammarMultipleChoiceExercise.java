@@ -212,7 +212,6 @@ public class GrammarMultipleChoiceExercise extends AppCompatActivity {
     private void nextQuestion() {
         if (questionNumber + 1 < questions.size()) {
             questionNumber++;
-
             setAnswerButtonsText();
             questionNumberTextView.setText(String.format(Locale.ENGLISH, "Question %d/%d", questionNumber + 1, questions.size()));
             exerciseTextView.setText(questions.get(questionNumber));

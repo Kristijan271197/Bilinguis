@@ -157,11 +157,25 @@ public class ImageGrammarFragment extends Fragment {
         }
 
         exerciseOneButtonImage.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
-            intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
-            intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
-            intent.putExtra(GrammarA1.EXERCISE_NUMBER, 1);
-            startActivity(intent);
+            Intent intent = null;
+            if (exerciseLevel == 1) {
+                if (exerciseName == 1 || exerciseName == 2 || exerciseName == 10)
+                    intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+                else
+                    intent = new Intent(view.getContext(), GrammarWritingExercise.class);
+            } else if(exerciseLevel == 2){
+                if (exerciseName == 8)
+                    intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+                else
+                    intent = new Intent(view.getContext(), GrammarWritingExercise.class);
+            }
+
+            if(intent != null) {
+                intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
+                intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
+                intent.putExtra(GrammarA1.EXERCISE_NUMBER, 1);
+                startActivity(intent);
+            }
         });
 
         exerciseTwoButtonImage.setOnClickListener(v -> {
