@@ -164,7 +164,7 @@ public class ImageGrammarFragment extends Fragment {
         exerciseOneButtonImage.setOnClickListener(v -> {
             Intent intent = null;
             if (exerciseLevel == 1) {
-                if (exerciseName == 1 || exerciseName == 2 || exerciseName == 5 || exerciseName == 10)
+                if (exerciseName == 1 || exerciseName == 2 || exerciseName == 5 || exerciseName == 6 || exerciseName == 10)
                     intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
                 else
                     intent = new Intent(view.getContext(), GrammarWritingExercise.class);

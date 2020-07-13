@@ -82,8 +82,7 @@ public class GrammarWritingExercise extends AppCompatActivity {
                     fillArray("grammar/A1_exercises/plural_questions_two.txt", questions);
                     fillArray("grammar/A1_exercises/plural_answers_two.txt", answers);
                 }
-            }
-            if (exerciseName == 4) {
+            } else if (exerciseName == 4) {
                 if (exerciseNumber == 1) {
                     exerciseTitleTextView.setText("Попробуйте перевести:");
                     fillArray("grammar/A1_exercises/demonstrative_questions_one.txt", questions);
@@ -98,6 +97,50 @@ public class GrammarWritingExercise extends AppCompatActivity {
                     exerciseTitleTextView.setText("Попробуйте перевести:");
                     fillArray("grammar/A1_exercises/verb_to_have_questions_two.txt", questions);
                     fillArray("grammar/A1_exercises/verb_to_have_answers_two.txt", answers);
+                }
+            } else if (exerciseName == 6) {
+                if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A1_exercises/to_be_questions_two.txt", questions);
+                    fillArray("grammar/A1_exercises/to_be_answers_two.txt", answers);
+                } else if (exerciseNumber == 3) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A1_exercises/to_be_questions_three.txt", questions);
+                    fillArray("grammar/A1_exercises/to_be_answers_three.txt", answers);
+                }
+            } else if (exerciseName == 8) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A1_exercises/present_simple_questions_one.txt", questions);
+                    fillArray("grammar/A1_exercises/present_simple_answers_one.txt", answers);
+                } else if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Раскройте скобки, употребляя глаголы в Present Simple:");
+                    fillArray("grammar/A1_exercises/present_simple_questions_two.txt", questions);
+                    fillArray("grammar/A1_exercises/present_simple_answers_two.txt", answers);
+                } else if (exerciseNumber == 3) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A1_exercises/present_simple_questions_three.txt", questions);
+                    fillArray("grammar/A1_exercises/present_simple_answers_three.txt", answers);
+                }
+            } else if (exerciseName == 9) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A1_exercises/present_continuous_questions_one.txt", questions);
+                    fillArray("grammar/A1_exercises/present_continuous_answers_one.txt", answers);
+                } else if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Раскройте скобки, употребляя глаголы в Present Continuous:");
+                    fillArray("grammar/A1_exercises/present_continuous_questions_two.txt", questions);
+                    fillArray("grammar/A1_exercises/present_continuous_answers_two.txt", answers);
+                } else if (exerciseNumber == 3) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A1_exercises/present_continuous_questions_three.txt", questions);
+                    fillArray("grammar/A1_exercises/present_continuous_answers_three.txt", answers);
+                }
+            } else if (exerciseName == 10) {
+                if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A1_exercises/quantifiers_questions_two.txt", questions);
+                    fillArray("grammar/A1_exercises/quantifiers_answers_two.txt", answers);
                 }
             }
         }

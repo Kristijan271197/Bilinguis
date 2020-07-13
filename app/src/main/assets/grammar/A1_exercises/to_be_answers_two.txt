@@ -1,0 +1,5 @@
+Are you at home?
+Are you in the bathroom?
+I am not at home.
+She is not in the city.
+Are they in the village?

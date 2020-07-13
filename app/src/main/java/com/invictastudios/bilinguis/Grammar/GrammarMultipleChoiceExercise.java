@@ -2,7 +2,6 @@ package com.invictastudios.bilinguis.Grammar;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -113,6 +112,17 @@ public class GrammarMultipleChoiceExercise extends AppCompatActivity {
                     numberOfButtons = 2;
                     setAnswerButtonsText();
                 }
+            } else if (exerciseName == 6) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Am, Are или Is?");
+                    fillArray("grammar/A1_exercises/to_be_questions_one.txt", questions);
+                    fillArray("grammar/A1_exercises/to_be_answers_one.txt", answers);
+                    fillArray("grammar/A1_exercises/to_be_all_answers_one.txt", allAnswers);
+                    fillArray("grammar/A1_exercises/to_be_all_answers_one.txt", allAnswersCopy);
+                    answerFourButton.setVisibility(View.INVISIBLE);
+                    numberOfButtons = 3;
+                    setAnswerButtonsText();
+                }
             } else if (exerciseName == 10) {
                 if (exerciseNumber == 1) {
                     exerciseTitleTextView.setText("Much/many?");
@@ -123,6 +133,14 @@ public class GrammarMultipleChoiceExercise extends AppCompatActivity {
                     answerThreeButton.setVisibility(View.INVISIBLE);
                     answerFourButton.setVisibility(View.INVISIBLE);
                     numberOfButtons = 2;
+                    setAnswerButtonsText();
+                } else if (exerciseNumber == 3) {
+                    exerciseTitleTextView.setText("Выберите правильный ответ: ");
+                    fillArray("grammar/A1_exercises/quantifiers_questions_three.txt", questions);
+                    fillArray("grammar/A1_exercises/quantifiers_answers_three.txt", answers);
+                    fillArray("grammar/A1_exercises/quantifiers_all_answers_three.txt", allAnswers);
+                    fillArray("grammar/A1_exercises/quantifiers_all_answers_three.txt", allAnswersCopy);
+                    numberOfButtons = 4;
                     setAnswerButtonsText();
                 }
             }

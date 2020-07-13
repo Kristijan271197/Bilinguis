@@ -106,11 +106,20 @@ public class NoImageGrammarFragment extends Fragment {
         });
 
         exerciseThreeButtonNoImage.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), GrammarWritingExercise.class);
-            intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
-            intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
-            intent.putExtra(GrammarA1.EXERCISE_NUMBER, 3);
-            startActivity(intent);
+            Intent intent = null;
+            if (exerciseLevel == 1) {
+                if (exerciseName == 10)
+                    intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+                else
+                    intent = new Intent(view.getContext(), GrammarWritingExercise.class);
+            }
+
+            if (intent != null) {
+                intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
+                intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
+                intent.putExtra(GrammarA1.EXERCISE_NUMBER, 3);
+                startActivity(intent);
+            }
         });
 
 
