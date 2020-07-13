@@ -65,6 +65,7 @@ public class ImageGrammarFragment extends Fragment {
                 enterText("grammar/A1/plural.txt", 1);
                 enterText("grammar/A1/plural_left_table.txt", true, 1);
                 enterText("grammar/A1/plural_right_table.txt", false, 1);
+                exerciseThreeButtonImage.setVisibility(View.INVISIBLE);
             } else if (exerciseName == 5) {
                 firstTextView.append("Have/has got – Иметь (Has got используем только когда он, она или оно)");
                 secondTextView.append("Отрицание");
@@ -81,6 +82,7 @@ public class ImageGrammarFragment extends Fragment {
                 fourthFrameTextView.setVisibility(View.VISIBLE);
                 fifthFrameTextView.setVisibility(View.VISIBLE);
                 sixthFrameTextView.setVisibility(View.VISIBLE);
+                exerciseThreeButtonImage.setVisibility(View.INVISIBLE);
             } else if (exerciseName == 6) {
                 enterText("grammar/A1/to_be_first_text.txt", 1);
                 enterText("grammar/A1/to_be_second_text.txt", 2);
@@ -90,6 +92,9 @@ public class ImageGrammarFragment extends Fragment {
             } else if (exerciseName == 7) {
                 enterText("grammar/A1/verbs_table_left.txt", true, 1);
                 enterText("grammar/A1/verbs_table_right.txt", false, 1);
+                exerciseOneButtonImage.setVisibility(View.INVISIBLE);
+                exerciseTwoButtonImage.setVisibility(View.INVISIBLE);
+                exerciseThreeButtonImage.setVisibility(View.INVISIBLE);
             } else if (exerciseName == 8) {
                 enterText("grammar/A1/present_simple_first_text.txt", 1);
                 enterText("grammar/A1/present_simple_second_text.txt", 2);
@@ -111,7 +116,7 @@ public class ImageGrammarFragment extends Fragment {
                 thirdFrameTextView.setVisibility(View.VISIBLE);
                 fourthFrameTextView.setVisibility(View.VISIBLE);
             }
-        } else if(exerciseLevel == 2){
+        } else if (exerciseLevel == 2) {
             if (exerciseName == 1) {
                 firstTextView.append("По-другому множественное число образуется если слово:");
                 enterText("grammar/A2/plural_exceptions_second_text.txt", 2);
@@ -159,18 +164,18 @@ public class ImageGrammarFragment extends Fragment {
         exerciseOneButtonImage.setOnClickListener(v -> {
             Intent intent = null;
             if (exerciseLevel == 1) {
-                if (exerciseName == 1 || exerciseName == 2 || exerciseName == 10)
+                if (exerciseName == 1 || exerciseName == 2 || exerciseName == 5 || exerciseName == 10)
                     intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
                 else
                     intent = new Intent(view.getContext(), GrammarWritingExercise.class);
-            } else if(exerciseLevel == 2){
+            } else if (exerciseLevel == 2) {
                 if (exerciseName == 8)
                     intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
                 else
                     intent = new Intent(view.getContext(), GrammarWritingExercise.class);
             }
 
-            if(intent != null) {
+            if (intent != null) {
                 intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
                 intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
                 intent.putExtra(GrammarA1.EXERCISE_NUMBER, 1);
@@ -179,7 +184,7 @@ public class ImageGrammarFragment extends Fragment {
         });
 
         exerciseTwoButtonImage.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+            Intent intent = new Intent(view.getContext(), GrammarWritingExercise.class);
             intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
             intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
             intent.putExtra(GrammarA1.EXERCISE_NUMBER, 2);
@@ -187,7 +192,7 @@ public class ImageGrammarFragment extends Fragment {
         });
 
         exerciseThreeButtonImage.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
+            Intent intent = new Intent(view.getContext(), GrammarWritingExercise.class);
             intent.putExtra(GrammarA1.EXERCISE_NAME, exerciseName);
             intent.putExtra(GrammarA1.EXERCISE_LEVEL, exerciseLevel);
             intent.putExtra(GrammarA1.EXERCISE_NUMBER, 3);

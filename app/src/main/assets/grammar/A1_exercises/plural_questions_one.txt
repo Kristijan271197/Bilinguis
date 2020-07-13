@@ -1,0 +1,6 @@
+pen (ручка)
+chair (стул)
+plant (растение)
+street (улица)
+street light (уличный фонарь)
+flower (цветок)

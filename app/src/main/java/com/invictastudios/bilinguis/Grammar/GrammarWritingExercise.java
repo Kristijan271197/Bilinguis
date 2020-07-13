@@ -72,11 +72,32 @@ public class GrammarWritingExercise extends AppCompatActivity {
         }
 
         if (exerciseLevel == 1) {
+            if (exerciseName == 3) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Образуйте множественное число:");
+                    fillArray("grammar/A1_exercises/plural_questions_one.txt", questions);
+                    fillArray("grammar/A1_exercises/plural_answers_one.txt", answers);
+                } else if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Образуйте единственное число: ");
+                    fillArray("grammar/A1_exercises/plural_questions_two.txt", questions);
+                    fillArray("grammar/A1_exercises/plural_answers_two.txt", answers);
+                }
+            }
             if (exerciseName == 4) {
                 if (exerciseNumber == 1) {
                     exerciseTitleTextView.setText("Попробуйте перевести:");
                     fillArray("grammar/A1_exercises/demonstrative_questions_one.txt", questions);
                     fillArray("grammar/A1_exercises/demonstrative_answers_one.txt", answers);
+                } else if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A1_exercises/demonstrative_questions_two.txt", questions);
+                    fillArray("grammar/A1_exercises/demonstrative_answers_two.txt", answers);
+                }
+            } else if (exerciseName == 5) {
+                if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A1_exercises/verb_to_have_questions_two.txt", questions);
+                    fillArray("grammar/A1_exercises/verb_to_have_answers_two.txt", answers);
                 }
             }
         }
@@ -89,21 +110,21 @@ public class GrammarWritingExercise extends AppCompatActivity {
                 String answer = answerEditText.getText().toString().trim();
                 for (int i = 0; i < answers.size(); i++) {
                     matches = answers.get(i).equalsIgnoreCase(answer);
-                    if (matches) {
-                        answers.remove(i);
+                    if (matches)
                         break;
-                    }
+
                 }
 
                 if (matches) {
                     correctAnswers++;
                     fadeView();
                 } else {
-                    solutionTextView.append(answers.get(questionNumber));
+                    solutionTextView.append(answers.get(0));
                     solutionTextView.setVisibility(View.VISIBLE);
                     wrongAnswers++;
                     shakeAnimation();
                 }
+                answers.remove(0);
             }
         });
     }

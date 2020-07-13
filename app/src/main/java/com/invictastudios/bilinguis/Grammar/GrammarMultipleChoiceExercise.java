@@ -101,6 +101,18 @@ public class GrammarMultipleChoiceExercise extends AppCompatActivity {
                     numberOfButtons = 2;
                     setAnswerButtonsText();
                 }
+            } else if (exerciseName == 5) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Have или Has?");
+                    fillArray("grammar/A1_exercises/verb_to_have_questions_one.txt", questions);
+                    fillArray("grammar/A1_exercises/verb_to_have_answers_one.txt", answers);
+                    fillArray("grammar/A1_exercises/verb_to_have_all_answers_one.txt", allAnswers);
+                    fillArray("grammar/A1_exercises/verb_to_have_all_answers_one.txt", allAnswersCopy);
+                    answerThreeButton.setVisibility(View.INVISIBLE);
+                    answerFourButton.setVisibility(View.INVISIBLE);
+                    numberOfButtons = 2;
+                    setAnswerButtonsText();
+                }
             } else if (exerciseName == 10) {
                 if (exerciseNumber == 1) {
                     exerciseTitleTextView.setText("Much/many?");

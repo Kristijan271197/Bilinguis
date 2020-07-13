@@ -1,0 +1,6 @@
+pens
+chairs
+plants
+streets
+street lights
+flowers

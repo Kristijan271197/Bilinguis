@@ -45,12 +45,20 @@ public class NoImageGrammarFragment extends Fragment {
 
 
         if (exerciseLevel == 1) {
-            if (exerciseName == 1)
+            if (exerciseName == 1) {
                 enterText("grammar/A1/personal_pronouns.txt");
-            else if (exerciseName == 2)
+                exerciseTwoButtonNoImage.setVisibility(View.INVISIBLE);
+                exerciseThreeButtonNoImage.setVisibility(View.INVISIBLE);
+            }
+            else if (exerciseName == 2) {
                 enterText("grammar/A1/english_articles.txt");
-            else if (exerciseName == 4)
+                exerciseTwoButtonNoImage.setVisibility(View.INVISIBLE);
+                exerciseThreeButtonNoImage.setVisibility(View.INVISIBLE);
+            }
+            else if (exerciseName == 4) {
                 enterText("grammar/A1/demonstrative_pronouns.txt");
+                exerciseThreeButtonNoImage.setVisibility(View.INVISIBLE);
+            }
             else if (exerciseName == 10)
                 enterText("grammar/A1/quantifiers_text.txt");
         } else if (exerciseLevel == 2) {

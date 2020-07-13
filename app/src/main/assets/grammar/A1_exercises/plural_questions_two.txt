@@ -1,0 +1,6 @@
+problems (проблемы)
+cars (автомобили)
+trees (деревья)
+books (книги)
+oranges (апельсины)
+forks (вилки)
