@@ -68,10 +68,15 @@ public class NoImageGrammarFragment extends Fragment {
             } else if (exerciseName == 6) {
                 enterText("grammar/A2/there_is_are.txt");
                 exerciseThreeButtonNoImage.setVisibility(View.INVISIBLE);
-            } else if (exerciseName == 9)
+            } else if (exerciseName == 9) {
                 enterText("grammar/A2/prepositions_of_time.txt");
-            else if (exerciseName == 10)
+                exerciseThreeButtonNoImage.setVisibility(View.INVISIBLE);
+            } else if (exerciseName == 10) {
                 enterText("grammar/A2/prepositions_of_place.txt");
+                exerciseOneButtonNoImage.setVisibility(View.INVISIBLE);
+                exerciseTwoButtonNoImage.setVisibility(View.INVISIBLE);
+                exerciseThreeButtonNoImage.setVisibility(View.INVISIBLE);
+            }
         }
 
 

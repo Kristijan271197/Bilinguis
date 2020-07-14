@@ -150,18 +150,21 @@ public class ImageGrammarFragment extends Fragment {
                 secondTextView.setVisibility(View.VISIBLE);
                 thirdFrameTextView.setVisibility(View.VISIBLE);
                 fourthFrameTextView.setVisibility(View.VISIBLE);
+                exerciseThreeButtonImage.setVisibility(View.INVISIBLE);
             } else if (exerciseName == 8) {
                 enterText("grammar/A2/modals_must_first_text.txt", 1);
                 enterText("grammar/A2/modals_must_table_left.txt", true, 1);
                 enterText("grammar/A2/modals_must_table_right.txt", false, 1);
                 enterText("grammar/A2/modals_must_second_text.txt", 2);
                 secondTextView.setVisibility(View.VISIBLE);
+                exerciseThreeButtonImage.setVisibility(View.INVISIBLE);
             } else if (exerciseName == 11) {
                 enterText("grammar/A2/future_be_going_to_first_text.txt", 1);
                 enterText("grammar/A2/future_be_going_to_table_left.txt", true, 1);
                 enterText("grammar/A2/future_be_going_to_table_right.txt", false, 1);
                 enterText("grammar/A2/future_be_going_to_second_text.txt", 2);
                 secondTextView.setVisibility(View.VISIBLE);
+                exerciseThreeButtonImage.setVisibility(View.INVISIBLE);
             }
         }
 

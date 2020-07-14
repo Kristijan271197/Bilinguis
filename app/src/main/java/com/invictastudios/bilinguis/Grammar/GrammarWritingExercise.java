@@ -190,6 +190,38 @@ public class GrammarWritingExercise extends AppCompatActivity {
                     fillArray("grammar/A2_exercises/there_is_are_questions_two.txt", questions);
                     fillArray("grammar/A2_exercises/there_is_are_answers_two.txt", answers);
                 }
+            } else if (exerciseName == 7) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Раскройте скобки, употребляя глаголы в Future Simple:");
+                    fillArray("grammar/A2_exercises/future_simple_questions_one.txt", questions);
+                    fillArray("grammar/A2_exercises/future_simple_answers_one.txt", answers);
+                } else if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A2_exercises/future_simple_questions_two.txt", questions);
+                    fillArray("grammar/A2_exercises/future_simple_answers_two.txt", answers);
+                }
+            } else if (exerciseName == 8) {
+                if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A2_exercises/modals_must_questions_two.txt", questions);
+                    fillArray("grammar/A2_exercises/modals_must_answers_two.txt", answers);
+                }
+            } else if (exerciseName == 9) {
+                if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A2_exercises/prepositions_of_time_questions_two.txt", questions);
+                    fillArray("grammar/A2_exercises/prepositions_of_time_answers_two.txt", answers);
+                }
+            } else if (exerciseName == 11) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A2_exercises/be_going_to_questions_one.txt", questions);
+                    fillArray("grammar/A2_exercises/be_going_to_answers_one.txt", answers);
+                } else if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A2_exercises/be_going_to_questions_two.txt", questions);
+                    fillArray("grammar/A2_exercises/be_going_to_answers_two.txt", answers);
+                }
             }
         }
 
