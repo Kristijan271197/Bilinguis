@@ -168,6 +168,28 @@ public class GrammarWritingExercise extends AppCompatActivity {
                     fillArray("grammar/A2_exercises/past_simple_questions_two.txt", questions);
                     fillArray("grammar/A2_exercises/past_simple_answers_two.txt", answers);
                 }
+            } else if (exerciseName == 4) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Выберите правильное местоимение:");
+                    fillArray("grammar/A2_exercises/personal_pronouns_two_questions_one.txt", questions);
+                    fillArray("grammar/A2_exercises/personal_pronouns_two_answers_one.txt", answers);
+                } else if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A2_exercises/personal_pronouns_two_questions_two.txt", questions);
+                    fillArray("grammar/A2_exercises/personal_pronouns_two_answers_two.txt", answers);
+                }
+            } else if (exerciseName == 5) {
+                if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A2_exercises/modal_verbs_questions_two.txt", questions);
+                    fillArray("grammar/A2_exercises/modal_verbs_answers_two.txt", answers);
+                }
+            } else if (exerciseName == 6) {
+                if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A2_exercises/there_is_are_questions_two.txt", questions);
+                    fillArray("grammar/A2_exercises/there_is_are_answers_two.txt", answers);
+                }
             }
         }
 

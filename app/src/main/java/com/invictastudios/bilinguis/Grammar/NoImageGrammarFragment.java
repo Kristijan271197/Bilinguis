@@ -49,26 +49,26 @@ public class NoImageGrammarFragment extends Fragment {
                 enterText("grammar/A1/personal_pronouns.txt");
                 exerciseTwoButtonNoImage.setVisibility(View.INVISIBLE);
                 exerciseThreeButtonNoImage.setVisibility(View.INVISIBLE);
-            }
-            else if (exerciseName == 2) {
+            } else if (exerciseName == 2) {
                 enterText("grammar/A1/english_articles.txt");
                 exerciseTwoButtonNoImage.setVisibility(View.INVISIBLE);
                 exerciseThreeButtonNoImage.setVisibility(View.INVISIBLE);
-            }
-            else if (exerciseName == 4) {
+            } else if (exerciseName == 4) {
                 enterText("grammar/A1/demonstrative_pronouns.txt");
                 exerciseThreeButtonNoImage.setVisibility(View.INVISIBLE);
-            }
-            else if (exerciseName == 10)
+            } else if (exerciseName == 10)
                 enterText("grammar/A1/quantifiers_text.txt");
         } else if (exerciseLevel == 2) {
-            if (exerciseName == 4)
+            if (exerciseName == 4) {
                 enterText("grammar/A2/personal_pronouns_part_two.txt");
-            else if (exerciseName == 5)
+                exerciseThreeButtonNoImage.setVisibility(View.INVISIBLE);
+            } else if (exerciseName == 5) {
                 enterText("grammar/A2/modal_verbs.txt");
-            else if (exerciseName == 6)
+                exerciseThreeButtonNoImage.setVisibility(View.INVISIBLE);
+            } else if (exerciseName == 6) {
                 enterText("grammar/A2/there_is_are.txt");
-            else if (exerciseName == 9)
+                exerciseThreeButtonNoImage.setVisibility(View.INVISIBLE);
+            } else if (exerciseName == 9)
                 enterText("grammar/A2/prepositions_of_time.txt");
             else if (exerciseName == 10)
                 enterText("grammar/A2/prepositions_of_place.txt");
@@ -82,8 +82,8 @@ public class NoImageGrammarFragment extends Fragment {
                     intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
                 else
                     intent = new Intent(view.getContext(), GrammarWritingExercise.class);
-            } else if(exerciseLevel == 2){
-                if (exerciseName == 6 || exerciseName == 9)
+            } else if (exerciseLevel == 2) {
+                if (exerciseName == 5 || exerciseName == 6 || exerciseName == 9)
                     intent = new Intent(view.getContext(), GrammarMultipleChoiceExercise.class);
                 else
                     intent = new Intent(view.getContext(), GrammarWritingExercise.class);

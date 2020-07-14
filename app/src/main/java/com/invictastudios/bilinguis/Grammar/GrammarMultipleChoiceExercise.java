@@ -145,7 +145,20 @@ public class GrammarMultipleChoiceExercise extends AppCompatActivity {
                 }
             }
         } else if (exerciseLevel == 2) {
-            if (exerciseName == 6) {
+
+            if (exerciseName == 5) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Что вы умеете / не умеете делать?");
+                    fillArray("grammar/A2_exercises/modal_verbs_questions_one.txt", questions);
+                    fillArray("grammar/A2_exercises/modal_verbs_answers_one.txt", answers);
+                    fillArray("grammar/A2_exercises/modal_verbs_all_answers_one.txt", allAnswers);
+                    fillArray("grammar/A2_exercises/modal_verbs_all_answers_one.txt", allAnswersCopy);
+                    answerThreeButton.setVisibility(View.INVISIBLE);
+                    answerFourButton.setVisibility(View.INVISIBLE);
+                    numberOfButtons = 2;
+                    setAnswerButtonsText();
+                }
+            } else if (exerciseName == 6) {
                 if (exerciseNumber == 1) {
                     exerciseTitleTextView.setText("There is или There are?");
                     fillArray("grammar/A2_exercises/there_is_are_questions_one.txt", questions);
