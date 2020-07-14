@@ -1,0 +1,8 @@
+knives
+forks
+dishes
+vases
+boxes
+days
+tomatoes
+wives

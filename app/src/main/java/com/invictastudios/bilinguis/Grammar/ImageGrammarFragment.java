@@ -126,6 +126,9 @@ public class ImageGrammarFragment extends Fragment {
             } else if (exerciseName == 2) {
                 enterText("grammar/A2/verbs_table_left.txt", true, 1);
                 enterText("grammar/A2/verbs_table_right.txt", false, 1);
+                exerciseOneButtonImage.setVisibility(View.INVISIBLE);
+                exerciseTwoButtonImage.setVisibility(View.INVISIBLE);
+                exerciseThreeButtonImage.setVisibility(View.INVISIBLE);
             } else if (exerciseName == 3) {
                 enterText("grammar/A2/past_simple_first_text.txt", 1);
                 enterText("grammar/A2/past_simple_first_table_left.txt", true, 1);
@@ -136,6 +139,7 @@ public class ImageGrammarFragment extends Fragment {
                 secondTextView.setVisibility(View.VISIBLE);
                 thirdFrameTextView.setVisibility(View.VISIBLE);
                 fourthFrameTextView.setVisibility(View.VISIBLE);
+                exerciseThreeButtonImage.setVisibility(View.INVISIBLE);
             } else if (exerciseName == 7) {
                 enterText("grammar/A2/future_simple_first_text.txt", 1);
                 enterText("grammar/A2/future_simple_first_table_left.txt", true, 1);

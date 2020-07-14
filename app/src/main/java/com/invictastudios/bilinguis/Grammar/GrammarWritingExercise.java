@@ -143,6 +143,32 @@ public class GrammarWritingExercise extends AppCompatActivity {
                     fillArray("grammar/A1_exercises/quantifiers_answers_two.txt", answers);
                 }
             }
+        } else if (exerciseLevel == 2) {
+            if (exerciseName == 1) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Образуйте множественное число:");
+                    fillArray("grammar/A2_exercises/plural_exceptions_questions_one.txt", questions);
+                    fillArray("grammar/A2_exercises/plural_exceptions_answers_one.txt", answers);
+                } else if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Образуйте множественное число:");
+                    fillArray("grammar/A2_exercises/plural_exceptions_questions_two.txt", questions);
+                    fillArray("grammar/A2_exercises/plural_exceptions_answers_two.txt", answers);
+                } else if (exerciseNumber == 3) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A2_exercises/plural_exceptions_questions_three.txt", questions);
+                    fillArray("grammar/A2_exercises/plural_exceptions_answers_three.txt", answers);
+                }
+            } else if (exerciseName == 3) {
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Раскройте скобки, употребляя глаголы в Past Simple:");
+                    fillArray("grammar/A2_exercises/past_simple_questions_one.txt", questions);
+                    fillArray("grammar/A2_exercises/past_simple_answers_one.txt", answers);
+                } else if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Попробуйте перевести:");
+                    fillArray("grammar/A2_exercises/past_simple_questions_two.txt", questions);
+                    fillArray("grammar/A2_exercises/past_simple_answers_two.txt", answers);
+                }
+            }
         }
 
         questionNumberTextView.setText(String.format(Locale.ENGLISH, "Question %d/%d", questionNumber + 1, questions.size()));
