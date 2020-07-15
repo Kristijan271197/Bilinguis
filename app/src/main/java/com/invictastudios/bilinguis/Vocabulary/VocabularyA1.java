@@ -24,7 +24,6 @@ public class VocabularyA1 extends Fragment {
     public static final String WEATHER = "weather";
 
 
-
     private ImageButton greetingsButton;
     private ImageButton geographyButton;
     private ImageButton colorsButton;
@@ -34,6 +33,8 @@ public class VocabularyA1 extends Fragment {
     private ImageButton homeButton;
     private ImageButton familyButton;
     private ImageButton weatherButton;
+    private ImageButton exercisesOneButton;
+    private ImageButton exercisesTwoButton;
 
 
     public VocabularyA1() {
@@ -108,8 +109,21 @@ public class VocabularyA1 extends Fragment {
             startActivity(intent);
         });
 
+        exercisesOneButton = view.findViewById(R.id.exerciseOneA1);
+        exercisesOneButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
+            intent.putExtra("level", 1);
+            intent.putExtra("number", 1);
+            startActivity(intent);
+        });
 
-
+        exercisesTwoButton = view.findViewById(R.id.exerciseTwoA1);
+        exercisesTwoButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
+            intent.putExtra("level", 1);
+            intent.putExtra("number", 2);
+            startActivity(intent);
+        });
 
         return view;
     }

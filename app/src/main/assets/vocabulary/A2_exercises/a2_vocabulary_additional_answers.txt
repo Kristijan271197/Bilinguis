@@ -1,0 +1,16 @@
+What is your name?
+Where do you live?
+spoon
+fruit
+vegetable
+bed
+bedroom
+parents
+cook
+drink
+Wednesday
+bus stop
+house
+eating
+jungle
+lion

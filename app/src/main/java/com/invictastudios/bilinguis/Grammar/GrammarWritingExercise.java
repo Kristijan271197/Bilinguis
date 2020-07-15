@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.invictastudios.bilinguis.R;
+import com.invictastudios.bilinguis.model.WritingExerciseModel;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,8 +34,10 @@ public class GrammarWritingExercise extends AppCompatActivity {
     private TextView solutionTextView;
     private EditText answerEditText;
     private Button submitAnswerButton;
+    private Button nextQuestionButton;
     private List<String> questions;
     private List<String> answers;
+    private List<WritingExerciseModel> questionsAnswers;
     private int questionNumber;
     private int correctAnswers;
     private int wrongAnswers;
@@ -59,8 +62,10 @@ public class GrammarWritingExercise extends AppCompatActivity {
         solutionTextView = findViewById(R.id.solution_text_view);
         answerEditText = findViewById(R.id.answer_edit_text);
         submitAnswerButton = findViewById(R.id.submit_answer_button);
+        nextQuestionButton = findViewById(R.id.next_question_button);
         questions = new ArrayList<>();
         answers = new ArrayList<>();
+        questionsAnswers = new ArrayList<>();
         questionNumber = 0;
         correctAnswers = 0;
         wrongAnswers = 0;
@@ -225,30 +230,36 @@ public class GrammarWritingExercise extends AppCompatActivity {
             }
         }
 
-        questionNumberTextView.setText(String.format(Locale.ENGLISH, "Question %d/%d", questionNumber + 1, questions.size()));
-        exerciseTextView.setText(questions.get(questionNumber));
+        for (int i = 0; i < questions.size(); i++)
+            questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+
+
+        questionNumberTextView.setText(String.format(Locale.ENGLISH, "Question %d/%d", questionNumber + 1, questionsAnswers.size()));
+        exerciseTextView.setText(questionsAnswers.get(questionNumber).getQuestion());
 
         submitAnswerButton.setOnClickListener(v -> {
             if (!answerEditText.getText().toString().trim().isEmpty()) {
                 String answer = answerEditText.getText().toString().trim();
-                for (int i = 0; i < answers.size(); i++) {
-                    matches = answers.get(i).equalsIgnoreCase(answer);
-                    if (matches)
-                        break;
-
-                }
+                matches = questionsAnswers.get(questionNumber).getAnswer().equalsIgnoreCase(answer);
 
                 if (matches) {
                     correctAnswers++;
                     fadeView();
                 } else {
-                    solutionTextView.append(answers.get(0));
+                    solutionTextView.append(questionsAnswers.get(questionNumber).getAnswer());
                     solutionTextView.setVisibility(View.VISIBLE);
                     wrongAnswers++;
                     shakeAnimation();
                 }
-                answers.remove(0);
             }
+        });
+
+        nextQuestionButton.setOnClickListener(v -> {
+            nextQuestion();
+            submitAnswerButton.setEnabled(true);
+            nextQuestionButton.setVisibility(View.INVISIBLE);
+            solutionTextView.setVisibility(View.INVISIBLE);
+            solutionTextView.setText("Answer: \n");
         });
     }
 
@@ -267,9 +278,9 @@ public class GrammarWritingExercise extends AppCompatActivity {
 
     private void nextQuestion() {
         answerEditText.setText("");
-        if (questionNumber + 1 < questions.size()) {
+        if (questionNumber + 1 < questionsAnswers.size()) {
             questionNumber++;
-            questionNumberTextView.setText(String.format(Locale.ENGLISH, "Question %d/%d", questionNumber + 1, questions.size()));
+            questionNumberTextView.setText(String.format(Locale.ENGLISH, "Question %d/%d", questionNumber + 1, questionsAnswers.size()));
             exerciseTextView.setText(questions.get(questionNumber));
         } else {
             questionNumberTextView.setVisibility(View.INVISIBLE);
@@ -300,10 +311,7 @@ public class GrammarWritingExercise extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 cardView.setCardBackgroundColor(Color.WHITE);
-                nextQuestion();
-                submitAnswerButton.setEnabled(true);
-                solutionTextView.setVisibility(View.INVISIBLE);
-                solutionTextView.setText("Answer: \n");
+                nextQuestionButton.setVisibility(View.VISIBLE);
             }
 
             @Override
@@ -329,10 +337,7 @@ public class GrammarWritingExercise extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 cardView.setCardBackgroundColor(Color.WHITE);
-                nextQuestion();
-                submitAnswerButton.setEnabled(true);
-                solutionTextView.setVisibility(View.INVISIBLE);
-                solutionTextView.setText("Answer: \n");
+                nextQuestionButton.setVisibility(View.VISIBLE);
             }
 
             @Override

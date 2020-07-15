@@ -35,6 +35,9 @@ public class VocabularyA2 extends Fragment {
     private ImageButton beveragesButton;
     private ImageButton timeButton;
     private ImageButton cityButton;
+    private ImageButton exercisesOneButton;
+    private ImageButton exercisesTwoButton;
+    private ImageButton exercisesThreeButton;
 
     public VocabularyA2() {
     }
@@ -112,6 +115,30 @@ public class VocabularyA2 extends Fragment {
         cityButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", CITY);
+            startActivity(intent);
+        });
+
+        exercisesOneButton = view.findViewById(R.id.exerciseOneA2);
+        exercisesOneButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
+            intent.putExtra("level", 2);
+            intent.putExtra("number", 1);
+            startActivity(intent);
+        });
+
+        exercisesTwoButton = view.findViewById(R.id.exerciseTwoA2);
+        exercisesTwoButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
+            intent.putExtra("level", 2);
+            intent.putExtra("number", 2);
+            startActivity(intent);
+        });
+
+        exercisesThreeButton = view.findViewById(R.id.exerciseThreeA2);
+        exercisesThreeButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
+            intent.putExtra("level", 2);
+            intent.putExtra("number", 3);
             startActivity(intent);
         });
 
