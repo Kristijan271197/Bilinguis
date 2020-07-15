@@ -43,7 +43,6 @@ public class VocabularyExercises extends AppCompatActivity {
     private int questionNumber;
     private int correctAnswers;
     private int wrongAnswers;
-    private int randomQuestion;
     private int exerciseNumber;
     private int exerciseLevel;
     private Random random;
@@ -114,7 +113,7 @@ public class VocabularyExercises extends AppCompatActivity {
 
         questionNumberTextView.setText(String.format(Locale.ENGLISH, "Question %d/%d", questionNumber + 1, questionsAnswers.size()));
         exerciseTextView.setText(questionsAnswers.get(questionNumber).getQuestion());
-        
+
         submitAnswerButton.setOnClickListener(v -> {
             if (!answerEditText.getText().toString().trim().isEmpty()) {
                 String answer = answerEditText.getText().toString().trim();
@@ -156,7 +155,7 @@ public class VocabularyExercises extends AppCompatActivity {
 
     private void randomiseQuestions() {
         for (int i = 0; i < 20; i++) {
-            randomQuestion = random.nextInt(randomQuestionBound);
+            int randomQuestion = random.nextInt(randomQuestionBound);
             questionsAnswers.add(new WritingExerciseModel(questions.get(randomQuestion), answers.get(randomQuestion)));
             questions.remove(randomQuestion);
             answers.remove(randomQuestion);
