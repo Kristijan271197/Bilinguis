@@ -24,7 +24,6 @@ public class VocabularyA2 extends Fragment {
     public static final String TIME = "time";
     public static final String CITY = "city";
 
-
     private ImageButton natureButton;
     private ImageButton animalsButton;
     private ImageButton facePartsButton;
@@ -123,6 +122,7 @@ public class VocabularyA2 extends Fragment {
             Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
             intent.putExtra("level", 2);
             intent.putExtra("number", 1);
+            intent.putExtra("vocabulary", true);
             startActivity(intent);
         });
 
@@ -131,6 +131,7 @@ public class VocabularyA2 extends Fragment {
             Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
             intent.putExtra("level", 2);
             intent.putExtra("number", 2);
+            intent.putExtra("vocabulary", true);
             startActivity(intent);
         });
 
@@ -139,6 +140,7 @@ public class VocabularyA2 extends Fragment {
             Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
             intent.putExtra("level", 2);
             intent.putExtra("number", 3);
+            intent.putExtra("vocabulary", true);
             startActivity(intent);
         });
 

@@ -10,6 +10,7 @@ import android.widget.Button;
 import androidx.fragment.app.Fragment;
 
 import com.invictastudios.bilinguis.R;
+import com.invictastudios.bilinguis.Vocabulary.VocabularyExercises;
 
 
 public class GrammarA1 extends Fragment {
@@ -28,6 +29,7 @@ public class GrammarA1 extends Fragment {
     private Button quantifiersButton;
     private Button toBeButton;
     private Button presentContinuousTenseButton;
+    private Button exercisesButton;
 
     public GrammarA1() {
 
@@ -48,12 +50,13 @@ public class GrammarA1 extends Fragment {
         quantifiersButton = view.findViewById(R.id.quantifiers_button);
         toBeButton = view.findViewById(R.id.to_be_button);
         presentContinuousTenseButton = view.findViewById(R.id.present_continuous_tense);
+        exercisesButton = view.findViewById(R.id.exercise_a1_grammar);
 
         personalPronounsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra(EXERCISE_NAME, 1);
             intent.putExtra("image", false);
-            intent.putExtra(EXERCISE_LEVEL,1);
+            intent.putExtra(EXERCISE_LEVEL, 1);
             startActivity(intent);
         });
 
@@ -61,7 +64,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra(EXERCISE_NAME, 2);
             intent.putExtra("image", false);
-            intent.putExtra(EXERCISE_LEVEL,1);
+            intent.putExtra(EXERCISE_LEVEL, 1);
             startActivity(intent);
         });
 
@@ -69,7 +72,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra(EXERCISE_NAME, 4);
             intent.putExtra("image", false);
-            intent.putExtra(EXERCISE_LEVEL,1);
+            intent.putExtra(EXERCISE_LEVEL, 1);
             startActivity(intent);
         });
 
@@ -77,7 +80,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra(EXERCISE_NAME, 5);
             intent.putExtra("image", true);
-            intent.putExtra(EXERCISE_LEVEL,1);
+            intent.putExtra(EXERCISE_LEVEL, 1);
             startActivity(intent);
         });
 
@@ -85,7 +88,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra(EXERCISE_NAME, 3);
             intent.putExtra("image", true);
-            intent.putExtra(EXERCISE_LEVEL,1);
+            intent.putExtra(EXERCISE_LEVEL, 1);
             startActivity(intent);
         });
 
@@ -93,7 +96,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra(EXERCISE_NAME, 7);
             intent.putExtra("image", true);
-            intent.putExtra(EXERCISE_LEVEL,1);
+            intent.putExtra(EXERCISE_LEVEL, 1);
             startActivity(intent);
         });
 
@@ -101,7 +104,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra(EXERCISE_NAME, 8);
             intent.putExtra("image", true);
-            intent.putExtra(EXERCISE_LEVEL,1);
+            intent.putExtra(EXERCISE_LEVEL, 1);
             startActivity(intent);
         });
 
@@ -109,7 +112,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra(EXERCISE_NAME, 10);
             intent.putExtra("image", false);
-            intent.putExtra(EXERCISE_LEVEL,1);
+            intent.putExtra(EXERCISE_LEVEL, 1);
             startActivity(intent);
         });
 
@@ -118,7 +121,7 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra(EXERCISE_NAME, 6);
             intent.putExtra("image", true);
-            intent.putExtra(EXERCISE_LEVEL,1);
+            intent.putExtra(EXERCISE_LEVEL, 1);
             startActivity(intent);
         });
 
@@ -126,7 +129,14 @@ public class GrammarA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
             intent.putExtra(EXERCISE_NAME, 9);
             intent.putExtra("image", true);
-            intent.putExtra(EXERCISE_LEVEL,1);
+            intent.putExtra(EXERCISE_LEVEL, 1);
+            startActivity(intent);
+        });
+
+        exercisesButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
+            intent.putExtra("vocabulary", false);
+            intent.putExtra("level", 1);
             startActivity(intent);
         });
 

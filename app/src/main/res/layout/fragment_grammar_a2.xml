@@ -155,6 +155,19 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+            <Button
+                android:id="@+id/exercise_a2_grammar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/future_be_going_to_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Exercises"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
 
         </RelativeLayout>
 

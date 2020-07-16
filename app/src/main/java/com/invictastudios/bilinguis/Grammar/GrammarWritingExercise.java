@@ -281,7 +281,7 @@ public class GrammarWritingExercise extends AppCompatActivity {
         if (questionNumber + 1 < questionsAnswers.size()) {
             questionNumber++;
             questionNumberTextView.setText(String.format(Locale.ENGLISH, "Question %d/%d", questionNumber + 1, questionsAnswers.size()));
-            exerciseTextView.setText(questions.get(questionNumber));
+            exerciseTextView.setText(questionsAnswers.get(questionNumber).getQuestion());
         } else {
             questionNumberTextView.setVisibility(View.INVISIBLE);
             answerEditText.setVisibility(View.INVISIBLE);

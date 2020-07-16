@@ -10,6 +10,7 @@ import android.widget.Button;
 import androidx.fragment.app.Fragment;
 
 import com.invictastudios.bilinguis.R;
+import com.invictastudios.bilinguis.Vocabulary.VocabularyExercises;
 
 public class GrammarA2 extends Fragment {
 
@@ -24,6 +25,7 @@ public class GrammarA2 extends Fragment {
     private Button prepositionsOfTimeButton;
     private Button prepositionsOfPlaceButton;
     private Button futureBeGoingToButton;
+    private Button exercisesButton;
 
     public GrammarA2() {
     }
@@ -44,6 +46,7 @@ public class GrammarA2 extends Fragment {
         prepositionsOfTimeButton = view.findViewById(R.id.prepositions_of_time_button);
         prepositionsOfPlaceButton = view.findViewById(R.id.prepositions_of_place_button);
         futureBeGoingToButton = view.findViewById(R.id.future_be_going_to_button);
+        exercisesButton = view.findViewById(R.id.exercise_a2_grammar);
 
         pluralExceptionsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
@@ -130,6 +133,13 @@ public class GrammarA2 extends Fragment {
             intent.putExtra(GrammarA1.EXERCISE_NAME, 11);
             intent.putExtra("image", true);
             intent.putExtra(GrammarA1.EXERCISE_LEVEL, 2);
+            startActivity(intent);
+        });
+
+        exercisesButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
+            intent.putExtra("vocabulary", false);
+            intent.putExtra("level", 2);
             startActivity(intent);
         });
 

@@ -114,6 +114,7 @@ public class VocabularyA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
             intent.putExtra("level", 1);
             intent.putExtra("number", 1);
+            intent.putExtra("vocabulary", true);
             startActivity(intent);
         });
 
@@ -122,6 +123,7 @@ public class VocabularyA1 extends Fragment {
             Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
             intent.putExtra("level", 1);
             intent.putExtra("number", 2);
+            intent.putExtra("vocabulary", true);
             startActivity(intent);
         });
 
