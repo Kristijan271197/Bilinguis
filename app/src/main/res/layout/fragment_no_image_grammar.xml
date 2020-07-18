@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#6C63FF"
     tools:context=".Grammar.NoImageGrammarFragment">
 
     <ScrollView
@@ -22,8 +23,9 @@
                 android:lineSpacingExtra="4dp"
                 android:padding="16dp"
                 android:text=""
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/exercise_one_button_no_image"

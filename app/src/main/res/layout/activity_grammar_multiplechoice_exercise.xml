@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#6C63FF"
     android:orientation="vertical"
     tools:context=".Grammar.GrammarMultipleChoiceExercise">
 
@@ -36,8 +37,10 @@
                     android:gravity="end"
                     android:padding="8dp"
                     android:text="Question 1/10"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
+                    android:textColor="#6C63FF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
 
                 <TextView
                     android:id="@+id/exercise_title_text_view"
@@ -49,8 +52,9 @@
                     android:lineSpacingExtra="4dp"
                     android:padding="16dp"
                     android:text="Попробуйте перевести: "
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
+                    android:textColor="#6C63FF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/exercise_text_view"
@@ -62,8 +66,9 @@
                     android:lineSpacingExtra="4dp"
                     android:padding="16dp"
                     android:text="We - ____"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp" />
+                    android:textColor="#6C63FF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -75,7 +80,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:background="@drawable/rounded_corners"
+            android:fontFamily="@font/roboto_black"
             android:text="Answer 1"
+            android:textColor="#6C63FF"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView" />
@@ -85,7 +95,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:background="@drawable/rounded_corners"
+            android:fontFamily="@font/roboto_black"
             android:text="Answer 2"
+            android:textColor="#6C63FF"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/answer_one_button" />
@@ -95,7 +110,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:background="@drawable/rounded_corners"
+            android:fontFamily="@font/roboto_black"
             android:text="Answer 3"
+            android:textColor="#6C63FF"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/answer_two_button" />
@@ -105,7 +125,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:background="@drawable/rounded_corners"
+            android:fontFamily="@font/roboto_black"
             android:text="Answer 4"
+            android:textColor="#6C63FF"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/answer_three_button" />

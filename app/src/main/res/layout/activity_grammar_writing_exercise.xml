@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#6C63FF"
     android:orientation="vertical"
     tools:context=".Grammar.GrammarWritingExercise">
 
@@ -36,8 +37,9 @@
                     android:gravity="end"
                     android:padding="8dp"
                     android:text="Question 1/10"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
+                    android:textColor="#6C63FF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/exercise_title_writing_text_view"
@@ -49,8 +51,9 @@
                     android:lineSpacingExtra="4dp"
                     android:padding="16dp"
                     android:text="Попробуйте перевести: "
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
+                    android:textColor="#6C63FF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/exercise_writing_text_view"
@@ -62,8 +65,9 @@
                     android:lineSpacingExtra="4dp"
                     android:padding="16dp"
                     android:text="We - ____"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp" />
+                    android:textColor="#6C63FF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -78,8 +82,9 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/open_sans"
             android:text="Answer:\nHint: use punctuation"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/card_view_writing" />
 
@@ -91,6 +96,9 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:hint="Answer"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/answer_text_view" />
@@ -102,7 +110,12 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
+            android:background="@drawable/rounded_corners"
+            android:fontFamily="@font/roboto_black"
             android:text="Submit"
+            android:textColor="#6C63FF"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/answer_edit_text" />
@@ -115,8 +128,9 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/open_sans"
             android:text="Correct Answer: \n"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
             android:visibility="invisible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/submit_answer_button" />
@@ -127,7 +141,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:background="@drawable/rounded_corners"
+            android:fontFamily="@font/roboto_black"
             android:text="Next Question"
+            android:textColor="#6C63FF"
+            android:textSize="20sp"
+            android:textStyle="bold"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/card_view_writing" />
