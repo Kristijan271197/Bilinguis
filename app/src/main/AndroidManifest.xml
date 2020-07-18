@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Vocabulary.VocabularyExercises"></activity>
+        <activity android:name=".Tests"></activity>
+        <activity android:name=".Exercises" />
         <activity android:name=".Grammar.GrammarWritingExercise" />
         <activity android:name=".Grammar.GrammarMultipleChoiceExercise" />
         <activity android:name=".Grammar.GrammarSectionSelected" />

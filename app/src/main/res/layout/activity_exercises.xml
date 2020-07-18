@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#6C63FF"
     android:orientation="vertical"
-    tools:context=".Vocabulary.VocabularyExercises">
+    tools:context=".Exercises">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

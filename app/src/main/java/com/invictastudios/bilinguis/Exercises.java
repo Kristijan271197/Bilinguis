@@ -1,4 +1,4 @@
-package com.invictastudios.bilinguis.Vocabulary;
+package com.invictastudios.bilinguis;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,7 +13,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.invictastudios.bilinguis.R;
 import com.invictastudios.bilinguis.model.WritingExerciseModel;
 
 import java.io.BufferedReader;
@@ -25,7 +24,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
-public class VocabularyExercises extends AppCompatActivity {
+public class Exercises extends AppCompatActivity {
 
     int randomQuestionBound;
     private CardView cardView;
@@ -52,7 +51,7 @@ public class VocabularyExercises extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vocabulary_exercises);
+        setContentView(R.layout.activity_exercises);
 
         Bundle bundle = getIntent().getExtras();
 
@@ -264,7 +263,7 @@ public class VocabularyExercises extends AppCompatActivity {
     }
 
     private void shakeAnimation() {
-        Animation shake = AnimationUtils.loadAnimation(VocabularyExercises.this,
+        Animation shake = AnimationUtils.loadAnimation(Exercises.this,
                 R.anim.shake_animation);
 
         cardView.startAnimation(shake);

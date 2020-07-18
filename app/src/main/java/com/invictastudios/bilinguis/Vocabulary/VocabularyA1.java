@@ -9,7 +9,9 @@ import android.widget.ImageButton;
 
 import androidx.fragment.app.Fragment;
 
+import com.invictastudios.bilinguis.Exercises;
 import com.invictastudios.bilinguis.R;
+import com.invictastudios.bilinguis.Tests;
 
 public class VocabularyA1 extends Fragment {
 
@@ -35,6 +37,7 @@ public class VocabularyA1 extends Fragment {
     private ImageButton weatherButton;
     private ImageButton exercisesOneButton;
     private ImageButton exercisesTwoButton;
+    private ImageButton testsButton;
 
 
     public VocabularyA1() {
@@ -111,7 +114,7 @@ public class VocabularyA1 extends Fragment {
 
         exercisesOneButton = view.findViewById(R.id.exerciseOneA1);
         exercisesOneButton.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
+            Intent intent = new Intent(view.getContext(), Exercises.class);
             intent.putExtra("level", 1);
             intent.putExtra("number", 1);
             intent.putExtra("vocabulary", true);
@@ -120,9 +123,17 @@ public class VocabularyA1 extends Fragment {
 
         exercisesTwoButton = view.findViewById(R.id.exerciseTwoA1);
         exercisesTwoButton.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
+            Intent intent = new Intent(view.getContext(), Exercises.class);
             intent.putExtra("level", 1);
             intent.putExtra("number", 2);
+            intent.putExtra("vocabulary", true);
+            startActivity(intent);
+        });
+
+        testsButton = view.findViewById(R.id.testA1Vocabulary);
+        testsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), Tests.class);
+            intent.putExtra("level", 1);
             intent.putExtra("vocabulary", true);
             startActivity(intent);
         });

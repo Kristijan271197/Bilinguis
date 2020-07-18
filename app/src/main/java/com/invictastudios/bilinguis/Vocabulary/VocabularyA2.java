@@ -9,7 +9,9 @@ import android.widget.ImageButton;
 
 import androidx.fragment.app.Fragment;
 
+import com.invictastudios.bilinguis.Exercises;
 import com.invictastudios.bilinguis.R;
+import com.invictastudios.bilinguis.Tests;
 
 public class VocabularyA2 extends Fragment {
 
@@ -37,6 +39,7 @@ public class VocabularyA2 extends Fragment {
     private ImageButton exercisesOneButton;
     private ImageButton exercisesTwoButton;
     private ImageButton exercisesThreeButton;
+    private ImageButton testsButton;
 
     public VocabularyA2() {
     }
@@ -119,7 +122,7 @@ public class VocabularyA2 extends Fragment {
 
         exercisesOneButton = view.findViewById(R.id.exerciseOneA2);
         exercisesOneButton.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
+            Intent intent = new Intent(view.getContext(), Exercises.class);
             intent.putExtra("level", 2);
             intent.putExtra("number", 1);
             intent.putExtra("vocabulary", true);
@@ -128,7 +131,7 @@ public class VocabularyA2 extends Fragment {
 
         exercisesTwoButton = view.findViewById(R.id.exerciseTwoA2);
         exercisesTwoButton.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
+            Intent intent = new Intent(view.getContext(), Exercises.class);
             intent.putExtra("level", 2);
             intent.putExtra("number", 2);
             intent.putExtra("vocabulary", true);
@@ -137,9 +140,17 @@ public class VocabularyA2 extends Fragment {
 
         exercisesThreeButton = view.findViewById(R.id.exerciseThreeA2);
         exercisesThreeButton.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
+            Intent intent = new Intent(view.getContext(), Exercises.class);
             intent.putExtra("level", 2);
             intent.putExtra("number", 3);
+            intent.putExtra("vocabulary", true);
+            startActivity(intent);
+        });
+
+        testsButton = view.findViewById(R.id.testA2Vocabulary);
+        testsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), Tests.class);
+            intent.putExtra("level", 2);
             intent.putExtra("vocabulary", true);
             startActivity(intent);
         });

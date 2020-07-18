@@ -348,6 +348,37 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/testA1VocabularyFrame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exerciseTwoA1Frame"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <ImageButton
+                    android:id="@+id/testA1Vocabulary"
+                    android:layout_width="300dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/image_button_rounded_corners"
+                    android:padding="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/final_test" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="Final Test"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
         </RelativeLayout>
     </ScrollView>
 </FrameLayout>

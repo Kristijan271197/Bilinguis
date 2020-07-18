@@ -9,8 +9,9 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
+import com.invictastudios.bilinguis.Exercises;
 import com.invictastudios.bilinguis.R;
-import com.invictastudios.bilinguis.Vocabulary.VocabularyExercises;
+import com.invictastudios.bilinguis.Tests;
 
 public class GrammarA2 extends Fragment {
 
@@ -26,6 +27,7 @@ public class GrammarA2 extends Fragment {
     private Button prepositionsOfPlaceButton;
     private Button futureBeGoingToButton;
     private Button exercisesButton;
+    private Button testsButton;
 
     public GrammarA2() {
     }
@@ -47,6 +49,7 @@ public class GrammarA2 extends Fragment {
         prepositionsOfPlaceButton = view.findViewById(R.id.prepositions_of_place_button);
         futureBeGoingToButton = view.findViewById(R.id.future_be_going_to_button);
         exercisesButton = view.findViewById(R.id.exercise_a2_grammar);
+        testsButton = view.findViewById(R.id.test_a2_grammar);
 
         pluralExceptionsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
@@ -137,9 +140,16 @@ public class GrammarA2 extends Fragment {
         });
 
         exercisesButton.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
+            Intent intent = new Intent(view.getContext(), Exercises.class);
             intent.putExtra("vocabulary", false);
             intent.putExtra("level", 2);
+            startActivity(intent);
+        });
+
+        testsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), Tests.class);
+            intent.putExtra("level", 2);
+            intent.putExtra("vocabulary", false);
             startActivity(intent);
         });
 

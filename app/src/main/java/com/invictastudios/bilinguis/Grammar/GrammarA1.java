@@ -9,8 +9,9 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
+import com.invictastudios.bilinguis.Exercises;
 import com.invictastudios.bilinguis.R;
-import com.invictastudios.bilinguis.Vocabulary.VocabularyExercises;
+import com.invictastudios.bilinguis.Tests;
 
 
 public class GrammarA1 extends Fragment {
@@ -30,6 +31,7 @@ public class GrammarA1 extends Fragment {
     private Button toBeButton;
     private Button presentContinuousTenseButton;
     private Button exercisesButton;
+    private Button testsButton;
 
     public GrammarA1() {
 
@@ -51,6 +53,7 @@ public class GrammarA1 extends Fragment {
         toBeButton = view.findViewById(R.id.to_be_button);
         presentContinuousTenseButton = view.findViewById(R.id.present_continuous_tense);
         exercisesButton = view.findViewById(R.id.exercise_a1_grammar);
+        testsButton = view.findViewById(R.id.test_a1_grammar);
 
         personalPronounsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);
@@ -134,9 +137,17 @@ public class GrammarA1 extends Fragment {
         });
 
         exercisesButton.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), VocabularyExercises.class);
+            Intent intent = new Intent(view.getContext(), Exercises.class);
             intent.putExtra("vocabulary", false);
             intent.putExtra("level", 1);
+            startActivity(intent);
+        });
+
+
+        testsButton.setOnClickListener(v -> {
+            Intent intent = new Intent(view.getContext(), Tests.class);
+            intent.putExtra("level", 1);
+            intent.putExtra("vocabulary", false);
             startActivity(intent);
         });
 
