@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#6C63FF"
     tools:context=".Grammar.ImageGrammarFragment">
 
     <ScrollView
@@ -22,8 +23,9 @@
                 android:lineSpacingExtra="4dp"
                 android:padding="16dp"
                 android:text=""
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:id="@+id/first_linear_layout"
@@ -31,6 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/first_text_view"
                 android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -39,31 +42,32 @@
                     android:id="@+id/first_linear_text"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:background="#d3d3d3"
+                    android:background="@drawable/rounded_corners"
                     android:fontFamily="@font/open_sans"
                     android:gravity="start"
                     android:lineSpacingExtra="4dp"
                     android:padding="16dp"
                     android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp" />
+                    android:textColor="#6C63FF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/second_linear_text"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
                     android:layout_weight="1"
-                    android:background="#d3d3d3"
+                    android:background="@drawable/rounded_corners"
                     android:fontFamily="@font/open_sans"
                     android:gravity="start"
                     android:lineSpacingExtra="4dp"
                     android:padding="16dp"
                     android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp" />
+                    android:textColor="#6C63FF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
@@ -76,8 +80,9 @@
                 android:lineSpacingExtra="4dp"
                 android:padding="16dp"
                 android:text=""
-                android:textColor="@android:color/black"
-                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 android:visibility="invisible" />
 
             <LinearLayout
@@ -86,6 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/second_text_view"
                 android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -94,32 +100,33 @@
                     android:id="@+id/third_linear_text"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:background="#d3d3d3"
+                    android:background="@drawable/rounded_corners"
                     android:fontFamily="@font/open_sans"
                     android:gravity="start"
                     android:lineSpacingExtra="4dp"
                     android:padding="16dp"
                     android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp"
+                    android:textColor="#6C63FF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
                     android:visibility="invisible" />
 
                 <TextView
                     android:id="@+id/fourth_linear_text"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
                     android:layout_weight="1"
-                    android:background="#d3d3d3"
+                    android:background="@drawable/rounded_corners"
                     android:fontFamily="@font/open_sans"
                     android:gravity="start"
                     android:lineSpacingExtra="4dp"
                     android:padding="16dp"
                     android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp"
+                    android:textColor="#6C63FF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
                     android:visibility="invisible" />
             </LinearLayout>
 
@@ -133,8 +140,9 @@
                 android:lineSpacingExtra="4dp"
                 android:padding="16dp"
                 android:text=""
-                android:textColor="@android:color/black"
-                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 android:visibility="invisible" />
 
             <LinearLayout
@@ -143,6 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/third_text_view"
                 android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -150,32 +159,33 @@
                     android:id="@+id/fifth_linear_text"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:background="#d3d3d3"
+                    android:background="@drawable/rounded_corners"
                     android:fontFamily="@font/open_sans"
                     android:gravity="start"
                     android:lineSpacingExtra="4dp"
                     android:padding="16dp"
                     android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp"
+                    android:textColor="#6C63FF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
                     android:visibility="invisible" />
 
                 <TextView
                     android:id="@+id/sixth_linear_text"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
                     android:layout_weight="1"
-                    android:background="#d3d3d3"
+                    android:background="@drawable/rounded_corners"
                     android:fontFamily="@font/open_sans"
                     android:gravity="start"
                     android:lineSpacingExtra="4dp"
                     android:padding="16dp"
                     android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="14sp"
+                    android:textColor="#6C63FF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
                     android:visibility="invisible" />
             </LinearLayout>
 
@@ -185,7 +195,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/third_linear_layout"
                 android:layout_margin="16dp"
-                android:text="Exercise 1" />
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Exercise 1"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/exercise_two_button_image"
@@ -193,7 +208,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/exercise_one_button_image"
                 android:layout_margin="16dp"
-                android:text="Exercise 2" />
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Exercise 2"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/exercise_three_button_image"
@@ -201,7 +221,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/exercise_two_button_image"
                 android:layout_margin="16dp"
-                android:text="Exercise 3" />
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Exercise 3"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 

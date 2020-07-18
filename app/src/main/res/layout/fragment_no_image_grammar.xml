@@ -33,21 +33,38 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_view"
                 android:layout_margin="16dp"
-                android:text="Exercise 1" />
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Exercise 1"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <Button
                 android:id="@+id/exercise_two_button_no_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/exercise_one_button_no_image"
                 android:layout_margin="16dp"
-                android:text="Exercise 2" />
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Exercise 2"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <Button
                 android:id="@+id/exercise_three_button_no_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/exercise_two_button_no_image"
                 android:layout_margin="16dp"
-                android:text="Exercise 3" />
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Exercise 3"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
 
