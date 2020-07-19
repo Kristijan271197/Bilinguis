@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.invictastudios.bilinguis.Grammar.Grammar;
 import com.invictastudios.bilinguis.R;
 import com.invictastudios.bilinguis.Vocabulary.Vocabulary;
+import com.invictastudios.bilinguis.Writing.Writing;
 import com.invictastudios.bilinguis.model.MainCardsModel;
 
 import java.util.List;
@@ -59,11 +60,17 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             mainItemName = itemView.findViewById(R.id.main_item_name);
             mainItemImage = itemView.findViewById(R.id.main_item_image);
             itemView.setOnClickListener(v -> {
-                if (items.get(getAdapterPosition()).getMainItemName().equals("Grammar"))
-                    context.startActivity(new Intent(context.getApplicationContext(), Grammar.class));
-                else if (items.get(getAdapterPosition()).getMainItemName().equals("Vocabulary"))
-                    context.startActivity(new Intent(context.getApplicationContext(), Vocabulary.class));
-
+                switch (items.get(getAdapterPosition()).getMainItemName()) {
+                    case "Grammar":
+                        context.startActivity(new Intent(context.getApplicationContext(), Grammar.class));
+                        break;
+                    case "Vocabulary":
+                        context.startActivity(new Intent(context.getApplicationContext(), Vocabulary.class));
+                        break;
+                    case "Writing":
+                        context.startActivity(new Intent(context.getApplicationContext(), Writing.class));
+                        break;
+                }
 
             });
         }
