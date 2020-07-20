@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6C63FF"
+    tools:context=".Reading.ReadingA1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/greetings_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Greetings"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/in_school_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/greetings_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="In School"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/in_the_market_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/in_school_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="In the Market"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/home_family_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/in_the_market_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="My Home and Family"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/our_day_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_family_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Our day"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>

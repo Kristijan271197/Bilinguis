@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.invictastudios.bilinguis.Grammar.Grammar;
 import com.invictastudios.bilinguis.R;
+import com.invictastudios.bilinguis.Reading.Reading;
 import com.invictastudios.bilinguis.Vocabulary.Vocabulary;
 import com.invictastudios.bilinguis.Writing.Writing;
 import com.invictastudios.bilinguis.model.MainCardsModel;
@@ -69,6 +70,9 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
                         break;
                     case "Writing":
                         context.startActivity(new Intent(context.getApplicationContext(), Writing.class));
+                        break;
+                    case "Reading":
+                        context.startActivity(new Intent(context.getApplicationContext(), Reading.class));
                         break;
                 }
 

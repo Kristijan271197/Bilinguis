@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6C63FF"
+    tools:context=".Reading.ReadingA2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/zoo_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Zoo"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/describing_man_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/zoo_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Describing a Man"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/clothes_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/describing_man_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Clothes"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/describing_room_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/clothes_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Describing my room"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/restaurant_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/describing_room_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="In the Restaurant"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/season_month_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/restaurant_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="Best Season and Month"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/city_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/season_month_button"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_corners"
+                android:fontFamily="@font/roboto_black"
+                android:text="In the City"
+                android:textColor="#6C63FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>

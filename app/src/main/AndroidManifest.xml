@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Writing.Writing"></activity>
+        <activity android:name=".Reading.ReadingSectionSelected"></activity>
+        <activity android:name=".Reading.Reading" />
+        <activity android:name=".Writing.Writing" />
         <activity android:name=".Tests" />
         <activity android:name=".Exercises" />
         <activity android:name=".Grammar.GrammarWritingExercise" />
