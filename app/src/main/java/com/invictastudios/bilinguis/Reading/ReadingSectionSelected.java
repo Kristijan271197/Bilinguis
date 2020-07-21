@@ -1,6 +1,7 @@
 package com.invictastudios.bilinguis.Reading;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,9 +16,16 @@ import java.nio.charset.StandardCharsets;
 
 public class ReadingSectionSelected extends AppCompatActivity {
 
+    private Button playTextButton;
+    private TextView exerciseOneQuestionTextView;
+    private TextView exerciseOneAnswerTextView;
     private TextView readingTextView;
+    private TextView exerciseTwoQuestionTextView;
+    private TextView exerciseTwoAnswerTextView;
     private int level;
     private int name;
+    private String firstAnswer;
+    private String secondAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +33,13 @@ public class ReadingSectionSelected extends AppCompatActivity {
         setContentView(R.layout.activity_reading_section_selected);
 
         Bundle bundle = getIntent().getExtras();
+
+        playTextButton = findViewById(R.id.play_text_button);
+        exerciseOneQuestionTextView = findViewById(R.id.exercise_one_question);
+        exerciseOneAnswerTextView = findViewById(R.id.exercise_one_answer);
         readingTextView = findViewById(R.id.reading_text_view);
+        exerciseTwoQuestionTextView = findViewById(R.id.exercise_two_question);
+        exerciseTwoAnswerTextView = findViewById(R.id.exercise_two_answer);
 
         if (bundle != null) {
             level = bundle.getInt(GrammarA1.EXERCISE_LEVEL);
@@ -34,43 +48,65 @@ public class ReadingSectionSelected extends AppCompatActivity {
 
         if (level == 1) {
             if (name == 1) {
-                enterText("reading/A1/greetings_text.txt");
+                enterText("reading/A1_exercises/greetings_exercise_one_question.txt", 1);
+                enterText("reading/A1_exercises/greetings_exercise_one_answer.txt", 2);
+                enterText("reading/A1/greetings_text.txt", 3);
+                enterText("reading/A1_exercises/greetings_exercise_two_question.txt", 4);
+                enterText("reading/A1_exercises/greetings_exercise_two_answer.txt", 5);
             } else if (name == 2) {
-                enterText("reading/A1/in_school_text.txt");
+                enterText("reading/A1/in_school_text.txt", 3);
             } else if (name == 3) {
-                enterText("reading/A1/market_text.txt");
+                enterText("reading/A1/market_text.txt", 3);
             } else if (name == 4) {
-                enterText("reading/A1/home_family_text.txt");
+                enterText("reading/A1/home_family_text.txt", 3);
             } else if (name == 5) {
-                enterText("reading/A1/our_day_text.txt");
+                enterText("reading/A1/our_day_text.txt", 3);
             }
         } else if (level == 2) {
             if (name == 1) {
-                enterText("reading/A2/zoo_text.txt");
+                enterText("reading/A2/zoo_text.txt", 3);
             } else if (name == 2) {
-                enterText("reading/A2/describing_man_text.txt");
+                enterText("reading/A2/describing_man_text.txt", 3);
             } else if (name == 3) {
-                enterText("reading/A2/clothes_text.txt");
+                enterText("reading/A2/clothes_text.txt", 3);
             } else if (name == 4) {
-                enterText("reading/A2/describing_room_text.txt");
+                enterText("reading/A2/describing_room_text.txt", 3);
             } else if (name == 5) {
-                enterText("reading/A2/restaurant_text.txt");
+                enterText("reading/A2/restaurant_text.txt", 3);
             } else if (name == 6) {
-                enterText("reading/A2/season_month_text.txt");
+                enterText("reading/A2/season_month_text.txt", 3);
             } else if (name == 7) {
-                enterText("reading/A2/city_text.txt");
+                enterText("reading/A2/city_text.txt", 3);
             }
         }
+
+        exerciseOneAnswerTextView.setOnClickListener(v -> exerciseOneAnswerTextView.setText(firstAnswer));
+
+        exerciseTwoAnswerTextView.setOnClickListener(v -> exerciseTwoAnswerTextView.setText(secondAnswer));
     }
 
-    private void enterText(String path) {
+    private void enterText(String path, int order) {
+        StringBuilder stringBuilder = new StringBuilder();
 
         try (BufferedReader reader = new BufferedReader(
                 new InputStreamReader(getAssets().open(path), StandardCharsets.UTF_8))) {
             String mLine;
             while ((mLine = reader.readLine()) != null) {
-                readingTextView.append(mLine + "\n");
+                if (order == 1)
+                    exerciseOneQuestionTextView.append(mLine + "\n");
+                else if (order == 2)
+                    stringBuilder.append(mLine).append("\n");
+                else if (order == 3)
+                    readingTextView.append(mLine + "\n");
+                else if (order == 4)
+                    exerciseTwoQuestionTextView.append(mLine + "\n");
+                else if (order == 5)
+                    stringBuilder.append(mLine).append("\n");
             }
+            if (order == 2)
+                firstAnswer = stringBuilder.toString();
+            else if (order == 5)
+                secondAnswer = stringBuilder.toString();
         } catch (IOException e) {
             e.printStackTrace();
         }
