@@ -54,29 +54,73 @@ public class ReadingSectionSelected extends AppCompatActivity {
                 enterText("reading/A1_exercises/greetings_exercise_two_question.txt", 4);
                 enterText("reading/A1_exercises/greetings_exercise_two_answer.txt", 5);
             } else if (name == 2) {
+                enterText("reading/A1_exercises/in_school_exercise_one_question.txt", 1);
+                enterText("reading/A1_exercises/in_school_exercise_one_answer.txt", 2);
                 enterText("reading/A1/in_school_text.txt", 3);
+                enterText("reading/A1_exercises/in_school_exercise_two_question.txt", 4);
+                enterText("reading/A1_exercises/in_school_exercise_two_answer.txt", 5);
             } else if (name == 3) {
+                enterText("reading/A1_exercises/market_exercise_one_question.txt", 1);
+                enterText("reading/A1_exercises/market_exercise_one_answer.txt", 2);
                 enterText("reading/A1/market_text.txt", 3);
+                enterText("reading/A1_exercises/market_exercise_two_question.txt", 4);
+                enterText("reading/A1_exercises/market_exercise_two_answer.txt", 5);
             } else if (name == 4) {
+                enterText("reading/A1_exercises/home_family_exercise_one_question.txt", 1);
+                enterText("reading/A1_exercises/home_family_exercise_one_answer.txt", 2);
                 enterText("reading/A1/home_family_text.txt", 3);
+                enterText("reading/A1_exercises/home_family_exercise_two_question.txt", 4);
+                enterText("reading/A1_exercises/home_family_exercise_two_answer.txt", 5);
             } else if (name == 5) {
+                enterText("reading/A1_exercises/our_day_exercise_one_question.txt", 1);
+                enterText("reading/A1_exercises/our_day_exercise_one_answer.txt", 2);
                 enterText("reading/A1/our_day_text.txt", 3);
+                enterText("reading/A1_exercises/our_day_exercise_two_question.txt", 4);
+                enterText("reading/A1_exercises/our_day_exercise_two_answer.txt", 5);
             }
         } else if (level == 2) {
             if (name == 1) {
+                enterText("reading/A2_exercises/zoo_exercise_one_question.txt", 1);
+                enterText("reading/A2_exercises/zoo_exercise_one_answer.txt", 2);
                 enterText("reading/A2/zoo_text.txt", 3);
+                enterText("reading/A2_exercises/zoo_exercise_two_question.txt", 4);
+                enterText("reading/A2_exercises/zoo_exercise_two_answer.txt", 5);
             } else if (name == 2) {
+                enterText("reading/A2_exercises/describing_man_exercise_one_question.txt", 1);
+                enterText("reading/A2_exercises/describing_man_exercise_one_answer.txt", 2);
                 enterText("reading/A2/describing_man_text.txt", 3);
+                enterText("reading/A2_exercises/describing_man_exercise_two_question.txt", 4);
+                enterText("reading/A2_exercises/describing_man_exercise_two_answer.txt", 5);
             } else if (name == 3) {
+                enterText("reading/A2_exercises/clothes_exercise_one_question.txt", 1);
+                enterText("reading/A2_exercises/clothes_exercise_one_answer.txt", 2);
                 enterText("reading/A2/clothes_text.txt", 3);
+                enterText("reading/A2_exercises/clothes_exercise_two_question.txt", 4);
+                enterText("reading/A2_exercises/clothes_exercise_two_answer.txt", 5);
             } else if (name == 4) {
+                enterText("reading/A2_exercises/describing_room_exercise_one_question.txt", 1);
+                enterText("reading/A2_exercises/describing_room_exercise_one_answer.txt", 2);
                 enterText("reading/A2/describing_room_text.txt", 3);
+                enterText("reading/A2_exercises/describing_room_exercise_two_question.txt", 4);
+                enterText("reading/A2_exercises/describing_room_exercise_two_answer.txt", 5);
             } else if (name == 5) {
+                enterText("reading/A2_exercises/restaurant_exercise_one_question.txt", 1);
+                enterText("reading/A2_exercises/restaurant_exercise_one_answer.txt", 2);
                 enterText("reading/A2/restaurant_text.txt", 3);
+                enterText("reading/A2_exercises/restaurant_exercise_two_question.txt", 4);
+                enterText("reading/A2_exercises/restaurant_exercise_two_answer.txt", 5);
             } else if (name == 6) {
+                enterText("reading/A2_exercises/season_month_exercise_one_question.txt", 1);
+                enterText("reading/A2_exercises/season_month_exercise_one_answer.txt", 2);
                 enterText("reading/A2/season_month_text.txt", 3);
+                enterText("reading/A2_exercises/season_month_exercise_two_question.txt", 4);
+                enterText("reading/A2_exercises/season_month_exercise_two_answer.txt", 5);
             } else if (name == 7) {
+                enterText("reading/A2_exercises/city_exercise_one_question.txt", 1);
+                enterText("reading/A2_exercises/city_exercise_one_answer.txt", 2);
                 enterText("reading/A2/city_text.txt", 3);
+                enterText("reading/A2_exercises/city_exercise_two_question.txt", 4);
+                enterText("reading/A2_exercises/city_exercise_two_answer.txt", 5);
             }
         }
 
