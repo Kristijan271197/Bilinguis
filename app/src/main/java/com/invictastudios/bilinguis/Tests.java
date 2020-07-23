@@ -1,5 +1,6 @@
 package com.invictastudios.bilinguis;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,7 @@ import java.util.Locale;
 
 public class Tests extends AppCompatActivity {
 
+    public static final String LEVELS_UNLOCK = "levelsUnlock";
     private CardView cardView;
     private TextView questionNumberTextView;
     private TextView exerciseTitleTextView;
@@ -43,11 +45,16 @@ public class Tests extends AppCompatActivity {
     private int exerciseLevel;
     private boolean matches;
     private boolean isVocabulary;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercises);
+
+        SharedPreferences sharedPreferences = getSharedPreferences(LEVELS_UNLOCK, MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
 
         Bundle bundle = getIntent().getExtras();
 
@@ -114,6 +121,23 @@ public class Tests extends AppCompatActivity {
                 if (matches) {
                     correctAnswers++;
                     fadeView();
+                    if (isVocabulary) {
+                        if (exerciseLevel == 1) {
+                            editor.putInt("VocabularyA1", correctAnswers);
+                            editor.apply();
+                        } else if (exerciseLevel == 2) {
+                            editor.putInt("VocabularyA2", correctAnswers);
+                            editor.apply();
+                        }
+                    } else {
+                        if (exerciseLevel == 1) {
+                            editor.putInt("GrammarA1", correctAnswers);
+                            editor.apply();
+                        } else if (exerciseLevel == 2) {
+                            editor.putInt("GrammarA2", correctAnswers);
+                            editor.apply();
+                        }
+                    }
                 } else {
                     solutionTextView.append(questionsAnswers.get(questionNumber).getAnswer());
                     solutionTextView.setVisibility(View.VISIBLE);

@@ -49,78 +49,112 @@ public class VocabularyA2 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_vocabulary_a2, container, false);
 
-
         natureButton = view.findViewById(R.id.nature);
+        animalsButton = view.findViewById(R.id.animals);
+        facePartsButton = view.findViewById(R.id.face_parts);
+        bodyPartsButton = view.findViewById(R.id.body_parts);
+        clothesButton = view.findViewById(R.id.clothes);
+        kitchenButton = view.findViewById(R.id.kitchen);
+        furnitureButton = view.findViewById(R.id.furniture);
+        beveragesButton = view.findViewById(R.id.beverages);
+        timeButton = view.findViewById(R.id.time);
+        cityButton = view.findViewById(R.id.city);
+        exercisesOneButton = view.findViewById(R.id.exerciseOneA2);
+        exercisesTwoButton = view.findViewById(R.id.exerciseTwoA2);
+        exercisesThreeButton = view.findViewById(R.id.exerciseThreeA2);
+        testsButton = view.findViewById(R.id.testA2Vocabulary);
+
+//        if (getActivity() != null) {
+//            SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Tests.LEVELS_UNLOCK, Context.MODE_PRIVATE);
+//            int vocabularyA1Test = sharedPreferences.getInt("VocabularyA1", 0);
+//            if (vocabularyA1Test < 34) {
+//                natureButton.setEnabled(false);
+//                animalsButton.setEnabled(false);
+//                facePartsButton.setEnabled(false);
+//                bodyPartsButton.setEnabled(false);
+//                clothesButton.setEnabled(false);
+//                kitchenButton.setEnabled(false);
+//                furnitureButton.setEnabled(false);
+//                beveragesButton.setEnabled(false);
+//                timeButton.setEnabled(false);
+//                cityButton.setEnabled(false);
+//                exercisesOneButton.setEnabled(false);
+//                exercisesTwoButton.setEnabled(false);
+//                exercisesThreeButton.setEnabled(false);
+//            }
+//        }
+
+
         natureButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", NATURE);
             startActivity(intent);
         });
 
-        animalsButton = view.findViewById(R.id.animals);
+
         animalsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", ANIMALS);
             startActivity(intent);
         });
 
-        facePartsButton = view.findViewById(R.id.face_parts);
+
         facePartsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", FACE_PARTS);
             startActivity(intent);
         });
 
-        bodyPartsButton = view.findViewById(R.id.body_parts);
+
         bodyPartsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", BODY_PARTS);
             startActivity(intent);
         });
 
-        clothesButton = view.findViewById(R.id.clothes);
+
         clothesButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", CLOTHES);
             startActivity(intent);
         });
 
-        kitchenButton = view.findViewById(R.id.kitchen);
+
         kitchenButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", KITCHEN);
             startActivity(intent);
         });
 
-        furnitureButton = view.findViewById(R.id.furniture);
+
         furnitureButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", FURNITURE);
             startActivity(intent);
         });
 
-        beveragesButton = view.findViewById(R.id.beverages);
+
         beveragesButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", BEVERAGES);
             startActivity(intent);
         });
 
-        timeButton = view.findViewById(R.id.time);
+
         timeButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", TIME);
             startActivity(intent);
         });
 
-        cityButton = view.findViewById(R.id.city);
+
         cityButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", CITY);
             startActivity(intent);
         });
 
-        exercisesOneButton = view.findViewById(R.id.exerciseOneA2);
+
         exercisesOneButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), Exercises.class);
             intent.putExtra("level", 2);
@@ -129,7 +163,7 @@ public class VocabularyA2 extends Fragment {
             startActivity(intent);
         });
 
-        exercisesTwoButton = view.findViewById(R.id.exerciseTwoA2);
+
         exercisesTwoButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), Exercises.class);
             intent.putExtra("level", 2);
@@ -138,7 +172,7 @@ public class VocabularyA2 extends Fragment {
             startActivity(intent);
         });
 
-        exercisesThreeButton = view.findViewById(R.id.exerciseThreeA2);
+
         exercisesThreeButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), Exercises.class);
             intent.putExtra("level", 2);
@@ -147,7 +181,7 @@ public class VocabularyA2 extends Fragment {
             startActivity(intent);
         });
 
-        testsButton = view.findViewById(R.id.testA2Vocabulary);
+
         testsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), Tests.class);
             intent.putExtra("level", 2);

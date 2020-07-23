@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6C63FF"
+    tools:context=".LockedSection">
+
+    <ImageButton
+        android:id="@+id/lock"
+        android:layout_width="300dp"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/image_button_rounded_corners"
+        android:padding="8dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/lock" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lock"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/roboto_black"
+        android:gravity="center_horizontal"
+        android:text="Pass the previous final test with at least 75% to unlock this one"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
