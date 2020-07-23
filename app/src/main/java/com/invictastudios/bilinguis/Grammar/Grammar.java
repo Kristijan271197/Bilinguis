@@ -22,7 +22,11 @@ public class Grammar extends AppCompatActivity {
     private ViewPager2 grammarPager;
     private FragmentStateAdapter pagerAdapter;
     private TabLayout grammarLayout;
-    public int grammarA1Test;
+    public int grammarA1TestOne;
+    public int grammarA1TestTwo;
+    public int grammarA1TestThree;
+    public int grammarA1TestFour;
+    public int grammarA1TestFive;
     private SharedPreferences sharedPreferences;
 
     @Override
@@ -31,7 +35,11 @@ public class Grammar extends AppCompatActivity {
         setContentView(R.layout.activity_grammar);
 
         sharedPreferences = getSharedPreferences(Tests.LEVELS_UNLOCK, Context.MODE_PRIVATE);
-        grammarA1Test = sharedPreferences.getInt("GrammarA1", 0);
+        grammarA1TestOne = sharedPreferences.getInt("GrammarA1One", 0);
+        grammarA1TestTwo = sharedPreferences.getInt("GrammarA1Two", 0);
+        grammarA1TestThree = sharedPreferences.getInt("GrammarA1Three", 0);
+        grammarA1TestFour = sharedPreferences.getInt("GrammarA1Four", 0);
+        grammarA1TestFive = sharedPreferences.getInt("GrammarA1Five", 0);
 
         grammarPager = findViewById(R.id.grammar_pager);
         grammarLayout = findViewById(R.id.grammar_tabs);
@@ -63,7 +71,9 @@ public class Grammar extends AppCompatActivity {
             if (position == 0)
                 return new GrammarA1();
             else if (position == 1) {
-                if (grammar.grammarA1Test < 37)
+                if (grammar.grammarA1TestOne < 7 || grammar.grammarA1TestTwo < 8 ||
+                        grammar.grammarA1TestThree < 7 || grammar.grammarA1TestFour < 8 ||
+                        grammar.grammarA1TestFive < 7)
                     return new LockedSection();
                 else
                     return new GrammarA2();

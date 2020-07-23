@@ -1,0 +1,10 @@
+book
+egg
+song
+apple
+lamp
+shelf
+plant
+umbrella
+street
+car

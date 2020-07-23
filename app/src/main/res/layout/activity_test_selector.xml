@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6C63FF"
+    tools:context=".TestSelection">
+
+    <Button
+        android:id="@+id/first_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="@font/roboto_black"
+        android:text="Exercise One"
+        android:textColor="#6C63FF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/second_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first_exercise"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="@font/roboto_black"
+        android:text="Exercise Two"
+        android:textColor="#6C63FF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/third_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/second_exercise"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="@font/roboto_black"
+        android:text="Exercise Three"
+        android:textColor="#6C63FF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/fourth_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/third_exercise"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="@font/roboto_black"
+        android:text="Exercise Four"
+        android:textColor="#6C63FF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/fifth_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fourth_exercise"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="@font/roboto_black"
+        android:text="Exercise Five"
+        android:textColor="#6C63FF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/sixth_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fifth_exercise"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_corners"
+        android:fontFamily="@font/roboto_black"
+        android:text="Exercise Six"
+        android:textColor="#6C63FF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

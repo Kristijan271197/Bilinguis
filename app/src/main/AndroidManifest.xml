@@ -11,19 +11,23 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".TestSelection" />
         <activity android:name=".Reading.ReadingSectionSelected" />
         <activity android:name=".Reading.Reading" />
         <activity android:name=".Writing.Writing" />
-        <activity android:name=".Tests" />
-        <activity android:name=".Exercises" />
-        <activity android:name=".Grammar.GrammarWritingExercise" />
+        <activity
+            android:name=".Tests"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Exercises"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Grammar.GrammarWritingExercise"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".Grammar.GrammarMultipleChoiceExercise" />
         <activity android:name=".Grammar.GrammarSectionSelected" />
         <activity android:name=".Grammar.Grammar" />
-        <!--
-        This is the sample AdMob App ID. Insert your own AdMob App ID in quotes
-        https://googlemobileadssdk.page.link/admob-android-update-manifest
-        -->
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-4701446273186664~8537561530" />

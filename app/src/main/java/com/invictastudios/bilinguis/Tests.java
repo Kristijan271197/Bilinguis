@@ -45,6 +45,7 @@ public class Tests extends AppCompatActivity {
     private int exerciseLevel;
     private boolean matches;
     private boolean isVocabulary;
+    private int exerciseNumber;
     private SharedPreferences.Editor editor;
 
     @Override
@@ -77,6 +78,7 @@ public class Tests extends AppCompatActivity {
         if (bundle != null) {
             exerciseLevel = bundle.getInt("level");
             isVocabulary = bundle.getBoolean("vocabulary");
+            exerciseNumber = bundle.getInt("exerciseNumber");
         }
 
 
@@ -96,17 +98,75 @@ public class Tests extends AppCompatActivity {
             }
         } else {
             if (exerciseLevel == 1) {
-                exerciseTitleTextView.setText("Упражнение 1: Используйте any/many/much");
-                fillArray("grammar/A1_exercises/a1_test_grammar_questions.txt", questions);
-                fillArray("grammar/A1_exercises/a1_test_grammar_answers.txt", answers);
-                for (int i = 0; i < questions.size(); i++)
-                    questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Упражнение 1: Используйте any/many/much");
+                    fillArray("grammar/A1_exercises/a1_test_grammar_one_questions.txt", questions);
+                    fillArray("grammar/A1_exercises/a1_test_grammar_one_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Упражнение 2: Present Simple или Present Continuous?");
+                    fillArray("grammar/A1_exercises/a1_test_grammar_two_questions.txt", questions);
+                    fillArray("grammar/A1_exercises/a1_test_grammar_two_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 3) {
+                    exerciseTitleTextView.setText("Упражнение 3: а/an");
+                    fillArray("grammar/A1_exercises/a1_test_grammar_three_questions.txt", questions);
+                    fillArray("grammar/A1_exercises/a1_test_grammar_three_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 4) {
+                    exerciseTitleTextView.setText("Упражнение 4: Сделайте вопрос:");
+                    fillArray("grammar/A1_exercises/a1_test_grammar_four_questions.txt", questions);
+                    fillArray("grammar/A1_exercises/a1_test_grammar_four_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 5) {
+                    exerciseTitleTextView.setText("Упражнение 5: Сделайте отрицание:");
+                    fillArray("grammar/A1_exercises/a1_test_grammar_five_questions.txt", questions);
+                    fillArray("grammar/A1_exercises/a1_test_grammar_five_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                }
             } else if (exerciseLevel == 2) {
-                exerciseTitleTextView.setText("Упражнение 1: Используйте личные местоимения");
-                fillArray("grammar/A2_exercises/a2_test_grammar_questions.txt", questions);
-                fillArray("grammar/A2_exercises/a2_test_grammar_answers.txt", answers);
-                for (int i = 0; i < questions.size(); i++)
-                    questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Упражнение 1: Используйте личные местоимения");
+                    fillArray("grammar/A2_exercises/a1_test_grammar_one_questions.txt", questions);
+                    fillArray("grammar/A2_exercises/a1_test_grammar_one_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Упражнение 2: Образуйте Past Simple");
+                    fillArray("grammar/A2_exercises/a1_test_grammar_two_questions.txt", questions);
+                    fillArray("grammar/A2_exercises/a1_test_grammar_two_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 3) {
+                    exerciseTitleTextView.setText("Упражнение 3: Образуйте множественное число существительных");
+                    fillArray("grammar/A2_exercises/a1_test_grammar_three_questions.txt", questions);
+                    fillArray("grammar/A2_exercises/a1_test_grammar_three_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 4) {
+                    exerciseTitleTextView.setText("Упражнение 4: Сделайте Future Simple:");
+                    fillArray("grammar/A2_exercises/a1_test_grammar_four_questions.txt", questions);
+                    fillArray("grammar/A2_exercises/a1_test_grammar_four_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 5) {
+                    exerciseTitleTextView.setText("Упражнение 5: Must(not) или Can(not)?");
+                    fillArray("grammar/A2_exercises/a1_test_grammar_five_questions.txt", questions);
+                    fillArray("grammar/A2_exercises/a1_test_grammar_five_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 6) {
+                    exerciseTitleTextView.setText("Упражнение 6: Future Simple или Past Simple?");
+                    fillArray("grammar/A2_exercises/a1_test_grammar_six_questions.txt", questions);
+                    fillArray("grammar/A2_exercises/a1_test_grammar_six_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                }
             }
         }
 
@@ -123,21 +183,54 @@ public class Tests extends AppCompatActivity {
                     fadeView();
                     if (isVocabulary) {
                         if (exerciseLevel == 1) {
-                            editor.putInt("VocabularyA1", correctAnswers);
-                            editor.apply();
+                            if (exerciseNumber == 1)
+                                editor.putInt("VocabularyA1One", correctAnswers);
+                            else if (exerciseNumber == 2)
+                                editor.putInt("VocabularyA1Two", correctAnswers);
+                            else if (exerciseNumber == 3)
+                                editor.putInt("VocabularyA1Three", correctAnswers);
+                            else if (exerciseNumber == 4)
+                                editor.putInt("VocabularyA1Four", correctAnswers);
+                            else if (exerciseNumber == 5)
+                                editor.putInt("VocabularyA1Five", correctAnswers);
                         } else if (exerciseLevel == 2) {
-                            editor.putInt("VocabularyA2", correctAnswers);
-                            editor.apply();
+                            if (exerciseNumber == 1)
+                                editor.putInt("VocabularyA2One", correctAnswers);
+                            else if (exerciseNumber == 2)
+                                editor.putInt("VocabularyA2Two", correctAnswers);
+                            else if (exerciseNumber == 3)
+                                editor.putInt("VocabularyA2Three", correctAnswers);
+                            else if (exerciseNumber == 4)
+                                editor.putInt("VocabularyA2Four", correctAnswers);
+                            else if (exerciseNumber == 5)
+                                editor.putInt("VocabularyA2Five", correctAnswers);
                         }
                     } else {
                         if (exerciseLevel == 1) {
-                            editor.putInt("GrammarA1", correctAnswers);
-                            editor.apply();
+                            if (exerciseNumber == 1)
+                                editor.putInt("GrammarA1One", correctAnswers);
+                            else if (exerciseNumber == 2)
+                                editor.putInt("GrammarA1Two", correctAnswers);
+                            else if (exerciseNumber == 3)
+                                editor.putInt("GrammarA1Three", correctAnswers);
+                            else if (exerciseNumber == 4)
+                                editor.putInt("GrammarA1Four", correctAnswers);
+                            else if (exerciseNumber == 5)
+                                editor.putInt("GrammarA1Five", correctAnswers);
                         } else if (exerciseLevel == 2) {
-                            editor.putInt("GrammarA2", correctAnswers);
-                            editor.apply();
+                            if (exerciseNumber == 1)
+                                editor.putInt("GrammarA2One", correctAnswers);
+                            else if (exerciseNumber == 2)
+                                editor.putInt("GrammarA2Two", correctAnswers);
+                            else if (exerciseNumber == 3)
+                                editor.putInt("GrammarA2Three", correctAnswers);
+                            else if (exerciseNumber == 4)
+                                editor.putInt("GrammarA2Four", correctAnswers);
+                            else if (exerciseNumber == 5)
+                                editor.putInt("GrammarA2Five", correctAnswers);
                         }
                     }
+                    editor.apply();
                 } else {
                     solutionTextView.append(questionsAnswers.get(questionNumber).getAnswer());
                     solutionTextView.setVisibility(View.VISIBLE);
@@ -171,7 +264,7 @@ public class Tests extends AppCompatActivity {
 
     private void nextQuestion() {
         answerEditText.setText("");
-        if (questionNumber + 1 < 20) {
+        if (questionNumber + 1 < questionsAnswers.size()) {
             questionNumber++;
             questionNumberTextView.setText(String.format(Locale.ENGLISH, "Question %d/%d", questionNumber + 1, questionsAnswers.size()));
             exerciseTextView.setText(questionsAnswers.get(questionNumber).getQuestion());
@@ -208,32 +301,6 @@ public class Tests extends AppCompatActivity {
                     exerciseTitleTextView.setText("Упражнение 4: Переведите:");
                 else
                     exerciseTitleTextView.setText("Упражнение 5: Ссоставьте слово из набора букв");
-            }
-        } else {
-            if (exerciseLevel == 1) {
-                if (questionNumber < 10)
-                    exerciseTitleTextView.setText("Упражнение 1: Используйте any/many/much");
-                else if (questionNumber < 20)
-                    exerciseTitleTextView.setText("Упражнение 2: Present Simple или Present Continuous?");
-                else if (questionNumber < 30)
-                    exerciseTitleTextView.setText("Упражнение 3: а/an");
-                else if (questionNumber < 40)
-                    exerciseTitleTextView.setText("Упражнение 4: Сделайте вопрос:");
-                else
-                    exerciseTitleTextView.setText("Упражнение 5: Сделайте отрицание:");
-            } else if (exerciseLevel == 2) {
-                if (questionNumber < 10)
-                    exerciseTitleTextView.setText("Упражнение 1: Используйте личные местоимения");
-                else if (questionNumber < 20)
-                    exerciseTitleTextView.setText("Упражнение 2: Образуйте Past Simple");
-                else if (questionNumber < 30)
-                    exerciseTitleTextView.setText("Упражнение 3: Образуйте множественное число существительных");
-                else if (questionNumber < 40)
-                    exerciseTitleTextView.setText("Упражнение 4: Сделайте Future Simple:");
-                else if (questionNumber < 50)
-                    exerciseTitleTextView.setText("Упражнение 5: Must(not) или Can(not)?:");
-                else
-                    exerciseTitleTextView.setText("Упражнение 6: Future Simple или Past Simple?");
             }
         }
     }
