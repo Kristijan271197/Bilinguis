@@ -1,9 +1,9 @@
-At 12 o’clock.
-In April.
-At 6 o’clock.
-In 2012.
-In Spring.
-At midday.
-On Monday.
-In May.
-On Friday.
+At 12 o’clock
+In April
+At 6 o’clock
+In 2012
+In Spring
+At midday
+On Monday
+In May
+On Friday

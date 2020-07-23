@@ -38,4 +38,4 @@ Restaurant
 Bakery 
 Square 
 Bus stop 
-Bus 
+Bus
