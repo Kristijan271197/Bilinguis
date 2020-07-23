@@ -170,8 +170,6 @@
                 android:textColor="#6C63FF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-
         </RelativeLayout>
 
     </ScrollView>

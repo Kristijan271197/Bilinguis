@@ -10,12 +10,6 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/main_item_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="9"/>
+        android:layout_height="match_parent" />
 
-    <fragment
-        android:id="@+id/bannerAd"
-        android:name="com.invictastudios.bilinguis.BannerAd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 </LinearLayout>

@@ -1,11 +1,19 @@
 package com.invictastudios.bilinguis.Reading;
 
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.invictastudios.bilinguis.Grammar.GrammarA1;
 import com.invictastudios.bilinguis.R;
 
@@ -26,11 +34,22 @@ public class ReadingSectionSelected extends AppCompatActivity {
     private int name;
     private String firstAnswer;
     private String secondAnswer;
+    private FrameLayout adContainerView;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reading_section_selected);
+
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+
+        adContainerView = findViewById(R.id.adView_container_reading_section_selected);
+        adView = new AdView(this);
+        adView.setAdUnitId(getString(R.string.banner_ad_unit_id));
+        adContainerView.addView(adView);
+        loadBanner();
 
         Bundle bundle = getIntent().getExtras();
 
@@ -93,31 +112,31 @@ public class ReadingSectionSelected extends AppCompatActivity {
                 enterText("reading/A2_exercises/describing_man_exercise_two_answer.txt", 5);
             } else if (name == 3) {
                 enterText("reading/A2_exercises/clothes_exercise_one_question.txt", 1);
-                enterText("reading/A2_exercises/clothes_exercise_one_answer.txt", 2);
+                exerciseOneAnswerTextView.setVisibility(View.INVISIBLE);
                 enterText("reading/A2/clothes_text.txt", 3);
                 enterText("reading/A2_exercises/clothes_exercise_two_question.txt", 4);
                 enterText("reading/A2_exercises/clothes_exercise_two_answer.txt", 5);
             } else if (name == 4) {
                 enterText("reading/A2_exercises/describing_room_exercise_one_question.txt", 1);
-                enterText("reading/A2_exercises/describing_room_exercise_one_answer.txt", 2);
+                exerciseOneAnswerTextView.setVisibility(View.INVISIBLE);
                 enterText("reading/A2/describing_room_text.txt", 3);
                 enterText("reading/A2_exercises/describing_room_exercise_two_question.txt", 4);
                 enterText("reading/A2_exercises/describing_room_exercise_two_answer.txt", 5);
             } else if (name == 5) {
                 enterText("reading/A2_exercises/restaurant_exercise_one_question.txt", 1);
-                enterText("reading/A2_exercises/restaurant_exercise_one_answer.txt", 2);
+                exerciseOneAnswerTextView.setVisibility(View.INVISIBLE);
                 enterText("reading/A2/restaurant_text.txt", 3);
                 enterText("reading/A2_exercises/restaurant_exercise_two_question.txt", 4);
                 enterText("reading/A2_exercises/restaurant_exercise_two_answer.txt", 5);
             } else if (name == 6) {
                 enterText("reading/A2_exercises/season_month_exercise_one_question.txt", 1);
-                enterText("reading/A2_exercises/season_month_exercise_one_answer.txt", 2);
+                exerciseOneAnswerTextView.setVisibility(View.INVISIBLE);
                 enterText("reading/A2/season_month_text.txt", 3);
                 enterText("reading/A2_exercises/season_month_exercise_two_question.txt", 4);
                 enterText("reading/A2_exercises/season_month_exercise_two_answer.txt", 5);
             } else if (name == 7) {
                 enterText("reading/A2_exercises/city_exercise_one_question.txt", 1);
-                enterText("reading/A2_exercises/city_exercise_one_answer.txt", 2);
+                exerciseOneAnswerTextView.setVisibility(View.INVISIBLE);
                 enterText("reading/A2/city_text.txt", 3);
                 enterText("reading/A2_exercises/city_exercise_two_question.txt", 4);
                 enterText("reading/A2_exercises/city_exercise_two_answer.txt", 5);
@@ -155,5 +174,27 @@ public class ReadingSectionSelected extends AppCompatActivity {
             e.printStackTrace();
         }
 
+    }
+
+    private void loadBanner() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        AdSize adSize = getAdSize();
+        adView.setAdSize(adSize);
+
+        adView.loadAd(adRequest);
+    }
+
+    private AdSize getAdSize() {
+        Display display = getWindowManager().getDefaultDisplay();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        display.getMetrics(outMetrics);
+
+        float widthPixels = outMetrics.widthPixels;
+        float density = outMetrics.density;
+
+        int adWidth = (int) (widthPixels / density);
+
+        return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth);
     }
 }

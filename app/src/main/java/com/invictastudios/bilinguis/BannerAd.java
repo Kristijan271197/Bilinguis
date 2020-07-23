@@ -10,13 +10,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 
 public class BannerAd extends Fragment {
-    // Remove the below line after defining your own ad unit ID.
-    private static final String TOAST_TEXT = "Test ads are being shown. "
-            + "To show live ads, replace the ad unit ID in res/values/strings.xml with your own ad unit ID.";
+
+    View view;
 
     @Nullable
     @Override

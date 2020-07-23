@@ -2,16 +2,23 @@ package com.invictastudios.bilinguis.Grammar;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.invictastudios.bilinguis.R;
 
 import java.io.BufferedReader;
@@ -46,11 +53,23 @@ public class GrammarMultipleChoiceExercise extends AppCompatActivity {
     private int numberOfButtons;
     private int exerciseLevel;
     private Random random;
+    private FrameLayout adContainerView;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grammar_multiplechoice_exercise);
+
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+
+        adContainerView = findViewById(R.id.adView_container_grammar_multiplechoice);
+        adView = new AdView(this);
+        adView.setAdUnitId(getString(R.string.banner_ad_unit_id));
+        adContainerView.addView(adView);
+        loadBanner();
+
 
         Bundle bundle = getIntent().getExtras();
 
@@ -423,4 +442,27 @@ public class GrammarMultipleChoiceExercise extends AppCompatActivity {
             }
         });
     }
+
+    private void loadBanner() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        AdSize adSize = getAdSize();
+        adView.setAdSize(adSize);
+
+        adView.loadAd(adRequest);
+    }
+
+    private AdSize getAdSize() {
+        Display display = getWindowManager().getDefaultDisplay();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        display.getMetrics(outMetrics);
+
+        float widthPixels = outMetrics.widthPixels;
+        float density = outMetrics.density;
+
+        int adWidth = (int) (widthPixels / density);
+
+        return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth);
+    }
+
 }
