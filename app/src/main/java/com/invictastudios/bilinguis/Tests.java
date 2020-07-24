@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -55,6 +56,7 @@ public class Tests extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences(LEVELS_UNLOCK, MODE_PRIVATE);
         editor = sharedPreferences.edit();
+        editor.apply();
 
 
         Bundle bundle = getIntent().getExtras();
@@ -132,38 +134,38 @@ public class Tests extends AppCompatActivity {
             } else if (exerciseLevel == 2) {
                 if (exerciseNumber == 1) {
                     exerciseTitleTextView.setText("Упражнение 1: Используйте личные местоимения");
-                    fillArray("grammar/A2_exercises/a1_test_grammar_one_questions.txt", questions);
-                    fillArray("grammar/A2_exercises/a1_test_grammar_one_answers.txt", answers);
+                    fillArray("grammar/A2_exercises/a2_test_grammar_one_questions.txt", questions);
+                    fillArray("grammar/A2_exercises/a2_test_grammar_one_answers.txt", answers);
                     for (int i = 0; i < questions.size(); i++)
                         questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
                 } else if (exerciseNumber == 2) {
                     exerciseTitleTextView.setText("Упражнение 2: Образуйте Past Simple");
-                    fillArray("grammar/A2_exercises/a1_test_grammar_two_questions.txt", questions);
-                    fillArray("grammar/A2_exercises/a1_test_grammar_two_answers.txt", answers);
+                    fillArray("grammar/A2_exercises/a2_test_grammar_two_questions.txt", questions);
+                    fillArray("grammar/A2_exercises/a2_test_grammar_two_answers.txt", answers);
                     for (int i = 0; i < questions.size(); i++)
                         questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
                 } else if (exerciseNumber == 3) {
                     exerciseTitleTextView.setText("Упражнение 3: Образуйте множественное число существительных");
-                    fillArray("grammar/A2_exercises/a1_test_grammar_three_questions.txt", questions);
-                    fillArray("grammar/A2_exercises/a1_test_grammar_three_answers.txt", answers);
+                    fillArray("grammar/A2_exercises/a2_test_grammar_three_questions.txt", questions);
+                    fillArray("grammar/A2_exercises/a2_test_grammar_three_answers.txt", answers);
                     for (int i = 0; i < questions.size(); i++)
                         questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
                 } else if (exerciseNumber == 4) {
                     exerciseTitleTextView.setText("Упражнение 4: Сделайте Future Simple:");
-                    fillArray("grammar/A2_exercises/a1_test_grammar_four_questions.txt", questions);
-                    fillArray("grammar/A2_exercises/a1_test_grammar_four_answers.txt", answers);
+                    fillArray("grammar/A2_exercises/a2_test_grammar_four_questions.txt", questions);
+                    fillArray("grammar/A2_exercises/a2_test_grammar_four_answers.txt", answers);
                     for (int i = 0; i < questions.size(); i++)
                         questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
                 } else if (exerciseNumber == 5) {
                     exerciseTitleTextView.setText("Упражнение 5: Must(not) или Can(not)?");
-                    fillArray("grammar/A2_exercises/a1_test_grammar_five_questions.txt", questions);
-                    fillArray("grammar/A2_exercises/a1_test_grammar_five_answers.txt", answers);
+                    fillArray("grammar/A2_exercises/a2_test_grammar_five_questions.txt", questions);
+                    fillArray("grammar/A2_exercises/a2_test_grammar_five_answers.txt", answers);
                     for (int i = 0; i < questions.size(); i++)
                         questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
                 } else if (exerciseNumber == 6) {
                     exerciseTitleTextView.setText("Упражнение 6: Future Simple или Past Simple?");
-                    fillArray("grammar/A2_exercises/a1_test_grammar_six_questions.txt", questions);
-                    fillArray("grammar/A2_exercises/a1_test_grammar_six_answers.txt", answers);
+                    fillArray("grammar/A2_exercises/a2_test_grammar_six_questions.txt", questions);
+                    fillArray("grammar/A2_exercises/a2_test_grammar_six_answers.txt", answers);
                     for (int i = 0; i < questions.size(); i++)
                         questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
                 }
@@ -174,70 +176,7 @@ public class Tests extends AppCompatActivity {
         exerciseTextView.setText(questionsAnswers.get(questionNumber).getQuestion());
 
         submitAnswerButton.setOnClickListener(v -> {
-            if (!answerEditText.getText().toString().trim().isEmpty()) {
-                String answer = answerEditText.getText().toString().trim();
-                matches = questionsAnswers.get(questionNumber).getAnswer().equalsIgnoreCase(answer);
-
-                if (matches) {
-                    correctAnswers++;
-                    fadeView();
-                    if (isVocabulary) {
-                        if (exerciseLevel == 1) {
-                            if (exerciseNumber == 1)
-                                editor.putInt("VocabularyA1One", correctAnswers);
-                            else if (exerciseNumber == 2)
-                                editor.putInt("VocabularyA1Two", correctAnswers);
-                            else if (exerciseNumber == 3)
-                                editor.putInt("VocabularyA1Three", correctAnswers);
-                            else if (exerciseNumber == 4)
-                                editor.putInt("VocabularyA1Four", correctAnswers);
-                            else if (exerciseNumber == 5)
-                                editor.putInt("VocabularyA1Five", correctAnswers);
-                        } else if (exerciseLevel == 2) {
-                            if (exerciseNumber == 1)
-                                editor.putInt("VocabularyA2One", correctAnswers);
-                            else if (exerciseNumber == 2)
-                                editor.putInt("VocabularyA2Two", correctAnswers);
-                            else if (exerciseNumber == 3)
-                                editor.putInt("VocabularyA2Three", correctAnswers);
-                            else if (exerciseNumber == 4)
-                                editor.putInt("VocabularyA2Four", correctAnswers);
-                            else if (exerciseNumber == 5)
-                                editor.putInt("VocabularyA2Five", correctAnswers);
-                        }
-                    } else {
-                        if (exerciseLevel == 1) {
-                            if (exerciseNumber == 1)
-                                editor.putInt("GrammarA1One", correctAnswers);
-                            else if (exerciseNumber == 2)
-                                editor.putInt("GrammarA1Two", correctAnswers);
-                            else if (exerciseNumber == 3)
-                                editor.putInt("GrammarA1Three", correctAnswers);
-                            else if (exerciseNumber == 4)
-                                editor.putInt("GrammarA1Four", correctAnswers);
-                            else if (exerciseNumber == 5)
-                                editor.putInt("GrammarA1Five", correctAnswers);
-                        } else if (exerciseLevel == 2) {
-                            if (exerciseNumber == 1)
-                                editor.putInt("GrammarA2One", correctAnswers);
-                            else if (exerciseNumber == 2)
-                                editor.putInt("GrammarA2Two", correctAnswers);
-                            else if (exerciseNumber == 3)
-                                editor.putInt("GrammarA2Three", correctAnswers);
-                            else if (exerciseNumber == 4)
-                                editor.putInt("GrammarA2Four", correctAnswers);
-                            else if (exerciseNumber == 5)
-                                editor.putInt("GrammarA2Five", correctAnswers);
-                        }
-                    }
-                    editor.apply();
-                } else {
-                    solutionTextView.append(questionsAnswers.get(questionNumber).getAnswer());
-                    solutionTextView.setVisibility(View.VISIBLE);
-                    wrongAnswers++;
-                    shakeAnimation();
-                }
-            }
+            submitButton();
         });
 
         nextQuestionButton.setOnClickListener(v -> {
@@ -247,6 +186,106 @@ public class Tests extends AppCompatActivity {
             solutionTextView.setVisibility(View.INVISIBLE);
             solutionTextView.setText("Answer: \n");
         });
+
+        answerEditText.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_DONE)
+                submitButton();
+            return false;
+        });
+    }
+
+    private void submitButton() {
+        if (!answerEditText.getText().toString().trim().isEmpty()) {
+            String answer = answerEditText.getText().toString().trim();
+            answer = answer.replaceAll("[!.]*", "");
+            matches = questionsAnswers.get(questionNumber).getAnswer().equalsIgnoreCase(answer);
+
+            if (matches) {
+                correctAnswers++;
+                fadeView();
+                rememberAnswers();
+                editor.apply();
+            } else {
+                solutionTextView.setText(questionsAnswers.get(questionNumber).getAnswer());
+                solutionTextView.setVisibility(View.VISIBLE);
+                wrongAnswers++;
+                shakeAnimation();
+            }
+        }
+    }
+
+    private void rememberAnswers() {
+        if (isVocabulary) {
+            if (exerciseLevel == 1) {
+                if (exerciseNumber == 1) {
+                    if (correctAnswers >= 7)
+                        editor.putBoolean("VocabularyA1One", true);
+                } else if (exerciseNumber == 2) {
+                    if (correctAnswers >= 8)
+                        editor.putBoolean("VocabularyA1Two", true);
+                } else if (exerciseNumber == 3) {
+                    if (correctAnswers >= 7)
+                        editor.putBoolean("VocabularyA1Three", true);
+                } else if (exerciseNumber == 4) {
+                    if (correctAnswers >= 8)
+                        editor.putBoolean("VocabularyA1Four", true);
+                } else if (exerciseNumber == 5) {
+                    if (correctAnswers >= 7)
+                        editor.putBoolean("VocabularyA1Five", true);
+                }
+            } else if (exerciseLevel == 2) {
+                if (exerciseNumber == 1)
+                    editor.putInt("VocabularyA2One", correctAnswers);
+                else if (exerciseNumber == 2)
+                    editor.putInt("VocabularyA2Two", correctAnswers);
+                else if (exerciseNumber == 3)
+                    editor.putInt("VocabularyA2Three", correctAnswers);
+                else if (exerciseNumber == 4)
+                    editor.putInt("VocabularyA2Four", correctAnswers);
+                else if (exerciseNumber == 5)
+                    editor.putInt("VocabularyA2Five", correctAnswers);
+            }
+        } else {
+            if (exerciseLevel == 1) {
+                if (exerciseNumber == 1) {
+                    if (correctAnswers >= 7)
+                        editor.putBoolean("GrammarA1One", true);
+                } else if (exerciseNumber == 2) {
+                    if (correctAnswers >= 8)
+                        editor.putBoolean("GrammarA1Two", true);
+                } else if (exerciseNumber == 3) {
+                    if (correctAnswers >= 7)
+                        editor.putBoolean("GrammarA1Three", true);
+                } else if (exerciseNumber == 4) {
+                    if (correctAnswers >= 8)
+                        editor.putBoolean("GrammarA1Four", true);
+                } else if (exerciseNumber == 5) {
+                    if (correctAnswers >= 7)
+                        editor.putBoolean("GrammarA1Five", true);
+                }
+            } else if (exerciseLevel == 2) {
+                if (exerciseNumber == 1) {
+                    if (correctAnswers >= 7)
+                        editor.putBoolean("GrammarA2One", true);
+                } else if (exerciseNumber == 2) {
+                    if (correctAnswers >= 8)
+                        editor.putBoolean("GrammarA2Two", true);
+                } else if (exerciseNumber == 3) {
+                    if (correctAnswers >= 7)
+                        editor.putBoolean("GrammarA2Three", true);
+                } else if (exerciseNumber == 4) {
+                    if (correctAnswers >= 8)
+                        editor.putBoolean("GrammarA2Four", true);
+                } else if (exerciseNumber == 5) {
+                    if (correctAnswers >= 7)
+                        editor.putBoolean("GrammarA2Five", true);
+                } else if (exerciseNumber == 6) {
+                    if (correctAnswers >= 2)
+                        editor.putBoolean("GrammarA2Six", true);
+                }
+            }
+        }
+        editor.apply();
     }
 
     private void fillArray(String path, List<String> list) {

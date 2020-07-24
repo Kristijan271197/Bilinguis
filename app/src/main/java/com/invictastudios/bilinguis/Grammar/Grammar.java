@@ -3,6 +3,7 @@ package com.invictastudios.bilinguis.Grammar;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,11 +23,12 @@ public class Grammar extends AppCompatActivity {
     private ViewPager2 grammarPager;
     private FragmentStateAdapter pagerAdapter;
     private TabLayout grammarLayout;
-    public int grammarA1TestOne;
-    public int grammarA1TestTwo;
-    public int grammarA1TestThree;
-    public int grammarA1TestFour;
-    public int grammarA1TestFive;
+    public boolean grammarA1TestOne;
+    public boolean grammarA1TestTwo;
+    public boolean grammarA1TestThree;
+    public boolean grammarA1TestFour;
+    public boolean grammarA1TestFive;
+
     private SharedPreferences sharedPreferences;
 
     @Override
@@ -35,11 +37,12 @@ public class Grammar extends AppCompatActivity {
         setContentView(R.layout.activity_grammar);
 
         sharedPreferences = getSharedPreferences(Tests.LEVELS_UNLOCK, Context.MODE_PRIVATE);
-        grammarA1TestOne = sharedPreferences.getInt("GrammarA1One", 0);
-        grammarA1TestTwo = sharedPreferences.getInt("GrammarA1Two", 0);
-        grammarA1TestThree = sharedPreferences.getInt("GrammarA1Three", 0);
-        grammarA1TestFour = sharedPreferences.getInt("GrammarA1Four", 0);
-        grammarA1TestFive = sharedPreferences.getInt("GrammarA1Five", 0);
+        grammarA1TestOne = sharedPreferences.getBoolean("GrammarA1One", false);
+        grammarA1TestTwo = sharedPreferences.getBoolean("GrammarA1Two", false);
+        grammarA1TestThree = sharedPreferences.getBoolean("GrammarA1Three", false);
+        grammarA1TestFour = sharedPreferences.getBoolean("GrammarA1Four", false);
+        grammarA1TestFive = sharedPreferences.getBoolean("GrammarA1Five", false);
+
 
         grammarPager = findViewById(R.id.grammar_pager);
         grammarLayout = findViewById(R.id.grammar_tabs);
@@ -57,9 +60,14 @@ public class Grammar extends AppCompatActivity {
 
     }
 
-    public static class ViewPagerAdapter extends FragmentStateAdapter {
+    @Override
+    protected void onResume() {
+        super.onResume();
+        pagerAdapter.notifyDataSetChanged();
+    }
+
+    public class ViewPagerAdapter extends FragmentStateAdapter {
         private static final int CARD_ITEM_SIZE = 2;
-        Grammar grammar = new Grammar();
 
         public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
             super(fragmentActivity);
@@ -68,15 +76,17 @@ public class Grammar extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment createFragment(int position) {
+            Toast.makeText(Grammar.this, grammarA1TestOne + " " + grammarA1TestTwo +
+                    " " + grammarA1TestThree + " " + grammarA1TestFour + " " + grammarA1TestFive, Toast.LENGTH_SHORT).show();
+
             if (position == 0)
                 return new GrammarA1();
             else if (position == 1) {
-                if (grammar.grammarA1TestOne < 7 || grammar.grammarA1TestTwo < 8 ||
-                        grammar.grammarA1TestThree < 7 || grammar.grammarA1TestFour < 8 ||
-                        grammar.grammarA1TestFive < 7)
-                    return new LockedSection();
-                else
+                if (grammarA1TestOne && grammarA1TestTwo && grammarA1TestThree &&
+                        grammarA1TestFour && grammarA1TestFive)
                     return new GrammarA2();
+                else
+                    return new LockedSection();
             } else
                 return null;
         }

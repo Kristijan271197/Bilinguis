@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -155,6 +156,27 @@ public class Exercises extends AppCompatActivity {
             nextQuestionButton.setVisibility(View.INVISIBLE);
             solutionTextView.setVisibility(View.INVISIBLE);
             solutionTextView.setText("Answer: \n");
+        });
+
+        answerEditText.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                if (!answerEditText.getText().toString().trim().isEmpty()) {
+                    String answer = answerEditText.getText().toString().trim();
+                    matches = questionsAnswers.get(questionNumber).getAnswer().equalsIgnoreCase(answer);
+
+                    if (matches) {
+                        correctAnswers++;
+                        fadeView();
+                    } else {
+                        solutionTextView.append(questionsAnswers.get(questionNumber).getAnswer());
+                        solutionTextView.setVisibility(View.VISIBLE);
+                        wrongAnswers++;
+                        shakeAnimation();
+                    }
+                }
+            }
+
+            return false;
         });
     }
 
