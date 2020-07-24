@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.invictastudios.bilinguis.Exercises;
 import com.invictastudios.bilinguis.R;
-import com.invictastudios.bilinguis.Tests;
+import com.invictastudios.bilinguis.TestSelection;
 
 public class VocabularyA1 extends Fragment {
 
@@ -132,7 +132,7 @@ public class VocabularyA1 extends Fragment {
 
         testsButton = view.findViewById(R.id.testA1Vocabulary);
         testsButton.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), Tests.class);
+            Intent intent = new Intent(view.getContext(), TestSelection.class);
             intent.putExtra("level", 1);
             intent.putExtra("vocabulary", true);
             startActivity(intent);

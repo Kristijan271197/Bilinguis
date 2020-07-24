@@ -29,14 +29,12 @@ public class Grammar extends AppCompatActivity {
     public boolean grammarA1TestFour;
     public boolean grammarA1TestFive;
 
-    private SharedPreferences sharedPreferences;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grammar);
 
-        sharedPreferences = getSharedPreferences(Tests.LEVELS_UNLOCK, Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(Tests.LEVELS_UNLOCK, Context.MODE_PRIVATE);
         grammarA1TestOne = sharedPreferences.getBoolean("GrammarA1One", false);
         grammarA1TestTwo = sharedPreferences.getBoolean("GrammarA1Two", false);
         grammarA1TestThree = sharedPreferences.getBoolean("GrammarA1Three", false);

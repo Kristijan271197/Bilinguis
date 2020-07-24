@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.invictastudios.bilinguis.Exercises;
 import com.invictastudios.bilinguis.R;
-import com.invictastudios.bilinguis.Tests;
+import com.invictastudios.bilinguis.TestSelection;
 
 public class VocabularyA2 extends Fragment {
 
@@ -63,27 +63,6 @@ public class VocabularyA2 extends Fragment {
         exercisesTwoButton = view.findViewById(R.id.exerciseTwoA2);
         exercisesThreeButton = view.findViewById(R.id.exerciseThreeA2);
         testsButton = view.findViewById(R.id.testA2Vocabulary);
-
-//        if (getActivity() != null) {
-//            SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Tests.LEVELS_UNLOCK, Context.MODE_PRIVATE);
-//            int vocabularyA1Test = sharedPreferences.getInt("VocabularyA1", 0);
-//            if (vocabularyA1Test < 34) {
-//                natureButton.setEnabled(false);
-//                animalsButton.setEnabled(false);
-//                facePartsButton.setEnabled(false);
-//                bodyPartsButton.setEnabled(false);
-//                clothesButton.setEnabled(false);
-//                kitchenButton.setEnabled(false);
-//                furnitureButton.setEnabled(false);
-//                beveragesButton.setEnabled(false);
-//                timeButton.setEnabled(false);
-//                cityButton.setEnabled(false);
-//                exercisesOneButton.setEnabled(false);
-//                exercisesTwoButton.setEnabled(false);
-//                exercisesThreeButton.setEnabled(false);
-//            }
-//        }
-
 
         natureButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
@@ -183,7 +162,7 @@ public class VocabularyA2 extends Fragment {
 
 
         testsButton.setOnClickListener(v -> {
-            Intent intent = new Intent(view.getContext(), Tests.class);
+            Intent intent = new Intent(view.getContext(), TestSelection.class);
             intent.putExtra("level", 2);
             intent.putExtra("vocabulary", true);
             startActivity(intent);

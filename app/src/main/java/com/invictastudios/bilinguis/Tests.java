@@ -86,17 +86,69 @@ public class Tests extends AppCompatActivity {
 
         if (isVocabulary) {
             if (exerciseLevel == 1) {
-                exerciseTitleTextView.setText("Упражнение 1.Переведите с английского на русский язык:");
-                fillArray("vocabulary/A1_exercises/a1_test_vocabulary_questions.txt", questions);
-                fillArray("vocabulary/A1_exercises/a1_test_vocabulary_answers.txt", answers);
-                for (int i = 0; i < questions.size(); i++)
-                    questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Упражнение 1.Переведите с английского на русский язык:");
+                    fillArray("vocabulary/A1_exercises/a1_test_vocabulary_one_questions.txt", questions);
+                    fillArray("vocabulary/A1_exercises/a1_test_vocabulary_one_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Упражнение 2: Сделайте предложение:");
+                    fillArray("vocabulary/A1_exercises/a1_test_vocabulary_two_questions.txt", questions);
+                    fillArray("vocabulary/A1_exercises/a1_test_vocabulary_two_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 3) {
+                    exerciseTitleTextView.setText("Упражнение 3: Переведите с русского на английский:");
+                    fillArray("vocabulary/A1_exercises/a1_test_vocabulary_three_questions.txt", questions);
+                    fillArray("vocabulary/A1_exercises/a1_test_vocabulary_three_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 4) {
+                    exerciseTitleTextView.setText("Упражнение 4: Переведите:");
+                    fillArray("vocabulary/A1_exercises/a1_test_vocabulary_four_questions.txt", questions);
+                    fillArray("vocabulary/A1_exercises/a1_test_vocabulary_four_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 5) {
+                    exerciseTitleTextView.setText("Упражнение 5: Ссоставьте слово из набора букв");
+                    fillArray("vocabulary/A1_exercises/a1_test_vocabulary_fifth_questions.txt", questions);
+                    fillArray("vocabulary/A1_exercises/a1_test_vocabulary_fifth_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                }
             } else if (exerciseLevel == 2) {
-                exerciseTitleTextView.setText("Упражнение 1.Переведите с английского на русский язык:");
-                fillArray("vocabulary/A2_exercises/a2_test_vocabulary_questions.txt", questions);
-                fillArray("vocabulary/A2_exercises/a2_test_vocabulary_answers.txt", answers);
-                for (int i = 0; i < questions.size(); i++)
-                    questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                if (exerciseNumber == 1) {
+                    exerciseTitleTextView.setText("Упражнение 1.Переведите с английского на русский язык:");
+                    fillArray("vocabulary/A2_exercises/a2_test_vocabulary_one_questions.txt", questions);
+                    fillArray("vocabulary/A2_exercises/a2_test_vocabulary_one_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 2) {
+                    exerciseTitleTextView.setText("Упражнение 2: Сделайте предложение:");
+                    fillArray("vocabulary/A2_exercises/a2_test_vocabulary_two_questions.txt", questions);
+                    fillArray("vocabulary/A2_exercises/a2_test_vocabulary_two_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 3) {
+                    exerciseTitleTextView.setText("Упражнение 3: Переведите с русского на английский:");
+                    fillArray("vocabulary/A2_exercises/a2_test_vocabulary_three_questions.txt", questions);
+                    fillArray("vocabulary/A2_exercises/a2_test_vocabulary_three_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 4) {
+                    exerciseTitleTextView.setText("Упражнение 4: Переведите:");
+                    fillArray("vocabulary/A2_exercises/a2_test_vocabulary_four_questions.txt", questions);
+                    fillArray("vocabulary/A2_exercises/a2_test_vocabulary_four_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                } else if (exerciseNumber == 5) {
+                    exerciseTitleTextView.setText("Упражнение 5: Ссоставьте слово из набора букв");
+                    fillArray("vocabulary/A2_exercises/a2_test_vocabulary_fifth_questions.txt", questions);
+                    fillArray("vocabulary/A2_exercises/a2_test_vocabulary_fifth_answers.txt", answers);
+                    for (int i = 0; i < questions.size(); i++)
+                        questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
+                }
             }
         } else {
             if (exerciseLevel == 1) {
@@ -221,7 +273,7 @@ public class Tests extends AppCompatActivity {
                     if (correctAnswers >= 7)
                         editor.putBoolean("VocabularyA1One", true);
                 } else if (exerciseNumber == 2) {
-                    if (correctAnswers >= 8)
+                    if (correctAnswers >= 9)
                         editor.putBoolean("VocabularyA1Two", true);
                 } else if (exerciseNumber == 3) {
                     if (correctAnswers >= 7)
@@ -230,20 +282,26 @@ public class Tests extends AppCompatActivity {
                     if (correctAnswers >= 8)
                         editor.putBoolean("VocabularyA1Four", true);
                 } else if (exerciseNumber == 5) {
-                    if (correctAnswers >= 7)
+                    if (correctAnswers >= 3)
                         editor.putBoolean("VocabularyA1Five", true);
                 }
             } else if (exerciseLevel == 2) {
-                if (exerciseNumber == 1)
-                    editor.putInt("VocabularyA2One", correctAnswers);
-                else if (exerciseNumber == 2)
-                    editor.putInt("VocabularyA2Two", correctAnswers);
-                else if (exerciseNumber == 3)
-                    editor.putInt("VocabularyA2Three", correctAnswers);
-                else if (exerciseNumber == 4)
-                    editor.putInt("VocabularyA2Four", correctAnswers);
-                else if (exerciseNumber == 5)
-                    editor.putInt("VocabularyA2Five", correctAnswers);
+                if (exerciseNumber == 1) {
+                    if (correctAnswers >= 7)
+                        editor.putBoolean("VocabularyA2One", true);
+                } else if (exerciseNumber == 2) {
+                    if (correctAnswers >= 8)
+                        editor.putBoolean("VocabularyA2Two", true);
+                } else if (exerciseNumber == 3) {
+                    if (correctAnswers >= 7)
+                        editor.putBoolean("VocabularyA2Three", true);
+                } else if (exerciseNumber == 4) {
+                    if (correctAnswers >= 8)
+                        editor.putBoolean("VocabularyA2Four", true);
+                } else if (exerciseNumber == 5) {
+                    if (correctAnswers >= 3)
+                        editor.putBoolean("VocabularyA2Five", true);
+                }
             }
         } else {
             if (exerciseLevel == 1) {
@@ -317,31 +375,7 @@ public class Tests extends AppCompatActivity {
             exerciseTextView.setText(String.format(Locale.ENGLISH, "Correct: %d \nIncorrect: %d", correctAnswers, wrongAnswers));
         }
 
-        if (isVocabulary) {
-            if (exerciseLevel == 1) {
-                if (questionNumber < 10)
-                    exerciseTitleTextView.setText("Упражнение 1.Переведите с английского на русский язык:");
-                else if (questionNumber < 21)
-                    exerciseTitleTextView.setText("Упражнение 2: Сделайте предложение:");
-                else if (questionNumber < 31)
-                    exerciseTitleTextView.setText("Упражнение 3: Переведите с русского на английский:");
-                else if (questionNumber < 41)
-                    exerciseTitleTextView.setText("Упражнение 4: Переведите:");
-                else
-                    exerciseTitleTextView.setText("Упражнение 5: Ссоставьте слово из набора букв");
-            } else if (exerciseLevel == 2) {
-                if (questionNumber < 10)
-                    exerciseTitleTextView.setText("Упражнение 1.Переведите с английского на русский язык:");
-                else if (questionNumber < 20)
-                    exerciseTitleTextView.setText("Упражнение 2: Сделайте предложение:");
-                else if (questionNumber < 30)
-                    exerciseTitleTextView.setText("Упражнение 3: Переведите с русского на английский:");
-                else if (questionNumber < 40)
-                    exerciseTitleTextView.setText("Упражнение 4: Переведите:");
-                else
-                    exerciseTitleTextView.setText("Упражнение 5: Ссоставьте слово из набора букв");
-            }
-        }
+
     }
 
     private void fadeView() {

@@ -22,16 +22,23 @@ public class Vocabulary extends AppCompatActivity {
     private ViewPager2 vocabularyPager;
     private FragmentStateAdapter pagerAdapter;
     private TabLayout vocabularyLayout;
-    public int vocabularyA1Test;
-    private SharedPreferences sharedPreferences;
+    public boolean vocabularyA1TestOne;
+    public boolean vocabularyA1TestTwo;
+    public boolean vocabularyA1TestThree;
+    public boolean vocabularyA1TestFour;
+    public boolean vocabularyA1TestFive;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
 
-        sharedPreferences = getSharedPreferences(Tests.LEVELS_UNLOCK, Context.MODE_PRIVATE);
-        vocabularyA1Test = sharedPreferences.getInt("VocabularyA1", 0);
+        SharedPreferences sharedPreferences = getSharedPreferences(Tests.LEVELS_UNLOCK, Context.MODE_PRIVATE);
+        vocabularyA1TestOne = sharedPreferences.getBoolean("VocabularyA1One", false);
+        vocabularyA1TestTwo = sharedPreferences.getBoolean("VocabularyA1Two", false);
+        vocabularyA1TestThree = sharedPreferences.getBoolean("VocabularyA1Three", false);
+        vocabularyA1TestFour = sharedPreferences.getBoolean("VocabularyA1Four", false);
+        vocabularyA1TestFive = sharedPreferences.getBoolean("VocabularyA1Five", false);
 
         vocabularyPager = findViewById(R.id.vocabulary_pager);
         vocabularyLayout = findViewById(R.id.vocabulary_tabs);
@@ -49,7 +56,7 @@ public class Vocabulary extends AppCompatActivity {
 
     }
 
-    public static class ViewPagerAdapter extends FragmentStateAdapter {
+    public class ViewPagerAdapter extends FragmentStateAdapter {
         private static final int CARD_ITEM_SIZE = 2;
         private Vocabulary vocabulary = new Vocabulary();
 
@@ -63,10 +70,12 @@ public class Vocabulary extends AppCompatActivity {
             if (position == 0)
                 return new VocabularyA1();
             else if (position == 1) {
-                if (vocabulary.vocabularyA1Test < 34)
-                    return new LockedSection();
-                else
+                if (vocabularyA1TestOne && vocabularyA1TestTwo && vocabularyA1TestThree &&
+                        vocabularyA1TestFour && vocabularyA1TestFive)
                     return new VocabularyA2();
+                else
+                    return new LockedSection();
+
             } else
                 return null;
         }
