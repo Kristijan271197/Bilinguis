@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         List<MainCardsModel> mainCardsModels = new ArrayList<>();
         mainCardsModels.add(new MainCardsModel("Grammar", R.mipmap.grammar));
         mainCardsModels.add(new MainCardsModel("Vocabulary", R.mipmap.vocabulary));
-//        mainCardsModels.add(new MainCardsModel("Listening", R.mipmap.listening));
         mainCardsModels.add(new MainCardsModel("Reading", R.mipmap.reading));
         mainCardsModels.add(new MainCardsModel("Writing", R.mipmap.writing));
         mainCardsModels.add(new MainCardsModel("Additional Information", R.mipmap.additional_info));

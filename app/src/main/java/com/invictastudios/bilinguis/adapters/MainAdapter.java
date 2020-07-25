@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.invictastudios.bilinguis.Additional.AdditionalInformation;
 import com.invictastudios.bilinguis.Grammar.Grammar;
 import com.invictastudios.bilinguis.R;
 import com.invictastudios.bilinguis.Reading.Reading;
@@ -73,6 +74,9 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
                         break;
                     case "Reading":
                         context.startActivity(new Intent(context.getApplicationContext(), Reading.class));
+                        break;
+                    case "Additional Information":
+                        context.startActivity(new Intent(context.getApplicationContext(), AdditionalInformation.class));
                         break;
                 }
 
