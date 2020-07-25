@@ -31,7 +31,7 @@ public class WritingA2 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_writing_a2, container, false);
 
         writingTextView = view.findViewById(R.id.writing_a2);
-        enterText("writing/writing_a2.txt");
+
         return view;
     }
 

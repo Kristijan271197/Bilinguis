@@ -55,7 +55,6 @@ public class GrammarWritingExercise extends AppCompatActivity {
     private FrameLayout adContainerView;
     private AdView adView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
