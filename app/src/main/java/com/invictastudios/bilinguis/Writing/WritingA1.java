@@ -54,7 +54,7 @@ public class WritingA1 extends Fragment {
         enterText("writing/A1/writing_a1_five.txt");
         enterText("writing/A1/writing_a1_six.txt");
 
-        recyclerView = view.findViewById(R.id.writing_recycler_view);
+        recyclerView = view.findViewById(R.id.writing_a1_recycler_view);
         writingAdapter = new WritingAdapter(view.getContext(), title, description);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         recyclerView.setAdapter(writingAdapter);

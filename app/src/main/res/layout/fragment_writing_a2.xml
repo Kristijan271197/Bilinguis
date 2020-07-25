@@ -6,23 +6,9 @@
     android:background="#6C63FF"
     tools:context=".Writing.WritingA2">
 
-    <ScrollView
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/writing_a2_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/writing_a2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/open_sans"
-            android:gravity="start"
-            android:lineSpacingExtra="4dp"
-            android:padding="16dp"
-            android:text=""
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-    </ScrollView>
-
+        android:layout_height="match_parent" />
 </FrameLayout>
