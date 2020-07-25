@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Additional.AdditionalInformation"></activity>
+        <activity android:name=".Additional.AdditionalInformationPlan"></activity>
+        <activity android:name=".Additional.AdditionalInformation" />
         <activity android:name=".TestSelection" />
         <activity android:name=".Reading.ReadingSectionSelected" />
         <activity android:name=".Reading.Reading" />
