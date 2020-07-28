@@ -2,9 +2,9 @@ Kim: Hi! My name is Kim! What is your name?
 Tom: Hello, Kim! My name is Tom!
 Kim: Where are you from, Tom?
 Tom: I am from England. Where are you from?
-Kim: I am from USA.
+Kim: I am from the USA.
 Tom: Where do you live, Kim?
-Kim: I live in a small town in USA. Where do you live?
-Tom: I used to live in England, but now I live in a small village in USA.
-Kim: Do you like living here in USA?
+Kim: I live in a small town in the USA. Where do you live?
+Tom: I used to live in England, but now I live in a small village in the USA.
+Kim: Do you like living here in the USA?
 Tom: Sure! I love America. That the reason I live here.

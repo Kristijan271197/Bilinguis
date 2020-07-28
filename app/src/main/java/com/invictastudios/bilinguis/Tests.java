@@ -130,8 +130,8 @@ public class Tests extends AppCompatActivity {
                         questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
                 } else if (exerciseNumber == 5) {
                     exerciseTitleTextView.setText("Упражнение 5: Ссоставьте слово из набора букв");
-                    fillArray("vocabulary/A1_exercises/a1_test_vocabulary_fifth_questions.txt", questions);
-                    fillArray("vocabulary/A1_exercises/a1_test_vocabulary_fifth_answers.txt", answers);
+                    fillArray("vocabulary/A1_exercises/a1_test_vocabulary_five_questions.txt", questions);
+                    fillArray("vocabulary/A1_exercises/a1_test_vocabulary_five_answers.txt", answers);
                     for (int i = 0; i < questions.size(); i++)
                         questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
                 }
@@ -162,8 +162,8 @@ public class Tests extends AppCompatActivity {
                         questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
                 } else if (exerciseNumber == 5) {
                     exerciseTitleTextView.setText("Упражнение 5: Ссоставьте слово из набора букв");
-                    fillArray("vocabulary/A2_exercises/a2_test_vocabulary_fifth_questions.txt", questions);
-                    fillArray("vocabulary/A2_exercises/a2_test_vocabulary_fifth_answers.txt", answers);
+                    fillArray("vocabulary/A2_exercises/a2_test_vocabulary_five_questions.txt", questions);
+                    fillArray("vocabulary/A2_exercises/a2_test_vocabulary_five_answers.txt", answers);
                     for (int i = 0; i < questions.size(); i++)
                         questionsAnswers.add(new WritingExerciseModel(questions.get(i), answers.get(i)));
                 }

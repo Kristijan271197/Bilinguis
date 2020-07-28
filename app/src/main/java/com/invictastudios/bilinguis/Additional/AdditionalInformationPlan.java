@@ -39,7 +39,7 @@ public class AdditionalInformationPlan extends AppCompatActivity {
             level = bundle.getInt("level");
 
         if (level == 1) {
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < 13; i++)
                 title.add("Day " + (i + 1));
             enterText("additional_info/A1/a1_plan_1.txt");
             enterText("additional_info/A1/a1_plan_2.txt");
@@ -53,6 +53,7 @@ public class AdditionalInformationPlan extends AppCompatActivity {
             enterText("additional_info/A1/a1_plan_10.txt");
             enterText("additional_info/A1/a1_plan_11.txt");
             enterText("additional_info/A1/a1_plan_12.txt");
+            enterText("additional_info/A1/a1_plan_13.txt");
             planAdapter = new PlanAdapter(this, title, description, 1);
         } else if (level == 2) {
             for (int i = 0; i < 15; i++)

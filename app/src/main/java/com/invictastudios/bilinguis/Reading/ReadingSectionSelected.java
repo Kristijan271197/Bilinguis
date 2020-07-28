@@ -105,8 +105,8 @@ public class ReadingSectionSelected extends AppCompatActivity {
                 enterText("reading/A2_exercises/zoo_exercise_two_question.txt", 4);
                 enterText("reading/A2_exercises/zoo_exercise_two_answer.txt", 5);
             } else if (name == 2) {
-                enterText("reading/A2_exercises/describing_man_exercise_one_question.txt", 1);
-                enterText("reading/A2_exercises/describing_man_exercise_one_answer.txt", 2);
+                exerciseOneQuestionTextView.setVisibility(View.INVISIBLE);
+                exerciseOneAnswerTextView.setVisibility(View.INVISIBLE);
                 enterText("reading/A2/describing_man_text.txt", 3);
                 enterText("reading/A2_exercises/describing_man_exercise_two_question.txt", 4);
                 enterText("reading/A2_exercises/describing_man_exercise_two_answer.txt", 5);

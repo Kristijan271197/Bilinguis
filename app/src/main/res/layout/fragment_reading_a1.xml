@@ -34,7 +34,7 @@
                 android:layout_margin="16dp"
                 android:background="@drawable/rounded_corners"
                 android:fontFamily="@font/roboto_black"
-                android:text="In School"
+                android:text="School"
                 android:textColor="#6C63FF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -47,7 +47,7 @@
                 android:layout_margin="16dp"
                 android:background="@drawable/rounded_corners"
                 android:fontFamily="@font/roboto_black"
-                android:text="In the Market"
+                android:text="Market"
                 android:textColor="#6C63FF"
                 android:textSize="20sp"
                 android:textStyle="bold" />

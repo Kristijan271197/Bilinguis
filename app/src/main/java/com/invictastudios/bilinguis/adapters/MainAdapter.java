@@ -63,19 +63,19 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             mainItemImage = itemView.findViewById(R.id.main_item_image);
             itemView.setOnClickListener(v -> {
                 switch (items.get(getAdapterPosition()).getMainItemName()) {
-                    case "Grammar":
+                    case "Grammar/Грамматика":
                         context.startActivity(new Intent(context.getApplicationContext(), Grammar.class));
                         break;
-                    case "Vocabulary":
+                    case "Vocabulary/Словарь":
                         context.startActivity(new Intent(context.getApplicationContext(), Vocabulary.class));
                         break;
-                    case "Writing":
+                    case "Writing/Писание":
                         context.startActivity(new Intent(context.getApplicationContext(), Writing.class));
                         break;
-                    case "Reading":
+                    case "Reading/Чтение":
                         context.startActivity(new Intent(context.getApplicationContext(), Reading.class));
                         break;
-                    case "Additional Information":
+                    case "Additional Information/Дополнительная информация":
                         context.startActivity(new Intent(context.getApplicationContext(), AdditionalInformation.class));
                         break;
                 }

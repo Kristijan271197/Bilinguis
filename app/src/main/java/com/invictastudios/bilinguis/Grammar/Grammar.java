@@ -3,7 +3,6 @@ package com.invictastudios.bilinguis.Grammar;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -74,9 +73,6 @@ public class Grammar extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment createFragment(int position) {
-            Toast.makeText(Grammar.this, grammarA1TestOne + " " + grammarA1TestTwo +
-                    " " + grammarA1TestThree + " " + grammarA1TestFour + " " + grammarA1TestFive, Toast.LENGTH_SHORT).show();
-
             if (position == 0)
                 return new GrammarA1();
             else if (position == 1) {

@@ -130,7 +130,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/roboto_black"
-                    android:text="Things"
+                    android:text="Office Equipment"
                     android:textColor="@android:color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />

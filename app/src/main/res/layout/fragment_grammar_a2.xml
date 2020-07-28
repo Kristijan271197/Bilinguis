@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#6C63FF"
     tools:context=".Grammar.GrammarA2">
 
     <ScrollView
@@ -72,7 +73,7 @@
                 android:layout_margin="16dp"
                 android:background="@drawable/rounded_corners"
                 android:fontFamily="@font/roboto_black"
-                android:text="Modal Verbs"
+                android:text="Modal Verbs can/could"
                 android:textColor="#6C63FF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
