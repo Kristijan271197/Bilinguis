@@ -1,0 +1,15 @@
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2Fcity.wav?alt=media&token=7aba1965-047c-4795-b85d-2cb8a81f80f2
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2Fvillage.wav?alt=media&token=2a38ea0f-1de8-433e-ad37-2e5c6334b93e
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2Fcountry.wav?alt=media&token=1855f447-8980-41e0-9d57-81068c931afb
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2Fhouse.wav?alt=media&token=c6b923f0-04f0-49d1-b617-7e0c36e7f347
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2Fstreet.wav?alt=media&token=5338590b-c39f-4630-a1d4-5e5f0f2cadcc
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2Friver.wav?alt=media&token=8d4bb697-c1e1-42c8-b141-a2a0b0ae03e3
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2Flake.wav?alt=media&token=cf4a207b-e94e-440e-b68a-8d7688cc8fc9
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2Fsea.wav?alt=media&token=8079fe0c-fe46-4d96-8b54-e815bd00e704
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2Fmountain.wav?alt=media&token=63d44e0f-a3e0-432d-af15-bca1fb351e6b
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2Focean.wav?alt=media&token=4cd91567-1bef-47cf-bb71-a65facd47189
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2Fisland.wav?alt=media&token=eeef7e0c-71e6-4fb7-9cb4-7b44340c7584
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2Fpark.wav?alt=media&token=3db3edbe-8c32-44d4-894b-f71acfc0848c
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2Fwhere%20do%20you%20live.wav?alt=media&token=3e2cc2cd-ecb6-41a4-94e2-28c68d2ad3d0
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2FI%20live%20in%20a%20small%20village.wav?alt=media&token=445dc74b-2ce2-4094-a6f4-4c42d1761898
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGeography%2FI%20live%20in%20a%20big%20city.wav?alt=media&token=feeee4bd-4e82-4030-8db4-15ec5bb278db

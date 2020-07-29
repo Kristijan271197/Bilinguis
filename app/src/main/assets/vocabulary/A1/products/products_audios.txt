@@ -1,0 +1,16 @@
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Forange.wav?alt=media&token=e4bd9f8c-5f3d-4d85-a870-c5e9519dbef5
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Fapple.wav?alt=media&token=cbaf181e-5789-481f-87aa-ec0c720ccb16
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Fbanana.wav?alt=media&token=82afc98b-7954-4f53-b431-07e2265ad69c
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Fpineapple.wav?alt=media&token=c2969fae-ca48-441e-a9f1-f76c48a8918f
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Fstrawberry.wav?alt=media&token=8894c4f0-dc2d-4617-b4c6-bad0657f2e06
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Fcherry.wav?alt=media&token=c0070772-b562-4db8-93cd-ecc531403714
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Fpear.wav?alt=media&token=d1f94e9f-1828-49db-a7e2-b653aa9ccc34
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Fwatermelon.wav?alt=media&token=3303f1af-bd94-4606-9408-cad4051b4d0b
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Fmelon.wav?alt=media&token=7c6c6d37-13a3-4bbe-9443-b4234ed60637
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Fonion.wav?alt=media&token=36ccbe8f-7c23-4f53-8d2c-52dbd9e946fc
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Fgarlic.wav?alt=media&token=9acd9289-aa1c-403d-a5a1-123dd5e32500
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Fpepper.wav?alt=media&token=79e62cd3-9472-4799-a41d-dce0ab133316
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Fpotato.wav?alt=media&token=60a1a5b6-0ff1-48a6-ab25-5adb37f5d343
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Ftomato.wav?alt=media&token=d87c2753-fc37-4e0b-8f10-386e11157ec1
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Fcucumber.wav?alt=media&token=1ebd1cdd-853d-461b-82d2-0466327c4576
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FProducts%2Fcarrot.wav?alt=media&token=35a74171-618f-470d-86bb-d52aef2fe2a6

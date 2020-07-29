@@ -29,6 +29,7 @@ public class VocabularySectionSelected extends AppCompatActivity {
     private List<String> englishWords;
     private List<String> russianWords;
     private List<VocabularySelectionModel> vocabularyModel;
+    private List<String> audioLinks;
     private RecyclerView vocabularySelectionRecyclerView;
     private VocabularySelectionAdapter adapter;
     private FrameLayout adContainerView;
@@ -51,6 +52,7 @@ public class VocabularySectionSelected extends AppCompatActivity {
         englishWords = new ArrayList<>();
         russianWords = new ArrayList<>();
         vocabularyModel = new ArrayList<>();
+        audioLinks = new ArrayList<>();
 
         Bundle bundle = getIntent().getExtras();
         String section = null;
@@ -63,38 +65,47 @@ public class VocabularySectionSelected extends AppCompatActivity {
                 case VocabularyA1.GREETINGS:
                     initializeWords(englishWords, "vocabulary/A1/greetings/greetings_english.txt");
                     initializeWords(russianWords, "vocabulary/A1/greetings/greetings_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A1/greetings/greetings_audios.txt");
                     break;
                 case VocabularyA1.GEOGRAPHY:
                     initializeWords(englishWords, "vocabulary/A1/geography/geography_english.txt");
                     initializeWords(russianWords, "vocabulary/A1/geography/geography_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A1/geography/geography_audios.txt");
                     break;
                 case VocabularyA1.COLORS:
                     initializeWords(englishWords, "vocabulary/A1/colors/colors_english.txt");
                     initializeWords(russianWords, "vocabulary/A1/colors/colors_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A1/colors/colors_audios.txt");
                     break;
                 case VocabularyA1.THINGS:
                     initializeWords(englishWords, "vocabulary/A1/things/things_english.txt");
                     initializeWords(russianWords, "vocabulary/A1/things/things_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A1/things/things_audios.txt");
                     break;
                 case VocabularyA1.FOOD:
                     initializeWords(englishWords, "vocabulary/A1/food/food_english.txt");
                     initializeWords(russianWords, "vocabulary/A1/food/food_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A1/food/food_audios.txt");
                     break;
                 case VocabularyA1.PRODUCTS:
                     initializeWords(englishWords, "vocabulary/A1/products/products_english.txt");
                     initializeWords(russianWords, "vocabulary/A1/products/products_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A1/products/products_audios.txt");
                     break;
                 case VocabularyA1.HOME:
                     initializeWords(englishWords, "vocabulary/A1/home/home_english.txt");
                     initializeWords(russianWords, "vocabulary/A1/home/home_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A1/home/home_audios.txt");
                     break;
                 case VocabularyA1.FAMILY:
                     initializeWords(englishWords, "vocabulary/A1/family/family_english.txt");
                     initializeWords(russianWords, "vocabulary/A1/family/family_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A1/family/family_audios.txt");
                     break;
                 case VocabularyA1.WEATHER:
                     initializeWords(englishWords, "vocabulary/A1/weather/weather_english.txt");
                     initializeWords(russianWords, "vocabulary/A1/weather/weather_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A1/weather/weather_audios.txt");
                     break;
                 case VocabularyA2.NATURE:
                     initializeWords(englishWords, "vocabulary/A2/nature/nature_english.txt");
@@ -142,10 +153,10 @@ public class VocabularySectionSelected extends AppCompatActivity {
 
         for (int i = 0; i < englishWords.size(); i++)
             vocabularyModel.add(new VocabularySelectionModel(englishWords.get(i),
-                    russianWords.get(i), false));
+                    russianWords.get(i), false, false));
 
         vocabularySelectionRecyclerView = findViewById(R.id.vocabulary_recycler_view);
-        adapter = new VocabularySelectionAdapter(vocabularyModel, this);
+        adapter = new VocabularySelectionAdapter(vocabularyModel, this, audioLinks);
         vocabularySelectionRecyclerView.setAdapter(adapter);
         vocabularySelectionRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 

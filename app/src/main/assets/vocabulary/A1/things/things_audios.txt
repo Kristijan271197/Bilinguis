@@ -1,0 +1,13 @@
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FThings%2Fbook.wav?alt=media&token=5319e045-7fd8-46af-9a02-e75acdb50f6b
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FThings%2Fpaper.wav?alt=media&token=b737ab7e-b188-41fd-b87a-882dabdd3c89
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FThings%2Fnotebook.wav?alt=media&token=a3362db9-5914-400e-9fc0-2daea29652e9
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FThings%2Fpencis.wav?alt=media&token=94eda434-f387-4c7c-8f49-82ba6274b424
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FThings%2Fpen.wav?alt=media&token=8c5d7a99-5763-4f18-8ab0-1a1fcd951ce5
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FThings%2Fruler.wav?alt=media&token=0c5aed24-7beb-47f1-b76a-734149763185
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FThings%2Frubber.wav?alt=media&token=dd35bda3-b287-45fc-a5cd-c465ae74f0dd
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FThings%2Fscissors.wav?alt=media&token=fe11df85-19ec-440d-b933-e9c51955c458
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FThings%2Fpencil%20sharpner.wav?alt=media&token=0b13ed1e-e6f8-4691-ab26-198d010d782c
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FThings%2Fmagazine.wav?alt=media&token=f2fde8ef-ec98-4d7c-8f8c-5b6275fc3b37
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FThings%2Fcomputer.wav?alt=media&token=1f107c79-c60c-4efc-8cf2-25e82b6ab78d
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FThings%2Fdesk.wav?alt=media&token=c22db0cb-6122-4280-bde2-fad33f1a8809
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FThings%2Fchair.wav?alt=media&token=f9ac6b1d-78ea-46c1-a568-c7d16690ece4

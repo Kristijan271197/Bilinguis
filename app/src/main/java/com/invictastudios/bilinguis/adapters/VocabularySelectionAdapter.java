@@ -24,14 +24,15 @@ public class VocabularySelectionAdapter extends RecyclerView.Adapter<VocabularyS
 
 
     private List<VocabularySelectionModel> vocabularyModel;
+    private List<String> audioLinks;
     private Context context;
     Uri uri;
-    private String url;
     private MediaPlayer mediaPlayer;
 
-    public VocabularySelectionAdapter(List<VocabularySelectionModel> vocabularyModel, Context context) {
+    public VocabularySelectionAdapter(List<VocabularySelectionModel> vocabularyModel, Context context, List<String> audioLinks) {
         this.vocabularyModel = vocabularyModel;
         this.context = context;
+        this.audioLinks = audioLinks;
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setAudioAttributes(
                 new AudioAttributes.Builder()
@@ -39,8 +40,7 @@ public class VocabularySelectionAdapter extends RecyclerView.Adapter<VocabularyS
                         .setUsage(AudioAttributes.USAGE_MEDIA)
                         .build()
         );
-        url = "https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FGreetings%2Fhi.wav?alt=media&token=9784ac7b-2009-4236-9089-af17b1ba04ee";
-        uri = Uri.parse(url);
+
     }
 
     @NonNull
@@ -61,17 +61,30 @@ public class VocabularySelectionAdapter extends RecyclerView.Adapter<VocabularyS
         });
         showText(position, holder);
 
-
         holder.playSoundButton.setOnClickListener(v -> {
+            if (!vocabularyModel.get(position).isSoundIcon()) {
+                for (int i = 0; i < vocabularyModel.size(); i++)
+                    vocabularyModel.get(i).setSoundIcon(false);
+                changeSoundIcon(position, holder);
+                notifyDataSetChanged();
+            }
             if (mediaPlayer.isPlaying()) {
                 mediaPlayer.stop();
                 mediaPlayer.reset();
-                holder.playSoundButton.setBackgroundResource(R.drawable.sound_icon);
+                for (int i = 0; i < vocabularyModel.size(); i++)
+                    vocabularyModel.get(i).setSoundIcon(false);
+                changeSoundIcon(position, holder);
+                notifyDataSetChanged();
             } else {
+                mediaPlayer.stop();
+                mediaPlayer.reset();
                 try {
+                    uri = Uri.parse(audioLinks.get(position));
                     mediaPlayer.setDataSource(context, uri);
                     mediaPlayer.prepareAsync();
-                    holder.playSoundButton.setBackgroundResource(R.drawable.pause_icon);
+                    vocabularyModel.get(position).setSoundIcon(true);
+                    changeSoundIcon(position, holder);
+                    notifyDataSetChanged();
                 } catch (IOException e) {
                     Toast.makeText(context, "No audio available", Toast.LENGTH_SHORT).show();
                 }
@@ -79,10 +92,22 @@ public class VocabularySelectionAdapter extends RecyclerView.Adapter<VocabularyS
                 mediaPlayer.setOnCompletionListener(mp -> {
                     mp.stop();
                     mp.reset();
-                    holder.playSoundButton.setBackgroundResource(R.drawable.sound_icon);
+                    for (int i = 0; i < vocabularyModel.size(); i++)
+                        vocabularyModel.get(i).setSoundIcon(false);
+                    changeSoundIcon(position, holder);
+                    notifyDataSetChanged();
                 });
             }
         });
+        changeSoundIcon(position, holder);
+    }
+
+    private void changeSoundIcon(int position, ViewHolder holder) {
+        if (vocabularyModel.get(position).isSoundIcon())
+            holder.playSoundButton.setBackgroundResource(R.drawable.pause_icon);
+        else
+            holder.playSoundButton.setBackgroundResource(R.drawable.sound_icon);
+
     }
 
     private void showText(int position, ViewHolder holder) {

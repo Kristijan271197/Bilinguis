@@ -1,0 +1,14 @@
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FFamily%2Fmother.wav?alt=media&token=4ebf0c47-14e9-41ba-9039-d6d2a1d8156b
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FFamily%2Ffather.wav?alt=media&token=b4e02ab6-4d67-4cb2-b1ea-35627b8f8b9d
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FFamily%2Fbrother.wav?alt=media&token=f4f9cbe8-d295-43a2-baf2-170e7e689c1e
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FFamily%2Fsister.wav?alt=media&token=089be9a0-f3fc-4473-a664-009c4ee2608d
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FFamily%2Fgrandmother.wav?alt=media&token=f296a571-ff3c-4686-b537-a753437173fe
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FFamily%2Fgrandfather.wav?alt=media&token=0e5f6bdf-6454-42d9-895c-63036411b62f
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FFamily%2Funcle.wav?alt=media&token=5e22f3cb-0295-45cd-bfa4-aeef34cc175b
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FFamily%2Faunt.wav?alt=media&token=25b05d66-04f0-4d92-9fdf-4af680d89a0e
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FFamily%2Fhusband.wav?alt=media&token=7d32aacc-763f-487d-8f89-0493bde1a473
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FFamily%2Fwife.wav?alt=media&token=3e344da1-e2c0-4f44-a372-3ad6d01eea14
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FFamily%2Fnephew.wav?alt=media&token=d5f28f66-dbfc-41f6-98b5-251a3c85ba21
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FFamily%2Fniece.wav?alt=media&token=b4454b71-76e7-44fd-98e7-be8ae4d92e69
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FFamily%2Fcousin.wav?alt=media&token=a22f0b19-3457-45cd-b57f-3a35c992c54a
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FFamily%2Ffinace.wav?alt=media&token=e8d14944-cd36-4417-a857-896966f518aa

@@ -1,0 +1,10 @@
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FColors%2Fyellow.wav?alt=media&token=89b51a88-9c26-4802-a219-4c39feed4a3b
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FColors%2Fred.wav?alt=media&token=25490b3e-837f-4904-86e5-f32ab2ecee25
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FColors%2Fblue.wav?alt=media&token=6a5a88ee-fcf4-4afd-a02f-79264e9bf2b4
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FColors%2Fgreen.wav?alt=media&token=04294101-df42-4010-a5f2-fe994a985073
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FColors%2Fbrown.wav?alt=media&token=9e065192-08d4-419e-85ef-3b52583efbb5
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FColors%2Forange.wav?alt=media&token=1b2dbbe7-b9ba-4180-85f5-6d990d79513d
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FColors%2Fpurple.wav?alt=media&token=66e9fd13-300a-4415-a509-f73bc9fc0063
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FColors%2Fpink.wav?alt=media&token=63fafecf-07b6-4a28-bda7-45586dde401e
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FColors%2Fwhite.wav?alt=media&token=62a0e58d-f951-4715-a5c1-5156dbbd4cdb
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA1%2FColors%2Fblack.wav?alt=media&token=4f218f36-0200-46ac-8201-1e805624bf95
