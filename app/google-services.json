@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "585655516519",
+    "firebase_url": "https://bilinguis-248b7.firebaseio.com",
+    "project_id": "bilinguis-248b7",
+    "storage_bucket": "bilinguis-248b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585655516519:android:3f4a7a2cca22a789c343c2",
+        "android_client_info": {
+          "package_name": "com.invictastudios.bilinguis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585655516519-agv2nbgub6trhfe49tj9crcf08shm96i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzhr8HEN-12V-UmSiHS4H88968P9tmcLQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585655516519-agv2nbgub6trhfe49tj9crcf08shm96i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

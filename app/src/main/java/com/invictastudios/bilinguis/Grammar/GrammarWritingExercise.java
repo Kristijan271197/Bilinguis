@@ -257,6 +257,7 @@ public class GrammarWritingExercise extends AppCompatActivity {
         submitAnswerButton.setOnClickListener(v -> {
             if (!answerEditText.getText().toString().trim().isEmpty()) {
                 String answer = answerEditText.getText().toString().trim();
+                answer = answer.replaceAll("[,!.]*", "");
                 matches = questionsAnswers.get(questionNumber).getAnswer().equalsIgnoreCase(answer);
 
                 if (matches) {

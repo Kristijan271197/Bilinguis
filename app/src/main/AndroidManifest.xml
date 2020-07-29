@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.invictastudios.bilinguis">
-    <!-- Include required permissions for Google Mobile Ads to run. -->
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:icon="@mipmap/icon"
@@ -11,7 +12,7 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Additional.AdditionalInformationPlan"></activity>
+        <activity android:name=".Additional.AdditionalInformationPlan" />
         <activity android:name=".Additional.AdditionalInformation" />
         <activity android:name=".TestSelection" />
         <activity android:name=".Reading.ReadingSectionSelected" />

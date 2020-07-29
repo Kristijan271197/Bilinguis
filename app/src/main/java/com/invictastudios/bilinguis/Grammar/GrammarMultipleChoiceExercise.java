@@ -71,6 +71,7 @@ public class GrammarMultipleChoiceExercise extends AppCompatActivity {
         loadBanner();
 
 
+
         Bundle bundle = getIntent().getExtras();
 
         questionNumberTextView = findViewById(R.id.question_number_text_view);
@@ -251,7 +252,6 @@ public class GrammarMultipleChoiceExercise extends AppCompatActivity {
                 fadeView();
             } else {
                 wrongAnswers++;
-
                 rightAnswer();
                 shakeAnimation();
             }
@@ -264,7 +264,6 @@ public class GrammarMultipleChoiceExercise extends AppCompatActivity {
                 fadeView();
             } else {
                 wrongAnswers++;
-
                 rightAnswer();
                 shakeAnimation();
             }
@@ -344,13 +343,13 @@ public class GrammarMultipleChoiceExercise extends AppCompatActivity {
 
     private void rightAnswer() {
         if (randomButton == 0)
-            answerOneButton.setBackgroundColor(Color.GREEN);
+            answerOneButton.setBackgroundResource(R.drawable.image_button_green_rounded_corners);
         if (randomButton == 1)
-            answerTwoButton.setBackgroundColor(Color.GREEN);
+            answerTwoButton.setBackgroundResource(R.drawable.image_button_green_rounded_corners);
         if (randomButton == 2)
-            answerThreeButton.setBackgroundColor(Color.GREEN);
+            answerThreeButton.setBackgroundResource(R.drawable.image_button_green_rounded_corners);
         if (randomButton == 3)
-            answerFourButton.setBackgroundColor(Color.GREEN);
+            answerFourButton.setBackgroundResource(R.drawable.image_button_green_rounded_corners);
 
     }
 
@@ -389,10 +388,10 @@ public class GrammarMultipleChoiceExercise extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 cardView.setCardBackgroundColor(Color.WHITE);
                 nextQuestion();
-                answerOneButton.setBackgroundColor(Color.WHITE);
-                answerTwoButton.setBackgroundColor(Color.WHITE);
-                answerThreeButton.setBackgroundColor(Color.WHITE);
-                answerFourButton.setBackgroundColor(Color.WHITE);
+                answerOneButton.setBackgroundResource(R.drawable.image_button_rounded_corners);
+                answerTwoButton.setBackgroundResource(R.drawable.image_button_rounded_corners);
+                answerThreeButton.setBackgroundResource(R.drawable.image_button_rounded_corners);
+                answerFourButton.setBackgroundResource(R.drawable.image_button_rounded_corners);
                 answerOneButton.setEnabled(true);
                 answerTwoButton.setEnabled(true);
                 answerThreeButton.setEnabled(true);
@@ -427,10 +426,10 @@ public class GrammarMultipleChoiceExercise extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 cardView.setCardBackgroundColor(Color.WHITE);
                 nextQuestion();
-                answerOneButton.setBackgroundColor(Color.WHITE);
-                answerTwoButton.setBackgroundColor(Color.WHITE);
-                answerThreeButton.setBackgroundColor(Color.WHITE);
-                answerFourButton.setBackgroundColor(Color.WHITE);
+                answerOneButton.setBackgroundResource(R.drawable.image_button_rounded_corners);
+                answerTwoButton.setBackgroundResource(R.drawable.image_button_rounded_corners);
+                answerThreeButton.setBackgroundResource(R.drawable.image_button_rounded_corners);
+                answerFourButton.setBackgroundResource(R.drawable.image_button_rounded_corners);
                 answerOneButton.setEnabled(true);
                 answerTwoButton.setEnabled(true);
                 answerThreeButton.setEnabled(true);

@@ -267,7 +267,7 @@ public class Tests extends AppCompatActivity {
     private void submitButton() {
         if (!answerEditText.getText().toString().trim().isEmpty()) {
             String answer = answerEditText.getText().toString().trim();
-            answer = answer.replaceAll("[!.]*", "");
+            answer = answer.replaceAll("[,!.]*", "");
             matches = questionsAnswers.get(questionNumber).getAnswer().equalsIgnoreCase(answer);
 
             if (matches) {

@@ -180,7 +180,7 @@ public class Exercises extends AppCompatActivity {
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 if (!answerEditText.getText().toString().trim().isEmpty()) {
                     String answer = answerEditText.getText().toString().trim();
-                    answer = answer.replaceAll("[!.]*", "");
+                    answer = answer.replaceAll("[,!.]*", "");
                     matches = questionsAnswers.get(questionNumber).getAnswer().equalsIgnoreCase(answer);
 
                     if (matches) {

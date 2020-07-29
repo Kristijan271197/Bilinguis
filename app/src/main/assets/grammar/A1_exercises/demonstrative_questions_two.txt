@@ -1,4 +1,4 @@
 Is this my book?
-No, this is my book!
+No this is my book
 Are these my socks?
-Yes, these are your socks
+Yes these are your socks
