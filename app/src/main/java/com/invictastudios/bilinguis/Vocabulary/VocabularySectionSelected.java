@@ -119,34 +119,42 @@ public class VocabularySectionSelected extends AppCompatActivity {
                 case VocabularyA2.FACE_PARTS:
                     initializeWords(englishWords, "vocabulary/A2/face_parts/face_parts_english.txt");
                     initializeWords(russianWords, "vocabulary/A2/face_parts/face_parts_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A2/face_parts/face_parts_audios.txt");
                     break;
                 case VocabularyA2.BODY_PARTS:
                     initializeWords(englishWords, "vocabulary/A2/body_parts/body_parts_english.txt");
                     initializeWords(russianWords, "vocabulary/A2/body_parts/body_parts_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A2/body_parts/body_parts_audios.txt");
                     break;
                 case VocabularyA2.CLOTHES:
                     initializeWords(englishWords, "vocabulary/A2/clothes/clothes_english.txt");
                     initializeWords(russianWords, "vocabulary/A2/clothes/clothes_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A2/clothes/clothes_audios.txt");
                     break;
                 case VocabularyA2.KITCHEN:
                     initializeWords(englishWords, "vocabulary/A2/kitchen/kitchen_english.txt");
                     initializeWords(russianWords, "vocabulary/A2/kitchen/kitchen_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A2/kitchen/kitchen_audios.txt");
                     break;
                 case VocabularyA2.FURNITURE:
                     initializeWords(englishWords, "vocabulary/A2/furniture/furniture_english.txt");
                     initializeWords(russianWords, "vocabulary/A2/furniture/furniture_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A2/furniture/furniture_audios.txt");
                     break;
                 case VocabularyA2.BEVERAGES:
                     initializeWords(englishWords, "vocabulary/A2/beverages/beverages_english.txt");
                     initializeWords(russianWords, "vocabulary/A2/beverages/beverages_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A2/beverages/beverages_audios.txt");
                     break;
                 case VocabularyA2.TIME:
                     initializeWords(englishWords, "vocabulary/A2/time/time_english.txt");
                     initializeWords(russianWords, "vocabulary/A2/time/time_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A2/time/time_audios.txt");
                     break;
                 case VocabularyA2.CITY:
                     initializeWords(englishWords, "vocabulary/A2/city/city_english.txt");
                     initializeWords(russianWords, "vocabulary/A2/city/city_russian.txt");
+                    initializeWords(audioLinks, "vocabulary/A2/city/city_audios.txt");
                     break;
 
             }

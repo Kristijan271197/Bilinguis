@@ -1,0 +1,14 @@
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA2%2FKitchen%2Fkitchen.wav?alt=media&token=f0705f2c-340b-48c5-8907-cb05b730577d
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA2%2FKitchen%2Fglass.wav?alt=media&token=9db836c4-a450-491e-a12e-b21d6a52f6d8
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA2%2FKitchen%2Fbottle.wav?alt=media&token=679a41b0-c362-4f32-8d6f-ee388cf0db71
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA2%2FKitchen%2Fplate.wav?alt=media&token=50e91761-001c-4b49-ae0f-d67a59d7f9a5
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA2%2FKitchen%2Fknife.wav?alt=media&token=ec0955d3-73ca-4aa5-8a4a-a8fd82e75763
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA2%2FKitchen%2Ffork.wav?alt=media&token=df949cda-feb1-4c64-a655-a176fc9116bb
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA2%2FKitchen%2Fspoon.wav?alt=media&token=3eeec78d-f540-4f81-9056-2ed208651190
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA2%2FKitchen%2Fdish.wav?alt=media&token=e7d79eeb-06eb-4e03-aaba-a267200524c3
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA2%2FKitchen%2Foven.wav?alt=media&token=b0e62bfc-a87a-404f-9c5e-f18d93b5a8b2
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA2%2FKitchen%2Frefrigrator.wav?alt=media&token=4c1231fe-acb3-44e4-b1d4-d427b35e8bad
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA2%2FKitchen%2Fkitchen%20stove.wav?alt=media&token=b5c73212-e951-4f49-91d1-d9f5abb986ae
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA2%2FKitchen%2Ffrying%20pan.wav?alt=media&token=cb3b6f4c-7e35-4451-ae51-5c301da14fbb
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA2%2FKitchen%2Fpan.wav?alt=media&token=46581041-2ea7-4a4d-9e53-8c3ed7c15ecc
+https://firebasestorage.googleapis.com/v0/b/bilinguis-248b7.appspot.com/o/Vocabulary%2FA2%2FKitchen%2Fsink.wav?alt=media&token=96e11924-0d72-4d05-9535-15838627c3ec
