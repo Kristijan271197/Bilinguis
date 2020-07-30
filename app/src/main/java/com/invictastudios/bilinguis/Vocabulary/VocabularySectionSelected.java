@@ -1,5 +1,7 @@
 package com.invictastudios.bilinguis.Vocabulary;
 
+import android.media.AudioAttributes;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Display;
@@ -34,6 +36,7 @@ public class VocabularySectionSelected extends AppCompatActivity {
     private VocabularySelectionAdapter adapter;
     private FrameLayout adContainerView;
     private AdView adView;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +56,14 @@ public class VocabularySectionSelected extends AppCompatActivity {
         russianWords = new ArrayList<>();
         vocabularyModel = new ArrayList<>();
         audioLinks = new ArrayList<>();
+
+        mediaPlayer = new MediaPlayer();
+        mediaPlayer.setAudioAttributes(
+                new AudioAttributes.Builder()
+                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                        .setUsage(AudioAttributes.USAGE_MEDIA)
+                        .build()
+        );
 
         Bundle bundle = getIntent().getExtras();
         String section = null;
@@ -165,7 +176,7 @@ public class VocabularySectionSelected extends AppCompatActivity {
                     russianWords.get(i), false, false));
 
         vocabularySelectionRecyclerView = findViewById(R.id.vocabulary_recycler_view);
-        adapter = new VocabularySelectionAdapter(vocabularyModel, this, audioLinks);
+        adapter = new VocabularySelectionAdapter(vocabularyModel, this, audioLinks, mediaPlayer);
         vocabularySelectionRecyclerView.setAdapter(adapter);
         vocabularySelectionRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -201,5 +212,12 @@ public class VocabularySectionSelected extends AppCompatActivity {
         int adWidth = (int) (widthPixels / density);
 
         return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mediaPlayer.release();
+        mediaPlayer = null;
     }
 }

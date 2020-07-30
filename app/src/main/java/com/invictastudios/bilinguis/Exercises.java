@@ -347,4 +347,5 @@ public class Exercises extends AppCompatActivity {
 
         return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth);
     }
+
 }
