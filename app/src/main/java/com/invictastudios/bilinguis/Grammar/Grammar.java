@@ -51,7 +51,7 @@ public class Grammar extends AppCompatActivity {
                     if (position == 0)
                         tab.setText("Beginner A1");
                     else if (position == 1)
-                        tab.setText("Beginner A2");
+                        tab.setText("Elementary English A2");
                 }).attach();
 
 
