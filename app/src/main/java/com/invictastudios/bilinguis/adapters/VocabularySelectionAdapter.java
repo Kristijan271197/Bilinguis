@@ -82,7 +82,7 @@ public class VocabularySelectionAdapter extends RecyclerView.Adapter<VocabularyS
                         changeSoundIcon(position, holder);
                         notifyDataSetChanged();
                     } catch (IOException e) {
-                        Toast.makeText(context, "No audio available", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, R.string.no_audio_available, Toast.LENGTH_SHORT).show();
                     }
                     mediaPlayer.setOnPreparedListener(MediaPlayer::start);
                     mediaPlayer.setOnCompletionListener(mp -> {
@@ -95,7 +95,7 @@ public class VocabularySelectionAdapter extends RecyclerView.Adapter<VocabularyS
                     });
                 }
             } else
-                Toast.makeText(context.getApplicationContext(), "Чтобы пользоватся аудиозаписами, пожалуйста подключитесь к интернету", Toast.LENGTH_LONG).show();
+                Toast.makeText(context.getApplicationContext(), R.string.internet_for_audios, Toast.LENGTH_LONG).show();
         });
         changeSoundIcon(position, holder);
 
@@ -113,7 +113,7 @@ public class VocabularySelectionAdapter extends RecyclerView.Adapter<VocabularyS
         if (vocabularyModel.get(position).isShowTranslation())
             holder.russianWord.setText(vocabularyModel.get(position).getRussianWord());
         else
-            holder.russianWord.setText("Show Translation");
+            holder.russianWord.setText(R.string.show_translation);
     }
 
     private boolean isNetworkAvailable() {

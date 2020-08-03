@@ -17,4 +17,8 @@
 <!- -->
     <string name="banner_ad_unit_id">ca-app-pub-4701446273186664/1972153189</string>
     <string name="advice">Для того, чтобы легко выучить слова, их необходимо повторить 10-20 раз в течение недели. Записывайте новые слова в тетрадке в два столбца: слово и перевод. Запоминайте не только перевод слова, но и его правильное написание и произношение.</string>
+    <string name="show_translation">Show Translation</string>
+    <string name="internet_for_audios">Чтобы пользоватся аудиозаписами, пожалуйста подключитесь к интернету</string>
+    <string name="no_audio_available">No audio available</string>
+    <string name="results_text">\"Results: \"</string>
 </resources>

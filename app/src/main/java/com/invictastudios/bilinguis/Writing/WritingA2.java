@@ -22,9 +22,6 @@ import java.util.List;
 
 public class WritingA2 extends Fragment {
 
-    private RecyclerView recyclerView;
-    private WritingAdapter writingAdapter;
-    private List<String> title;
     private List<String> description;
 
     public WritingA2() {
@@ -37,7 +34,7 @@ public class WritingA2 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_writing_a2, container, false);
 
-        title = new ArrayList<>();
+        List<String> title = new ArrayList<>();
         description = new ArrayList<>();
 
         title.add("Past Simple");
@@ -54,8 +51,8 @@ public class WritingA2 extends Fragment {
         enterText("writing/A2/writing_a2_five.txt");
         enterText("writing/A2/writing_a2_six.txt");
 
-        recyclerView = view.findViewById(R.id.writing_a2_recycler_view);
-        writingAdapter = new WritingAdapter(view.getContext(), title, description);
+        RecyclerView recyclerView = view.findViewById(R.id.writing_a2_recycler_view);
+        WritingAdapter writingAdapter = new WritingAdapter(view.getContext(), title, description);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         recyclerView.setAdapter(writingAdapter);
 

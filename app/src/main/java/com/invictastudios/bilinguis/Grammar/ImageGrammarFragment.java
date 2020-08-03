@@ -28,9 +28,6 @@ public class ImageGrammarFragment extends Fragment {
     private TextView fourthFrameTextView;
     private TextView fifthFrameTextView;
     private TextView sixthFrameTextView;
-    private Button exerciseOneButtonImage;
-    private Button exerciseTwoButtonImage;
-    private Button exerciseThreeButtonImage;
 
     private int exerciseName;
     private int exerciseLevel;
@@ -51,9 +48,9 @@ public class ImageGrammarFragment extends Fragment {
         fourthFrameTextView = view.findViewById(R.id.fourth_linear_text);
         fifthFrameTextView = view.findViewById(R.id.fifth_linear_text);
         sixthFrameTextView = view.findViewById(R.id.sixth_linear_text);
-        exerciseOneButtonImage = view.findViewById(R.id.exercise_one_button_image);
-        exerciseTwoButtonImage = view.findViewById(R.id.exercise_two_button_image);
-        exerciseThreeButtonImage = view.findViewById(R.id.exercise_three_button_image);
+        Button exerciseOneButtonImage = view.findViewById(R.id.exercise_one_button_image);
+        Button exerciseTwoButtonImage = view.findViewById(R.id.exercise_two_button_image);
+        Button exerciseThreeButtonImage = view.findViewById(R.id.exercise_three_button_image);
 
 
         if (this.getArguments() != null) {

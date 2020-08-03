@@ -31,6 +31,16 @@ public class TestSelection extends AppCompatActivity {
     boolean grammarA2TestFour;
     boolean grammarA2TestFive;
     boolean grammarA2TestSix;
+    boolean vocabularyA1TestOne;
+    boolean vocabularyA1TestTwo;
+    boolean vocabularyA1TestThree;
+    boolean vocabularyA1TestFour;
+    boolean vocabularyA1TestFive;
+    boolean vocabularyA2TestOne;
+    boolean vocabularyA2TestTwo;
+    boolean vocabularyA2TestThree;
+    boolean vocabularyA2TestFour;
+    boolean vocabularyA2TestFive;
 
 
     @Override
@@ -58,6 +68,17 @@ public class TestSelection extends AppCompatActivity {
         grammarA2TestFour = sharedPreferences.getBoolean("GrammarA2Four", false);
         grammarA2TestFive = sharedPreferences.getBoolean("GrammarA2Five", false);
         grammarA2TestSix = sharedPreferences.getBoolean("GrammarA2Six", false);
+
+        vocabularyA1TestOne = sharedPreferences.getBoolean("VocabularyA1One", false);
+        vocabularyA1TestTwo = sharedPreferences.getBoolean("VocabularyA1Two", false);
+        vocabularyA1TestThree = sharedPreferences.getBoolean("VocabularyA1Three", false);
+        vocabularyA1TestFour = sharedPreferences.getBoolean("VocabularyA1Four", false);
+        vocabularyA1TestFive = sharedPreferences.getBoolean("VocabularyA1Five", false);
+        vocabularyA2TestOne = sharedPreferences.getBoolean("VocabularyA2One", false);
+        vocabularyA2TestTwo = sharedPreferences.getBoolean("VocabularyA2Two", false);
+        vocabularyA2TestThree = sharedPreferences.getBoolean("VocabularyA2Three", false);
+        vocabularyA2TestFour = sharedPreferences.getBoolean("VocabularyA2Four", false);
+        vocabularyA2TestFive = sharedPreferences.getBoolean("VocabularyA2Five", false);
 
         Bundle bundle = getIntent().getExtras();
 
@@ -129,7 +150,49 @@ public class TestSelection extends AppCompatActivity {
 
     private void buttonColors() {
         if (vocabulary) {
-
+            if (level == 1) {
+                if (vocabularyA1TestOne) {
+                    firstExercise.setBackground(getDrawable(R.drawable.rounded_corners_green));
+                    firstExercise.setTextColor(Color.WHITE);
+                }
+                if (vocabularyA1TestTwo) {
+                    secondExercise.setBackground(getDrawable(R.drawable.rounded_corners_green));
+                    secondExercise.setTextColor(Color.WHITE);
+                }
+                if (vocabularyA1TestThree) {
+                    thirdExercise.setBackground(getDrawable(R.drawable.rounded_corners_green));
+                    thirdExercise.setTextColor(Color.WHITE);
+                }
+                if (vocabularyA1TestFour) {
+                    fourthExercise.setBackground(getDrawable(R.drawable.rounded_corners_green));
+                    fourthExercise.setTextColor(Color.WHITE);
+                }
+                if (vocabularyA1TestFive) {
+                    fifthExercise.setBackground(getDrawable(R.drawable.rounded_corners_green));
+                    fifthExercise.setTextColor(Color.WHITE);
+                }
+            } else if (level == 2) {
+                if (vocabularyA2TestOne) {
+                    firstExercise.setBackground(getDrawable(R.drawable.rounded_corners_green));
+                    firstExercise.setTextColor(Color.WHITE);
+                }
+                if (vocabularyA2TestTwo) {
+                    secondExercise.setBackground(getDrawable(R.drawable.rounded_corners_green));
+                    secondExercise.setTextColor(Color.WHITE);
+                }
+                if (vocabularyA2TestThree) {
+                    thirdExercise.setBackground(getDrawable(R.drawable.rounded_corners_green));
+                    thirdExercise.setTextColor(Color.WHITE);
+                }
+                if (vocabularyA2TestFour) {
+                    fourthExercise.setBackground(getDrawable(R.drawable.rounded_corners_green));
+                    fourthExercise.setTextColor(Color.WHITE);
+                }
+                if (vocabularyA2TestFive) {
+                    fifthExercise.setBackground(getDrawable(R.drawable.rounded_corners_green));
+                    fifthExercise.setTextColor(Color.WHITE);
+                }
+            }
         } else {
             if (level == 1) {
                 if (grammarA1TestOne) {

@@ -55,7 +55,6 @@ public class Exercises extends AppCompatActivity {
     private Random random;
     private boolean matches;
     private boolean isVocabulary;
-    private FrameLayout adContainerView;
     private AdView adView;
 
     @Override
@@ -66,7 +65,7 @@ public class Exercises extends AppCompatActivity {
         MobileAds.initialize(this, initializationStatus -> {
         });
 
-        adContainerView = findViewById(R.id.adView_container_exercises);
+        FrameLayout adContainerView = findViewById(R.id.adView_container_exercises);
         adView = new AdView(this);
         adView.setAdUnitId(getString(R.string.banner_ad_unit_id));
         adContainerView.addView(adView);
@@ -233,7 +232,7 @@ public class Exercises extends AppCompatActivity {
             answerEditText.setVisibility(View.INVISIBLE);
             submitAnswerButton.setVisibility(View.INVISIBLE);
             answerTextView.setVisibility(View.INVISIBLE);
-            exerciseTitleTextView.setText(String.format(Locale.ENGLISH, "Results: "));
+            exerciseTitleTextView.setText(R.string.results_text);
             exerciseTitleTextView.setTextSize(18);
             exerciseTextView.setText(String.format(Locale.ENGLISH, "Correct: %d \nIncorrect: %d", correctAnswers, wrongAnswers));
         }

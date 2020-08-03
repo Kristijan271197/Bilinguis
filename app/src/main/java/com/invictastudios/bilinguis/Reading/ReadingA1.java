@@ -15,22 +15,16 @@ import com.invictastudios.bilinguis.R;
 
 public class ReadingA1 extends Fragment {
 
-    private Button greetingsButton;
-    private Button inSchoolButton;
-    private Button inTheMarketButton;
-    private Button homeFamilyButton;
-    private Button ourDayButton;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_reading_a1, container, false);
 
-        greetingsButton = view.findViewById(R.id.greetings_button);
-        inSchoolButton = view.findViewById(R.id.in_school_button);
-        inTheMarketButton = view.findViewById(R.id.in_the_market_button);
-        homeFamilyButton = view.findViewById(R.id.home_family_button);
-        ourDayButton = view.findViewById(R.id.our_day_button);
+        Button greetingsButton = view.findViewById(R.id.greetings_button);
+        Button inSchoolButton = view.findViewById(R.id.in_school_button);
+        Button inTheMarketButton = view.findViewById(R.id.in_the_market_button);
+        Button homeFamilyButton = view.findViewById(R.id.home_family_button);
+        Button ourDayButton = view.findViewById(R.id.our_day_button);
 
         greetingsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), ReadingSectionSelected.class);

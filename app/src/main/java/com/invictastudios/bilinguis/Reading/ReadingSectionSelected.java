@@ -41,7 +41,6 @@ public class ReadingSectionSelected extends AppCompatActivity {
     private int name;
     private String firstAnswer;
     private String secondAnswer;
-    private FrameLayout adContainerView;
     private String url;
     private AdView adView;
     private MediaPlayer mediaPlayer;
@@ -54,7 +53,7 @@ public class ReadingSectionSelected extends AppCompatActivity {
         MobileAds.initialize(this, initializationStatus -> {
         });
 
-        adContainerView = findViewById(R.id.adView_container_reading_section_selected);
+        FrameLayout adContainerView = findViewById(R.id.adView_container_reading_section_selected);
         adView = new AdView(this);
         adView.setAdUnitId(getString(R.string.banner_ad_unit_id));
         adContainerView.addView(adView);

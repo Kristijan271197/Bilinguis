@@ -19,9 +19,7 @@ import com.invictastudios.bilinguis.Tests;
 
 public class Grammar extends AppCompatActivity {
 
-    private ViewPager2 grammarPager;
     private FragmentStateAdapter pagerAdapter;
-    private TabLayout grammarLayout;
     public boolean grammarA1TestOne;
     public boolean grammarA1TestTwo;
     public boolean grammarA1TestThree;
@@ -41,8 +39,8 @@ public class Grammar extends AppCompatActivity {
         grammarA1TestFive = sharedPreferences.getBoolean("GrammarA1Five", false);
 
 
-        grammarPager = findViewById(R.id.grammar_pager);
-        grammarLayout = findViewById(R.id.grammar_tabs);
+        ViewPager2 grammarPager = findViewById(R.id.grammar_pager);
+        TabLayout grammarLayout = findViewById(R.id.grammar_tabs);
         pagerAdapter = new ViewPagerAdapter(this);
         grammarPager.setAdapter(pagerAdapter);
 

@@ -20,19 +20,6 @@ public class GrammarA1 extends Fragment {
     public static final String EXERCISE_LEVEL = "exerciseLevel";
     public static final String EXERCISE_NUMBER = "exerciseNumber";
 
-    private Button personalPronounsButton;
-    private Button englishArticlesButton;
-    private Button demonstrativePronounsButton;
-    private Button verbToHaveButton;
-    private Button pluralButton;
-    private Button verbsButton;
-    private Button presentSimpleTenseButton;
-    private Button quantifiersButton;
-    private Button toBeButton;
-    private Button presentContinuousTenseButton;
-    private Button exercisesButton;
-    private Button testsButton;
-
     public GrammarA1() {
 
     }
@@ -42,18 +29,18 @@ public class GrammarA1 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_grammar_a1, container, false);
 
-        personalPronounsButton = view.findViewById(R.id.personal_pronouns_button);
-        englishArticlesButton = view.findViewById(R.id.english_articles_button);
-        demonstrativePronounsButton = view.findViewById(R.id.demonstrative_button);
-        verbToHaveButton = view.findViewById(R.id.to_have_button);
-        pluralButton = view.findViewById(R.id.plural_button);
-        verbsButton = view.findViewById(R.id.verbs_button);
-        presentSimpleTenseButton = view.findViewById(R.id.present_simple_tense);
-        quantifiersButton = view.findViewById(R.id.quantifiers_button);
-        toBeButton = view.findViewById(R.id.to_be_button);
-        presentContinuousTenseButton = view.findViewById(R.id.present_continuous_tense);
-        exercisesButton = view.findViewById(R.id.exercise_a1_grammar);
-        testsButton = view.findViewById(R.id.test_a1_grammar);
+        Button personalPronounsButton = view.findViewById(R.id.personal_pronouns_button);
+        Button englishArticlesButton = view.findViewById(R.id.english_articles_button);
+        Button demonstrativePronounsButton = view.findViewById(R.id.demonstrative_button);
+        Button verbToHaveButton = view.findViewById(R.id.to_have_button);
+        Button pluralButton = view.findViewById(R.id.plural_button);
+        Button verbsButton = view.findViewById(R.id.verbs_button);
+        Button presentSimpleTenseButton = view.findViewById(R.id.present_simple_tense);
+        Button quantifiersButton = view.findViewById(R.id.quantifiers_button);
+        Button toBeButton = view.findViewById(R.id.to_be_button);
+        Button presentContinuousTenseButton = view.findViewById(R.id.present_continuous_tense);
+        Button exercisesButton = view.findViewById(R.id.exercise_a1_grammar);
+        Button testsButton = view.findViewById(R.id.test_a1_grammar);
 
         personalPronounsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);

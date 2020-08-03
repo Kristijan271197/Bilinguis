@@ -17,7 +17,6 @@ import com.invictastudios.bilinguis.R;
 
 public class GrammarSectionSelected extends AppCompatActivity {
 
-    private FrameLayout adContainerView;
     private AdView adView;
 
     @Override
@@ -28,7 +27,7 @@ public class GrammarSectionSelected extends AppCompatActivity {
         MobileAds.initialize(this, initializationStatus -> {
         });
 
-        adContainerView = findViewById(R.id.adView_container_grammar_section_selected);
+        FrameLayout adContainerView = findViewById(R.id.adView_container_grammar_section_selected);
         adView = new AdView(this);
         adView.setAdUnitId(getString(R.string.banner_ad_unit_id));
         adContainerView.addView(adView);

@@ -14,15 +14,8 @@ public class MainCardsModel {
         return mainItemName;
     }
 
-    public void setMainItemName(String mainItemName) {
-        this.mainItemName = mainItemName;
-    }
-
     public int getMainItemImage() {
         return mainItemImage;
     }
 
-    public void setMainItemImage(int mainItemImage) {
-        this.mainItemImage = mainItemImage;
-    }
 }

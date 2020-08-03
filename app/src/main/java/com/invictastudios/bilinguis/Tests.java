@@ -44,18 +44,14 @@ public class Tests extends AppCompatActivity {
     private EditText answerEditText;
     private Button submitAnswerButton;
     private Button nextQuestionButton;
-    private List<String> questions;
-    private List<String> answers;
     private List<WritingExerciseModel> questionsAnswers;
     private int questionNumber;
     private int correctAnswers;
     private int wrongAnswers;
     private int exerciseLevel;
-    private boolean matches;
     private boolean isVocabulary;
     private int exerciseNumber;
     private SharedPreferences.Editor editor;
-    private FrameLayout adContainerView;
     private AdView adView;
 
     @Override
@@ -66,7 +62,7 @@ public class Tests extends AppCompatActivity {
         MobileAds.initialize(this, initializationStatus -> {
         });
 
-        adContainerView = findViewById(R.id.adView_container_exercises);
+        FrameLayout adContainerView = findViewById(R.id.adView_container_exercises);
         adView = new AdView(this);
         adView.setAdUnitId(getString(R.string.banner_ad_unit_id));
         adContainerView.addView(adView);
@@ -88,8 +84,8 @@ public class Tests extends AppCompatActivity {
         answerEditText = findViewById(R.id.answer_vocabulary_exercises_edit_text);
         submitAnswerButton = findViewById(R.id.submit_vocabulary_exercises_answer_button);
         nextQuestionButton = findViewById(R.id.next_question_vocabulary_exercises_button);
-        questions = new ArrayList<>();
-        answers = new ArrayList<>();
+        List<String> questions = new ArrayList<>();
+        List<String> answers = new ArrayList<>();
         questionsAnswers = new ArrayList<>();
         questionNumber = 0;
         correctAnswers = 0;
@@ -268,7 +264,7 @@ public class Tests extends AppCompatActivity {
         if (!answerEditText.getText().toString().trim().isEmpty()) {
             String answer = answerEditText.getText().toString().trim();
             answer = answer.replaceAll("[,!.]*", "");
-            matches = questionsAnswers.get(questionNumber).getAnswer().equalsIgnoreCase(answer);
+            boolean matches = questionsAnswers.get(questionNumber).getAnswer().equalsIgnoreCase(answer);
 
             if (matches) {
                 correctAnswers++;
@@ -388,7 +384,7 @@ public class Tests extends AppCompatActivity {
             answerEditText.setVisibility(View.INVISIBLE);
             submitAnswerButton.setVisibility(View.INVISIBLE);
             answerTextView.setVisibility(View.INVISIBLE);
-            exerciseTitleTextView.setText(String.format(Locale.ENGLISH, "Results: "));
+            exerciseTitleTextView.setText(R.string.results_text);
             exerciseTitleTextView.setTextSize(18);
             exerciseTextView.setText(String.format(Locale.ENGLISH, "Correct: %d \nIncorrect: %d", correctAnswers, wrongAnswers));
         }

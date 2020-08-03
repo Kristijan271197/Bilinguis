@@ -26,21 +26,6 @@ public class VocabularyA2 extends Fragment {
     public static final String TIME = "time";
     public static final String CITY = "city";
 
-    private ImageButton natureButton;
-    private ImageButton animalsButton;
-    private ImageButton facePartsButton;
-    private ImageButton bodyPartsButton;
-    private ImageButton clothesButton;
-    private ImageButton kitchenButton;
-    private ImageButton furnitureButton;
-    private ImageButton beveragesButton;
-    private ImageButton timeButton;
-    private ImageButton cityButton;
-    private ImageButton exercisesOneButton;
-    private ImageButton exercisesTwoButton;
-    private ImageButton exercisesThreeButton;
-    private ImageButton testsButton;
-
     public VocabularyA2() {
     }
 
@@ -49,20 +34,20 @@ public class VocabularyA2 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_vocabulary_a2, container, false);
 
-        natureButton = view.findViewById(R.id.nature);
-        animalsButton = view.findViewById(R.id.animals);
-        facePartsButton = view.findViewById(R.id.face_parts);
-        bodyPartsButton = view.findViewById(R.id.body_parts);
-        clothesButton = view.findViewById(R.id.clothes);
-        kitchenButton = view.findViewById(R.id.kitchen);
-        furnitureButton = view.findViewById(R.id.furniture);
-        beveragesButton = view.findViewById(R.id.beverages);
-        timeButton = view.findViewById(R.id.time);
-        cityButton = view.findViewById(R.id.city);
-        exercisesOneButton = view.findViewById(R.id.exerciseOneA2);
-        exercisesTwoButton = view.findViewById(R.id.exerciseTwoA2);
-        exercisesThreeButton = view.findViewById(R.id.exerciseThreeA2);
-        testsButton = view.findViewById(R.id.testA2Vocabulary);
+        ImageButton natureButton = view.findViewById(R.id.nature);
+        ImageButton animalsButton = view.findViewById(R.id.animals);
+        ImageButton facePartsButton = view.findViewById(R.id.face_parts);
+        ImageButton bodyPartsButton = view.findViewById(R.id.body_parts);
+        ImageButton clothesButton = view.findViewById(R.id.clothes);
+        ImageButton kitchenButton = view.findViewById(R.id.kitchen);
+        ImageButton furnitureButton = view.findViewById(R.id.furniture);
+        ImageButton beveragesButton = view.findViewById(R.id.beverages);
+        ImageButton timeButton = view.findViewById(R.id.time);
+        ImageButton cityButton = view.findViewById(R.id.city);
+        ImageButton exercisesOneButton = view.findViewById(R.id.exerciseOneA2);
+        ImageButton exercisesTwoButton = view.findViewById(R.id.exerciseTwoA2);
+        ImageButton exercisesThreeButton = view.findViewById(R.id.exerciseThreeA2);
+        ImageButton testsButton = view.findViewById(R.id.testA2Vocabulary);
 
         natureButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);

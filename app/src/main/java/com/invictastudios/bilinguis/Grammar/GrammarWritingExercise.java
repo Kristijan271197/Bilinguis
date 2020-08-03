@@ -42,8 +42,6 @@ public class GrammarWritingExercise extends AppCompatActivity {
     private EditText answerEditText;
     private Button submitAnswerButton;
     private Button nextQuestionButton;
-    private List<String> questions;
-    private List<String> answers;
     private List<WritingExerciseModel> questionsAnswers;
     private int questionNumber;
     private int correctAnswers;
@@ -52,7 +50,6 @@ public class GrammarWritingExercise extends AppCompatActivity {
     private int exerciseNumber;
     private int exerciseLevel;
     private boolean matches;
-    private FrameLayout adContainerView;
     private AdView adView;
 
     @Override
@@ -63,7 +60,7 @@ public class GrammarWritingExercise extends AppCompatActivity {
         MobileAds.initialize(this, initializationStatus -> {
         });
 
-        adContainerView = findViewById(R.id.adView_container_grammar_writing);
+        FrameLayout adContainerView = findViewById(R.id.adView_container_grammar_writing);
         adView = new AdView(this);
         adView.setAdUnitId(getString(R.string.banner_ad_unit_id));
         adContainerView.addView(adView);
@@ -80,8 +77,8 @@ public class GrammarWritingExercise extends AppCompatActivity {
         answerEditText = findViewById(R.id.answer_edit_text);
         submitAnswerButton = findViewById(R.id.submit_answer_button);
         nextQuestionButton = findViewById(R.id.next_question_button);
-        questions = new ArrayList<>();
-        answers = new ArrayList<>();
+        List<String> questions = new ArrayList<>();
+        List<String> answers = new ArrayList<>();
         questionsAnswers = new ArrayList<>();
         questionNumber = 0;
         correctAnswers = 0;
@@ -305,7 +302,7 @@ public class GrammarWritingExercise extends AppCompatActivity {
             answerEditText.setVisibility(View.INVISIBLE);
             submitAnswerButton.setVisibility(View.INVISIBLE);
             answerTextView.setVisibility(View.INVISIBLE);
-            exerciseTitleTextView.setText(String.format(Locale.ENGLISH, "Results: "));
+            exerciseTitleTextView.setText(R.string.results_text);
             exerciseTitleTextView.setTextSize(18);
             exerciseTextView.setText(String.format(Locale.ENGLISH, "Correct: %d \nIncorrect: %d", correctAnswers, wrongAnswers));
         }

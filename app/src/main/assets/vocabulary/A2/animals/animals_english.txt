@@ -6,7 +6,7 @@ Parrot
 Chicken 
 Pig 
 Turkey 
-Cow 
+Cow
 Goat 
 Sheep 
 Horse 

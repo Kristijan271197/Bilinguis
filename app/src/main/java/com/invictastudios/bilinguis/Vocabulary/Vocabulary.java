@@ -19,9 +19,6 @@ import com.invictastudios.bilinguis.Tests;
 
 public class Vocabulary extends AppCompatActivity {
 
-    private ViewPager2 vocabularyPager;
-    private FragmentStateAdapter pagerAdapter;
-    private TabLayout vocabularyLayout;
     public boolean vocabularyA1TestOne;
     public boolean vocabularyA1TestTwo;
     public boolean vocabularyA1TestThree;
@@ -40,9 +37,9 @@ public class Vocabulary extends AppCompatActivity {
         vocabularyA1TestFour = sharedPreferences.getBoolean("VocabularyA1Four", false);
         vocabularyA1TestFive = sharedPreferences.getBoolean("VocabularyA1Five", false);
 
-        vocabularyPager = findViewById(R.id.vocabulary_pager);
-        vocabularyLayout = findViewById(R.id.vocabulary_tabs);
-        pagerAdapter = new ViewPagerAdapter(this);
+        ViewPager2 vocabularyPager = findViewById(R.id.vocabulary_pager);
+        TabLayout vocabularyLayout = findViewById(R.id.vocabulary_tabs);
+        FragmentStateAdapter pagerAdapter = new ViewPagerAdapter(this);
         vocabularyPager.setAdapter(pagerAdapter);
 
         new TabLayoutMediator(vocabularyLayout, vocabularyPager,
@@ -58,7 +55,6 @@ public class Vocabulary extends AppCompatActivity {
 
     public class ViewPagerAdapter extends FragmentStateAdapter {
         private static final int CARD_ITEM_SIZE = 2;
-        private Vocabulary vocabulary = new Vocabulary();
 
         public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
             super(fragmentActivity);

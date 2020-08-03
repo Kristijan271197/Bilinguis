@@ -15,18 +15,14 @@ import com.invictastudios.bilinguis.R;
 
 public class Reading extends AppCompatActivity {
 
-    private ViewPager2 readingPager;
-    private FragmentStateAdapter pagerAdapter;
-    private TabLayout readingLayout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reading);
 
-        readingPager = findViewById(R.id.reading_pager);
-        readingLayout = findViewById(R.id.reading_tabs);
-        pagerAdapter = new ViewPagerAdapter(this);
+        ViewPager2 readingPager = findViewById(R.id.reading_pager);
+        TabLayout readingLayout = findViewById(R.id.reading_tabs);
+        FragmentStateAdapter pagerAdapter = new ViewPagerAdapter(this);
         readingPager.setAdapter(pagerAdapter);
 
         new TabLayoutMediator(readingLayout, readingPager,

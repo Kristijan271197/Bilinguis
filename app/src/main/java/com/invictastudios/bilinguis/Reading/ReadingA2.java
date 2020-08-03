@@ -15,27 +15,19 @@ import com.invictastudios.bilinguis.R;
 
 public class ReadingA2 extends Fragment {
 
-    private Button zooButton;
-    private Button describingManButton;
-    private Button clothesButton;
-    private Button describingRoomButton;
-    private Button restaurantButton;
-    private Button seasonMonthButton;
-    private Button cityButton;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_reading_a2, container, false);
 
-        zooButton = view.findViewById(R.id.zoo_button);
-        describingManButton = view.findViewById(R.id.describing_man_button);
-        clothesButton = view.findViewById(R.id.clothes_button);
-        describingRoomButton = view.findViewById(R.id.describing_room_button);
-        restaurantButton = view.findViewById(R.id.restaurant_button);
-        seasonMonthButton = view.findViewById(R.id.season_month_button);
-        cityButton = view.findViewById(R.id.city_button);
+        Button zooButton = view.findViewById(R.id.zoo_button);
+        Button describingManButton = view.findViewById(R.id.describing_man_button);
+        Button clothesButton = view.findViewById(R.id.clothes_button);
+        Button describingRoomButton = view.findViewById(R.id.describing_room_button);
+        Button restaurantButton = view.findViewById(R.id.restaurant_button);
+        Button seasonMonthButton = view.findViewById(R.id.season_month_button);
+        Button cityButton = view.findViewById(R.id.city_button);
 
         zooButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), ReadingSectionSelected.class);

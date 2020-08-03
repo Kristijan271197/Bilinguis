@@ -15,20 +15,6 @@ import com.invictastudios.bilinguis.TestSelection;
 
 public class GrammarA2 extends Fragment {
 
-    private Button pluralExceptionsButton;
-    private Button verbsButton;
-    private Button pastSimpleTenseButton;
-    private Button personalPronounsPartTwoButton;
-    private Button modalVerbsButton;
-    private Button thereIsAreButton;
-    private Button futureSimpleTenseButton;
-    private Button modalsMustButton;
-    private Button prepositionsOfTimeButton;
-    private Button prepositionsOfPlaceButton;
-    private Button futureBeGoingToButton;
-    private Button exercisesButton;
-    private Button testsButton;
-
     public GrammarA2() {
     }
 
@@ -37,19 +23,19 @@ public class GrammarA2 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_grammar_a2, container, false);
 
-        pluralExceptionsButton = view.findViewById(R.id.plural_exceptions);
-        verbsButton = view.findViewById(R.id.verbs);
-        pastSimpleTenseButton = view.findViewById(R.id.past_simple_tense_button);
-        personalPronounsPartTwoButton = view.findViewById(R.id.personal_pronouns_2_button);
-        modalVerbsButton = view.findViewById(R.id.modal_verbs_button);
-        thereIsAreButton = view.findViewById(R.id.there_is_are_button);
-        futureSimpleTenseButton = view.findViewById(R.id.future_simple_tense_button);
-        modalsMustButton = view.findViewById(R.id.modals_must_button);
-        prepositionsOfTimeButton = view.findViewById(R.id.prepositions_of_time_button);
-        prepositionsOfPlaceButton = view.findViewById(R.id.prepositions_of_place_button);
-        futureBeGoingToButton = view.findViewById(R.id.future_be_going_to_button);
-        exercisesButton = view.findViewById(R.id.exercise_a2_grammar);
-        testsButton = view.findViewById(R.id.test_a2_grammar);
+        Button pluralExceptionsButton = view.findViewById(R.id.plural_exceptions);
+        Button verbsButton = view.findViewById(R.id.verbs);
+        Button pastSimpleTenseButton = view.findViewById(R.id.past_simple_tense_button);
+        Button personalPronounsPartTwoButton = view.findViewById(R.id.personal_pronouns_2_button);
+        Button modalVerbsButton = view.findViewById(R.id.modal_verbs_button);
+        Button thereIsAreButton = view.findViewById(R.id.there_is_are_button);
+        Button futureSimpleTenseButton = view.findViewById(R.id.future_simple_tense_button);
+        Button modalsMustButton = view.findViewById(R.id.modals_must_button);
+        Button prepositionsOfTimeButton = view.findViewById(R.id.prepositions_of_time_button);
+        Button prepositionsOfPlaceButton = view.findViewById(R.id.prepositions_of_place_button);
+        Button futureBeGoingToButton = view.findViewById(R.id.future_be_going_to_button);
+        Button exercisesButton = view.findViewById(R.id.exercise_a2_grammar);
+        Button testsButton = view.findViewById(R.id.test_a2_grammar);
 
         pluralExceptionsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), GrammarSectionSelected.class);

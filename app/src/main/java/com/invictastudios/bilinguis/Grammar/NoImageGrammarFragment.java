@@ -20,9 +20,6 @@ import java.nio.charset.StandardCharsets;
 public class NoImageGrammarFragment extends Fragment {
 
     private TextView textView;
-    private Button exerciseOneButtonNoImage;
-    private Button exerciseTwoButtonNoImage;
-    private Button exerciseThreeButtonNoImage;
     int exerciseName;
     int exerciseLevel;
 
@@ -35,9 +32,9 @@ public class NoImageGrammarFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_no_image_grammar, container, false);
 
         textView = view.findViewById(R.id.text_view);
-        exerciseOneButtonNoImage = view.findViewById(R.id.exercise_one_button_no_image);
-        exerciseTwoButtonNoImage = view.findViewById(R.id.exercise_two_button_no_image);
-        exerciseThreeButtonNoImage = view.findViewById(R.id.exercise_three_button_no_image);
+        Button exerciseOneButtonNoImage = view.findViewById(R.id.exercise_one_button_no_image);
+        Button exerciseTwoButtonNoImage = view.findViewById(R.id.exercise_two_button_no_image);
+        Button exerciseThreeButtonNoImage = view.findViewById(R.id.exercise_three_button_no_image);
         if (this.getArguments() != null) {
             exerciseName = this.getArguments().getInt(GrammarA1.EXERCISE_NAME);
             exerciseLevel = this.getArguments().getInt(GrammarA1.EXERCISE_LEVEL);

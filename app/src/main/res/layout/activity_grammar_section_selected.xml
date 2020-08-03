@@ -21,7 +21,7 @@
         android:id="@+id/adView_container_grammar_section_selected"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"></FrameLayout>
+        android:layout_weight="1" />
 
 
 </LinearLayout>

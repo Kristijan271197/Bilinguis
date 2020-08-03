@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.invictastudios.bilinguis">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -7,6 +8,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
+        tools:ignore="AllowBackup"
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icon"
@@ -20,24 +22,48 @@
         <activity android:name=".Writing.Writing" />
         <activity
             android:name=".Tests"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Exercises"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Grammar.GrammarWritingExercise"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".Grammar.GrammarMultipleChoiceExercise" />
-        <activity android:name=".Grammar.GrammarSectionSelected" />
-        <activity android:name=".Grammar.Grammar" />
+        <activity
+            android:name=".Grammar.GrammarMultipleChoiceExercise"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Grammar.GrammarSectionSelected"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Grammar.Grammar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-4701446273186664~8537561530" />
 
-        <activity android:name=".Vocabulary.VocabularySectionSelected" />
-        <activity android:name=".Vocabulary.Vocabulary" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".Vocabulary.VocabularySectionSelected"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Vocabulary.Vocabulary"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -15,18 +15,14 @@ import com.invictastudios.bilinguis.R;
 
 public class Writing extends AppCompatActivity {
 
-    private ViewPager2 writingPager;
-    private FragmentStateAdapter pagerAdapter;
-    private TabLayout writingLayout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_writing);
 
-        writingPager = findViewById(R.id.writing_pager);
-        writingLayout = findViewById(R.id.writing_tabs);
-        pagerAdapter = new ViewPagerAdapter(this);
+        ViewPager2 writingPager = findViewById(R.id.writing_pager);
+        TabLayout writingLayout = findViewById(R.id.writing_tabs);
+        FragmentStateAdapter pagerAdapter = new ViewPagerAdapter(this);
         writingPager.setAdapter(pagerAdapter);
 
         new TabLayoutMediator(writingLayout, writingPager,

@@ -26,20 +26,6 @@ public class VocabularyA1 extends Fragment {
     public static final String WEATHER = "weather";
 
 
-    private ImageButton greetingsButton;
-    private ImageButton geographyButton;
-    private ImageButton colorsButton;
-    private ImageButton thingsButton;
-    private ImageButton foodButton;
-    private ImageButton productsButton;
-    private ImageButton homeButton;
-    private ImageButton familyButton;
-    private ImageButton weatherButton;
-    private ImageButton exercisesOneButton;
-    private ImageButton exercisesTwoButton;
-    private ImageButton testsButton;
-
-
     public VocabularyA1() {
     }
 
@@ -49,70 +35,70 @@ public class VocabularyA1 extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_vocabulary_a1, container, false);
 
-        greetingsButton = view.findViewById(R.id.greetings);
+        ImageButton greetingsButton = view.findViewById(R.id.greetings);
         greetingsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", GREETINGS);
             startActivity(intent);
         });
 
-        geographyButton = view.findViewById(R.id.geography);
+        ImageButton geographyButton = view.findViewById(R.id.geography);
         geographyButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", GEOGRAPHY);
             startActivity(intent);
         });
 
-        colorsButton = view.findViewById(R.id.colors);
+        ImageButton colorsButton = view.findViewById(R.id.colors);
         colorsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", COLORS);
             startActivity(intent);
         });
 
-        thingsButton = view.findViewById(R.id.things);
+        ImageButton thingsButton = view.findViewById(R.id.things);
         thingsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", THINGS);
             startActivity(intent);
         });
 
-        foodButton = view.findViewById(R.id.food);
+        ImageButton foodButton = view.findViewById(R.id.food);
         foodButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", FOOD);
             startActivity(intent);
         });
 
-        productsButton = view.findViewById(R.id.products);
+        ImageButton productsButton = view.findViewById(R.id.products);
         productsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", PRODUCTS);
             startActivity(intent);
         });
 
-        homeButton = view.findViewById(R.id.home);
+        ImageButton homeButton = view.findViewById(R.id.home);
         homeButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", HOME);
             startActivity(intent);
         });
 
-        familyButton = view.findViewById(R.id.family);
+        ImageButton familyButton = view.findViewById(R.id.family);
         familyButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", FAMILY);
             startActivity(intent);
         });
 
-        weatherButton = view.findViewById(R.id.weather);
+        ImageButton weatherButton = view.findViewById(R.id.weather);
         weatherButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), VocabularySectionSelected.class);
             intent.putExtra("section", WEATHER);
             startActivity(intent);
         });
 
-        exercisesOneButton = view.findViewById(R.id.exerciseOneA1);
+        ImageButton exercisesOneButton = view.findViewById(R.id.exerciseOneA1);
         exercisesOneButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), Exercises.class);
             intent.putExtra("level", 1);
@@ -121,7 +107,7 @@ public class VocabularyA1 extends Fragment {
             startActivity(intent);
         });
 
-        exercisesTwoButton = view.findViewById(R.id.exerciseTwoA1);
+        ImageButton exercisesTwoButton = view.findViewById(R.id.exerciseTwoA1);
         exercisesTwoButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), Exercises.class);
             intent.putExtra("level", 1);
@@ -130,7 +116,7 @@ public class VocabularyA1 extends Fragment {
             startActivity(intent);
         });
 
-        testsButton = view.findViewById(R.id.testA1Vocabulary);
+        ImageButton testsButton = view.findViewById(R.id.testA1Vocabulary);
         testsButton.setOnClickListener(v -> {
             Intent intent = new Intent(view.getContext(), TestSelection.class);
             intent.putExtra("level", 1);
